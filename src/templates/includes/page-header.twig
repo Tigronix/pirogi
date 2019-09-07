@@ -1,9 +1,110 @@
-
+{% set menuList = {
+  item0: {
+    imgSrc: 'money',
+    text: 'Цены'
+  },
+  item1: {
+    imgSrc: 'price-tag',
+    text: 'Акции и скидки',
+    mod: 'page-header__menu-link--sale'
+  },
+  item2: {
+    imgSrc: 'trolley',
+    text: 'Доставка'
+  },
+  item3: {
+    imgSrc: 'bill',
+    text: 'Оплата'
+  },
+  item4: {
+    imgSrc: 'like',
+    text: 'Отзывы'
+  },
+  item5: {
+    imgSrc: 'factory',
+    text: 'О компании'
+  },
+  item6: {
+    imgSrc: 'shop',
+    text: 'Контакты'
+  },
+} %}
 
 <header class="page-header">
-  <nav class="page-header__menu">
-    <ul class="page-header__menu-list">
-      <li class="page-header__menu-li"><a href="#" class="page-header__menu-link"></a></li>
-    </ul>
-  </nav>
+	<div class="page-header__top">
+		<div class="container page-header__container-top">
+			<nav class="page-header__menu">
+				<ul class="page-header__menu-list">
+					{% for item in menuList %}
+						<li class="page-header__menu-li">
+							<a href="#" class="page-header__menu-link {{item.mod}}">
+								<img src="assets/img/icons/{{item.imgSrc}}.png" alt="" class="page-header__menu-icon">
+								<span class="page-header__menu-text">{{item.text}}</span>
+							</a>
+						</li>
+					{% endfor %}
+				</ul>
+			</nav>
+      <div class="page-header__location">
+        <img src="assets/img/map.png" alt="" class="page-header__location-img">
+        <div class="page-header__location-text">г. Москва, Площадь Киевского Вокзала, 2</div>
+      </div>
+		</div>
+	</div>
+	<div class="page-header__bot">
+		<div class="container page-header__container-bot">
+      <button type="button" class="page-header__menu-btn"><img src="assets/img/icons/menu.png" alt=""></button>
+			<a href="#" class="page-header__logo">
+        <img class="page-header__logo-img" src="assets/img/logo.png" alt="">
+				<span class="page-header__logo-text">традиции <br> осетии</span>
+      </a>
+			<div class="page-header__rating">
+				<div class="page-header__rating-score">4.8</div>
+        <div class="page-header__rating-content">
+          <ul class="page-header__rating-list">
+  					{% for index in 0..4 %}
+  						<li class="page-header__rating-li"><img src="assets/img/icons/star.png" alt="" class="page-header__rating-img"></li>
+  					{% endfor %}
+  				</ul>
+  				<div class="page-header__rating-desc">рейтинг пекарни</div>
+        </div>
+			</div>
+			<div class="page-header__quality">
+				<img src="assets/img/medal.png" alt="" class="page-header__quality-img">
+				<div class="page-header__quality-desc">
+					<div class="page-header__quality-big">11 лет</div>
+					качества
+				</div>
+			</div>
+			<form action="" class="page-header__search">
+        <img src="assets/img/icons/search.png" alt="" class="page-header__search-icon">
+				<input type="search" placeholder="осетинский пирог с мясом" class="page-header__input">
+				<button type="submit" class="page-header__search-submit"><span class="page-header__search-submit-text">Найти</span></button>
+			</form>
+			<div class="page-header__fav">
+				<div class="page-header__fav-icon">
+					<img src="assets/img/icons/heart.png" alt="" class="page-header__fav-img page-header__fav-img--desktop">
+					<img src="assets/img/icons/heart-mobile.png" alt="" class="page-header__fav-img page-header__fav-img--mobile">
+					<div class="page-header__fav-counter">4</div>
+				</div>
+				<a href="#" class="page-header__fav-desc">Избранное</a>
+			</div>
+			<div class="page-header__basket">
+				<div class="page-header__basket-icon">
+					<img src="assets/img/icons/basket.png" alt="" class="page-header__basket-img page-header__basket-img--desktop">
+					<img src="assets/img/icons/basket-mobile.png" alt="" class="page-header__basket-img page-header__basket-img--mobile">
+					<div class="page-header__basket-counter">12</div>
+				</div>
+				<a href="#" class="page-header__basket-desc">Корзина</a>
+			</div>
+			<div class="page-header__contacts">
+				<a href="tel:+74953249000" class="page-header__phone">+7 (495) 324-90-00</a>
+				{% include 'btn.twig' with {
+          imgSrc: 'phone',
+          text: 'Позвоните мне',
+          mod: 'page-header__call-me'
+        } %}
+			</div>
+		</div>
+	</div>
 </header>

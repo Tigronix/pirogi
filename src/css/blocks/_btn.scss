@@ -1,0 +1,21 @@
+.btn {
+  width: 100%;
+  height: vw(40px);
+  background: #f8cf26;
+  border-radius: 5px;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: vw(18px);
+  line-height: vw(18px);
+  color: #333;
+  font-weight: 500;
+
+  &__icon {
+    width: vw(20px);
+    height: vw(20px);
+    margin-right: vw(10px);
+
+  }
+}

@@ -1,0 +1,20 @@
+.big-choice {
+  &__img-box {
+    width: vw(64px);
+    height: vw(64px);
+    border-radius: 50%;
+    margin-right: vw(7px);
+
+  }
+
+  &__img {
+    border-radius: 50%;
+  }
+
+  &__desc {
+    padding-left: vw(28px);
+    background: url(../img/big-choice-triangle.png) no-repeat left center;
+    background-size: vw(28px) vw(13px);
+    padding: vw(18px) vw(12px) vw(18px) vw(30px);
+  }
+}
