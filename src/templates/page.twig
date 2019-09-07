@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta name="format-detection" content="telephone=no">
+
+		<title>
+			{% block title %}Default title{% endblock %}
+		</title>
+
+		<link rel="stylesheet" href="./assets/css/main.css">
+	</head>
+	<body>
+		<div class="site-wrapper">
+			{% include 'includes/page-header.twig' %}
+			<main class="page-main">
+				{% block page %}{% endblock %}
+			</main>
+			{% include 'includes/page-footer.twig' %}
+		</div>
+
+		<script src="./assets/js/vendor.js"></script>
+		<script src="./assets/js/main.js"></script>
+
+		<div style="display: none;">
+			{% include 'includes/icons.svg' %}
+		</div>
+	</body>
+</html>

@@ -1,0 +1,18 @@
+// general
+@import 'variables';
+@import 'normalize.css/normalize.css';
+@import 'mixins';
+@import 'fonts';
+@import 'png_sprite';
+@import 'base';
+
+// plugins
+@import 'slick-carousel/slick/slick.css';
+@import 'plugins/fancybox';
+
+// blocks
+@import 'blocks/icon';
+@import 'blocks/container';
+
+// sections
+@import 'sections/page-header';

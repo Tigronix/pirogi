@@ -1,0 +1,61 @@
+* {
+  box-sizing: border-box;
+  outline: none;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  @include helvetica;
+  color: #57555C;
+
+  &.overflow {
+    overflow: hidden;
+  }
+}
+
+button {
+  cursor: pointer;
+  background: none;
+  border: none;
+  line-height: 0;
+  padding: 0;
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+  vertical-align: bottom;
+}
+
+textarea {
+  resize: vertical;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+.h1 {
+  font-size: 24px;
+  line-height: 24px;
+  font-weight: 500;
+  margin-bottom: 15px;
+
+  @include mobile {
+    font-size: 18px;
+    line-height: 21px;
+    text-align: center;
+  }
+}
+
+p {
+  font-size: 16px;
+  line-height: 25px;
+  color: #57555C;
+
+  @include mobile {
+    line-height: 19px;
+  }
+}

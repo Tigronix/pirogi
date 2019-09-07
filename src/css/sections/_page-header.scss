@@ -1,0 +1,7 @@
+.page-header {
+  .icon-email {
+    width: 20px;
+    height: 20px;
+    @include icon(like);
+  }
+}
