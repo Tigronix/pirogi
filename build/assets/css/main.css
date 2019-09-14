@@ -2507,4 +2507,22 @@ body.compensate-for-scrollbar {
   display: none;
 }
 
+.text-block {
+  margin-bottom: 3px;
+}
+
+.text-block__header {
+  font-size: 1.45833vw;
+  line-height: 1.45833vw;
+  font-weight: 500;
+  color: #70544F;
+  margin-bottom: 11px;
+}
+
+.text-block__text {
+  font-size: 0.9375vw;
+  line-height: 1.30208vw;
+  color: #666;
+}
+
 /*# sourceMappingURL=main.css.map */

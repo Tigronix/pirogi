@@ -1,0 +1,17 @@
+.text-block {
+  margin-bottom: 3px;
+
+  &__header {
+    font-size: vw(28px);
+    line-height: vw(28px);
+    font-weight: 500;
+    color: #70544F;
+    margin-bottom: 11px;
+  }
+
+  &__text {
+    font-size: vw(18px);
+    line-height: vw(25px);
+    color: #666;
+  }
+}
