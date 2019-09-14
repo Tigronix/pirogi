@@ -1,0 +1,56 @@
+<div class="card js-card">
+	<div class="card__img-wrap">
+		<img src="assets/img/{{item.imgSrc|default('catalogItem0')}}.png" alt="" class="card__img">
+		{% if item.sale %}
+			<div class="card__sale">хит продаж</div>
+		{% endif %}
+		<button type="button" class="card__fav">
+			<img src="assets/img/icons/heart.png" alt="" class="card__fav-img">
+			{% include 'tooltip.twig' with {
+        mod: 'card__fav-tooltip'
+      } %}
+		</button>
+	</div>
+	<div class="card__content">
+		<a href="#" class="card__header">{{item.header}}</a>
+		<div class="card__gram">
+			<ul class="card__gram-list">
+				{% for item in item.gramList %}
+					<li class="card__gram-li">
+						<label class="card__checkbox">
+							<input type="radio" name="{{key}}" class="card__input js-card-input" data-default-price="{{item.defaultPrice}}" {% if item.checked %}checked{% endif %}>
+							<span class="card__checkbox-icon"></span>
+							<span class="card__checkbox-desc">
+								<span class="card__text-red">{{item.gram}}
+									г</span>
+									/
+								<span class="card__text-green">{{item.radius}}
+									см</span>
+							</span>
+						</label>
+					</li>
+				{% endfor %}
+			</ul>
+		</div>
+		<div class="card__bottom">
+			{% include 'counter.twig' with {
+				mod: 'card__counter'
+			} %}
+			<div class="card__price">
+				<span class="card__price-number js-card-price">{{item.gramList.item0.defaultPrice}}</span>
+				<span class="card__price-value">руб.</span>
+			</div>
+			<button type="button" class="card__spices">
+				<img src="assets/img/icons/spices.png" alt="" class="card__spices-img">
+				{% include 'tooltip.twig' with {
+	        mod: 'card__spices-tooltip',
+					text: 'Добавить ингридиенты'
+	      } %}
+			</button>
+		</div>
+		{% include 'btn--btn.twig' with {
+			mod: 'btn--green card__btn',
+			text: 'В корзину'
+		} %}
+	</div>
+</div>

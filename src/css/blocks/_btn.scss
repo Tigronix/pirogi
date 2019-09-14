@@ -12,6 +12,11 @@
   color: #333;
   font-weight: 500;
 
+  &--green {
+    background: #23B75F;
+    color: #fff;
+  }
+
   &__icon {
     width: vw(20px);
     height: vw(20px);

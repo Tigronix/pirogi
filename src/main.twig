@@ -2,10 +2,9 @@
 {% block title %}Главная{% endblock %}
 {% block page %}
 	<main class="page-main">
-		<div class="container page-main__container">
-			{% include 'templates/includes/big-choice.twig' %}
-			{% include 'templates/includes/menu.twig' %}
-			{% include 'templates/includes/text-block.twig' %}
-		</div>
+		{% include 'templates/includes/big-choice.twig' %}
+		{% include 'templates/includes/menu.twig' %}
+		{% include 'templates/includes/text-block.twig' %}
+		{% include 'templates/includes/catalog.twig' %}
 	</main>
 {% endblock %}

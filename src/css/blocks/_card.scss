@@ -1,0 +1,197 @@
+.card {
+  $self: &;
+  background: #ffffff;
+  border-radius: 10px;
+  padding-bottom: vw(14px);
+
+  &__img-wrap {
+    height: 350px;
+    position: relative;
+    border-radius: 10px 10px 0px 0px;
+    margin-bottom: 8px;
+  }
+
+  &__img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px 10px 0px 0px;
+  }
+
+  &__content {
+    padding: 0 vw(8px);
+  }
+
+  &__sale {
+    position: absolute;
+    left: vw(25px);
+    top: vw(25px);
+    height: vw(35px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: vw(16px);
+    line-height: vw(19px);
+    color: #fff;
+    text-transform: uppercase;
+    background: url(../img/sale.png) no-repeat center;
+    background-size: 100% auto;
+    padding: 0 vw(26px);
+  }
+
+  &__fav {
+    position: absolute;
+    right: vw(25px);
+    top: vw(25px);
+    background: #fff;
+    width: vw(61px);
+    height: vw(61px);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.8;
+    transition: opacity 0.3s;
+
+    &:hover {
+      opacity: 1;
+
+      .tooltip {
+        display: block;
+      }
+    }
+
+    &.active {
+      opacity: 1;
+    }
+  }
+
+  &__fav-img {
+    max-width: 60%;
+  }
+
+  &__header {
+    font-size: 20px;
+    line-height: 25px;
+    color: #3c763d;
+    margin-bottom: 16px;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+
+    @include hover {
+      text-decoration: underline;
+    }
+  }
+
+  &__gram {
+    border-top: 1px solid #dddfe0;
+    padding-top: 8px;
+  }
+
+  &__gram-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: vw(-4px);
+  }
+
+  &__gram-li {
+    padding: vw(4px);
+    width: calc(100% / 2);
+  }
+
+  &__checkbox {
+    cursor: pointer;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  &__input {
+    display: none;
+
+    &:checked + .card__checkbox-icon {
+      background-color: #f94848;
+      background-image: url(../img/icons/check.png);
+    }
+  }
+
+  &__checkbox-icon {
+    width: 30px;
+    height: 30px;
+    border-radius: 3px;
+    background: #ecf1f7 no-repeat center;
+    background-size: 60% auto;
+    margin-right: vw(16px);
+    display: block;
+    transition: background 0.3s;
+
+    #{$self}input:checked + & {
+      background-image: url(../img/icons/check.png);
+    }
+  }
+
+  &__checkbox-desc {
+    font-size: vw(16px);
+    line-height: vw(21px);
+    @include avant;
+    color: #9299a2;
+  }
+
+  &__text-red {
+    color: #f94848;
+  }
+
+  &__text-green {
+    color: #009471;
+  }
+
+  &__bottom {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-top: 34px;
+    margin-bottom: 15px;
+  }
+
+  &__price {
+    color: #f94848;
+    @include avant;
+    margin-left: vw(19px);
+  }
+
+  &__price-number {
+    font-size: vw(32px);
+    line-height: vw(38px);
+    font-weight: bold;
+  }
+
+  &__price-value {
+    font-size: vw(18px);
+    line-height: vw(21px);
+
+  }
+
+  &__spices {
+    width: vw(55px);
+    height: vw(55px);
+    background: #ecf1f7;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 50%;
+    margin-left: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    @include hover {
+      
+      .tooltip {
+        display: block;
+      }
+    }
+  }
+
+  &__spices-img {
+    max-width: 35px;
+  }
+}

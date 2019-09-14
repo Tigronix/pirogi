@@ -1,0 +1,35 @@
+.tooltip {
+  font-size: vw(14px);
+  line-height: vw(14px);
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  padding-bottom: 22px;
+  display: none;
+
+  &__content {
+    padding: vw(14px) vw(8px);
+    background: rgba(0, 54, 87, 1);
+    border-radius: 5px;
+    white-space: nowrap;
+    position: relative;
+
+    &:after {
+      display: block;
+      content: "";
+      width: vw(32px);
+      height: vw(18px);
+      background: url(../img/tooltip.png) no-repeat center;
+      background-size: 100% auto;
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+}

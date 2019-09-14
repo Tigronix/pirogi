@@ -1,0 +1,70 @@
+.counter {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  height: 40px;
+
+  &__btn {
+    width: vw(40px);
+    height: 100%;
+    border: 2px solid #DFF0D8;
+    position: relative;
+
+    &--minus {
+      border-radius: 3px 0px 0px 3px;
+
+      &:before {
+        display: block;
+        content: '';
+        width: vw(20px);
+        height: 1px;
+        background: #20A183;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+
+    &--plus {
+      border-radius: 0px 3px 3px 0px;
+
+      &:before {
+        display: block;
+        content: '';
+        width: vw(20px);
+        height: 1px;
+        background: #20A183;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      &:after {
+        display: block;
+        content: '';
+        width: 1px;
+        height: vw(20px);
+        background: #20A183;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+  }
+
+  &__number {
+    width: vw(40px);
+    height: 100%;
+    font-size: vw(18px);
+    line-height: vw(21px);
+    color: #009471;
+    @include avant;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #DFF0D8;
+  }
+}

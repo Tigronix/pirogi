@@ -131,7 +131,7 @@
                         <div class="page-header__basket-icon">
                             <img src="assets/img/icons/basket.png" alt="" class="page-header__basket-img page-header__basket-img--desktop">
                             <img src="assets/img/icons/basket-mobile.png" alt="" class="page-header__basket-img page-header__basket-img--mobile">
-                            <div class="page-header__basket-counter">12</div>
+                            <div class="page-header__basket-counter js-basket-counter">20</div>
                         </div>
                         <a href="#" class="page-header__basket-desc">Корзина</a>
                     </div>
@@ -150,186 +150,2393 @@
         <main class="page-main">
 
             <main class="page-main">
-                <div class="container page-main__container">
-                    <section class="big-choice">
-                        <div class="container big-choice__container">
-                            <div class="big-choice__img-box"><img src="assets/img/big-choice.png" alt="" class="big-choice__img"></div>
-                            <div class="big-choice__desc">
-                                Самый большой выбор осетинский пирогов в Москве -
-                                <span class="big-choice__red">350 видов</span>
-                                начинок в наличии
-                            </div>
+                <section class="big-choice">
+                    <div class="container big-choice__container">
+                        <div class="big-choice__img-box"><img src="assets/img/big-choice.png" alt="" class="big-choice__img"></div>
+                        <div class="big-choice__desc">
+                            Самый большой выбор осетинский пирогов в Москве -
+                            <span class="big-choice__red">350 видов</span>
+                            начинок в наличии
                         </div>
-                    </section>
+                    </div>
+                </section>
 
 
 
 
 
-                    <section class="menu">
-                        <div class="container menu__container">
-                            <ul class="menu__btns">
+                <section class="menu">
+                    <div class="container menu__container">
+                        <ul class="menu__btns">
 
-                                <li class="menu__btns-li active" data-tabclass="js-menu-content" data-tabnumber="">
-                                    <button type="button" class="menu__btns-item">
-                                        <span class="menu__btn-text">Сытные</span>
-                                        <span class="menu__counter">12</span>
-                                    </button>
+                            <li class="menu__btns-li active" data-tabclass="js-menu-content" data-tabnumber="">
+                                <button type="button" class="menu__btns-item">
+                                    <span class="menu__btn-text">Сытные</span>
+                                    <span class="menu__counter">12</span>
+                                </button>
+                            </li>
+
+                            <li class="menu__btns-li " data-tabclass="js-menu-content" data-tabnumber="">
+                                <button type="button" class="menu__btns-item">
+                                    <span class="menu__btn-text">Постные</span>
+                                    <span class="menu__counter">24</span>
+                                </button>
+                            </li>
+
+                            <li class="menu__btns-li " data-tabclass="js-menu-content" data-tabnumber="">
+                                <button type="button" class="menu__btns-item">
+                                    <span class="menu__btn-text">Традиционные</span>
+                                    <span class="menu__counter">24</span>
+                                </button>
+                            </li>
+
+                            <li class="menu__btns-li " data-tabclass="js-menu-content" data-tabnumber="">
+                                <button type="button" class="menu__btns-item">
+                                    <span class="menu__btn-text">С зеленью</span>
+                                    <span class="menu__counter">24</span>
+                                </button>
+                            </li>
+
+                            <li class="menu__btns-li " data-tabclass="js-menu-content" data-tabnumber="">
+                                <button type="button" class="menu__btns-item">
+                                    <span class="menu__btn-text">Сладкие</span>
+                                    <span class="menu__counter">24</span>
+                                </button>
+                            </li>
+
+                            <li class="menu__btns-li " data-tabclass="js-menu-content" data-tabnumber="">
+                                <button type="button" class="menu__btns-item">
+                                    <span class="menu__btn-text">Фруктовые</span>
+                                    <span class="menu__counter">24</span>
+                                </button>
+                            </li>
+
+                            <li class="menu__btns-li " data-tabclass="js-menu-content" data-tabnumber="">
+                                <button type="button" class="menu__btns-item">
+                                    <span class="menu__btn-text">Овощные</span>
+                                    <span class="menu__counter">24</span>
+                                </button>
+                            </li>
+
+                        </ul>
+                        <div class="menu__bottom">
+                            <ul class="menu__content js-menu-content">
+
+                                <li class="menu__content-li" data-tabnumber="">
+                                    <div class="menu__content-item">
+                                        <img src="assets/img/icons/meat.png" alt="" class="menu__img">
+                                        <div class="menu__desc">
+                                            <span class="menu__text">Мясо</span>
+                                            <span class="menu__index">(7)</span>
+                                        </div>
+                                    </div>
                                 </li>
 
-                                <li class="menu__btns-li " data-tabclass="js-menu-content" data-tabnumber="">
-                                    <button type="button" class="menu__btns-item">
-                                        <span class="menu__btn-text">Постные</span>
-                                        <span class="menu__counter">24</span>
-                                    </button>
+                                <li class="menu__content-li" data-tabnumber="">
+                                    <div class="menu__content-item">
+                                        <img src="assets/img/icons/turkey.png" alt="" class="menu__img">
+                                        <div class="menu__desc">
+                                            <span class="menu__text">Индейка</span>
+                                            <span class="menu__index">(5)</span>
+                                        </div>
+                                    </div>
                                 </li>
 
-                                <li class="menu__btns-li " data-tabclass="js-menu-content" data-tabnumber="">
-                                    <button type="button" class="menu__btns-item">
-                                        <span class="menu__btn-text">Традиционные</span>
-                                        <span class="menu__counter">24</span>
-                                    </button>
+                                <li class="menu__content-li" data-tabnumber="">
+                                    <div class="menu__content-item">
+                                        <img src="assets/img/icons/turkey(1).png" alt="" class="menu__img">
+                                        <div class="menu__desc">
+                                            <span class="menu__text">Курица</span>
+                                            <span class="menu__index">(10)</span>
+                                        </div>
+                                    </div>
                                 </li>
 
-                                <li class="menu__btns-li " data-tabclass="js-menu-content" data-tabnumber="">
-                                    <button type="button" class="menu__btns-item">
-                                        <span class="menu__btn-text">С зеленью</span>
-                                        <span class="menu__counter">24</span>
-                                    </button>
+                                <li class="menu__content-li" data-tabnumber="">
+                                    <div class="menu__content-item">
+                                        <img src="assets/img/icons/salmon.png" alt="" class="menu__img">
+                                        <div class="menu__desc">
+                                            <span class="menu__text">Форель</span>
+                                            <span class="menu__index">(4)</span>
+                                        </div>
+                                    </div>
                                 </li>
 
-                                <li class="menu__btns-li " data-tabclass="js-menu-content" data-tabnumber="">
-                                    <button type="button" class="menu__btns-item">
-                                        <span class="menu__btn-text">Сладкие</span>
-                                        <span class="menu__counter">24</span>
-                                    </button>
+                                <li class="menu__content-li" data-tabnumber="">
+                                    <div class="menu__content-item">
+                                        <img src="assets/img/icons/fish.png" alt="" class="menu__img">
+                                        <div class="menu__desc">
+                                            <span class="menu__text">Лосось</span>
+                                            <span class="menu__index">(3)</span>
+                                        </div>
+                                    </div>
                                 </li>
 
-                                <li class="menu__btns-li " data-tabclass="js-menu-content" data-tabnumber="">
-                                    <button type="button" class="menu__btns-item">
-                                        <span class="menu__btn-text">Фруктовые</span>
-                                        <span class="menu__counter">24</span>
-                                    </button>
+                                <li class="menu__content-li" data-tabnumber="">
+                                    <div class="menu__content-item">
+                                        <img src="assets/img/icons/fish(1).png" alt="" class="menu__img">
+                                        <div class="menu__desc">
+                                            <span class="menu__text">Сёмга</span>
+                                            <span class="menu__index">(7)</span>
+                                        </div>
+                                    </div>
                                 </li>
 
-                                <li class="menu__btns-li " data-tabclass="js-menu-content" data-tabnumber="">
-                                    <button type="button" class="menu__btns-item">
-                                        <span class="menu__btn-text">Овощные</span>
-                                        <span class="menu__counter">24</span>
-                                    </button>
+                                <li class="menu__content-li" data-tabnumber="">
+                                    <div class="menu__content-item">
+                                        <img src="assets/img/icons/cheese.png" alt="" class="menu__img">
+                                        <div class="menu__desc">
+                                            <span class="menu__text">Сыр</span>
+                                            <span class="menu__index">(6)</span>
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <li class="menu__content-li" data-tabnumber="">
+                                    <div class="menu__content-item">
+                                        <img src="assets/img/icons/turkey(2).png" alt="" class="menu__img">
+                                        <div class="menu__desc">
+                                            <span class="menu__text">Курица</span>
+                                            <span class="menu__index">(10)</span>
+                                        </div>
+                                    </div>
                                 </li>
 
                             </ul>
-                            <div class="menu__bottom">
-                                <ul class="menu__content js-menu-content">
+                            <form class="menu__metro">
+                                <div class="menu__select-wrap">
+                                    <select name="" id="" class="menu__select" placeholder="">
+                                        <option class="menu__select-option" value="">Выберите станцию метро</option>
+                                        <option class="menu__select-option" value="2">2</option>
+                                        <option class="menu__select-option" value="3">3</option>
+                                    </select>
+                                </div>
+                                <a href="#" class="btn menu__btn">
+                                    <img src="assets/img/icons/my_location_24px.png" alt="" class="btn__icon">
+                                    <span class="btn__text">Заказать доставку</span>
+                                </a>
 
-                                    <li class="menu__content-li" data-tabnumber="">
-                                        <div class="menu__content-item">
-                                            <img src="assets/img/icons/meat.png" alt="" class="menu__img">
-                                            <div class="menu__desc">
-                                                <span class="menu__text">Мясо</span>
-                                                <span class="menu__index">(7)</span>
-                                            </div>
-                                        </div>
-                                    </li>
-
-                                    <li class="menu__content-li" data-tabnumber="">
-                                        <div class="menu__content-item">
-                                            <img src="assets/img/icons/turkey.png" alt="" class="menu__img">
-                                            <div class="menu__desc">
-                                                <span class="menu__text">Индейка</span>
-                                                <span class="menu__index">(5)</span>
-                                            </div>
-                                        </div>
-                                    </li>
-
-                                    <li class="menu__content-li" data-tabnumber="">
-                                        <div class="menu__content-item">
-                                            <img src="assets/img/icons/turkey(1).png" alt="" class="menu__img">
-                                            <div class="menu__desc">
-                                                <span class="menu__text">Курица</span>
-                                                <span class="menu__index">(10)</span>
-                                            </div>
-                                        </div>
-                                    </li>
-
-                                    <li class="menu__content-li" data-tabnumber="">
-                                        <div class="menu__content-item">
-                                            <img src="assets/img/icons/salmon.png" alt="" class="menu__img">
-                                            <div class="menu__desc">
-                                                <span class="menu__text">Форель</span>
-                                                <span class="menu__index">(4)</span>
-                                            </div>
-                                        </div>
-                                    </li>
-
-                                    <li class="menu__content-li" data-tabnumber="">
-                                        <div class="menu__content-item">
-                                            <img src="assets/img/icons/fish.png" alt="" class="menu__img">
-                                            <div class="menu__desc">
-                                                <span class="menu__text">Лосось</span>
-                                                <span class="menu__index">(3)</span>
-                                            </div>
-                                        </div>
-                                    </li>
-
-                                    <li class="menu__content-li" data-tabnumber="">
-                                        <div class="menu__content-item">
-                                            <img src="assets/img/icons/fish(1).png" alt="" class="menu__img">
-                                            <div class="menu__desc">
-                                                <span class="menu__text">Сёмга</span>
-                                                <span class="menu__index">(7)</span>
-                                            </div>
-                                        </div>
-                                    </li>
-
-                                    <li class="menu__content-li" data-tabnumber="">
-                                        <div class="menu__content-item">
-                                            <img src="assets/img/icons/cheese.png" alt="" class="menu__img">
-                                            <div class="menu__desc">
-                                                <span class="menu__text">Сыр</span>
-                                                <span class="menu__index">(6)</span>
-                                            </div>
-                                        </div>
-                                    </li>
-
-                                    <li class="menu__content-li" data-tabnumber="">
-                                        <div class="menu__content-item">
-                                            <img src="assets/img/icons/turkey(2).png" alt="" class="menu__img">
-                                            <div class="menu__desc">
-                                                <span class="menu__text">Курица</span>
-                                                <span class="menu__index">(10)</span>
-                                            </div>
-                                        </div>
-                                    </li>
-
-                                </ul>
-                                <form class="menu__metro">
-                                    <div class="menu__select-wrap">
-                                        <select name="" id="" class="menu__select" placeholder="">
-                                            <option class="menu__select-option" value="">Выберите станцию метро</option>
-                                            <option class="menu__select-option" value="2">2</option>
-                                            <option class="menu__select-option" value="3">3</option>
-                                        </select>
-                                    </div>
-                                    <a href="#" class="btn menu__btn">
-                                        <img src="assets/img/icons/my_location_24px.png" alt="" class="btn__icon">
-                                        <span class="btn__text">Заказать доставку</span>
-                                    </a>
-
-                                </form>
-                            </div>
+                            </form>
                         </div>
-                    </section>
+                    </div>
+                </section>
 
-                    <section class="text-block">
-                        <div class="container text-block__container">
-                            <div class="text-block__header">Акция! Закажите осетинские пироги в Москве с доставкой!</div>
-                            <div class="text-block__text">Заказать осетинские пироги в Москве с доставкой точно ко времени можно с 8:00 до 21:00 по телефону +7 (495) 324-90-00 или круглосуточно на сайте через корзину. На ваш выбор мы предлагаем услуги 4 пекарен, в которых выпекаются осетинские пироги на любой вкус – сладкие, мясные, с капустой, сырные и другие. Заказ осетинских пирогов в Москве с доставкой на дом и в офис выполняется оперативно: приготовление занимает 25-45 минут, а доставка за 45 минут!</div>
-                        </div>
-                    </section>
+                <section class="text-block">
+                    <div class="container text-block__container">
+                        <div class="text-block__header">Акция! Закажите осетинские пироги в Москве с доставкой!</div>
+                        <div class="text-block__text">Заказать осетинские пироги в Москве с доставкой точно ко времени можно с 8:00 до 21:00 по телефону +7 (495) 324-90-00 или круглосуточно на сайте через корзину. На ваш выбор мы предлагаем услуги 4 пекарен, в которых выпекаются осетинские пироги на любой вкус – сладкие, мясные, с капустой, сырные и другие. Заказ осетинских пирогов в Москве с доставкой на дом и в офис выполняется оперативно: приготовление занимает 25-45 минут, а доставка за 45 минут!</div>
+                    </div>
+                </section>
 
+
+
+                <div class="container">
+                    <div class="catalog__header">Сытные пироги</div>
                 </div>
+                <section class="catalog">
+                    <div class="container catalog__container">
+                        <ul class="catalog__list">
+
+                            <li class="catalog__li">
+                                <div class="card js-card">
+                                    <div class="card__img-wrap">
+                                        <img src="assets/img/catalogItem0.png" alt="" class="card__img">
+
+                                        <div class="card__sale">хит продаж</div>
+
+                                        <button type="button" class="card__fav">
+                                            <img src="assets/img/icons/heart.png" alt="" class="card__fav-img">
+                                            <div class="tooltip card__fav-tooltip">
+                                                <div class="tooltip__content">
+                                                    В избранное
+                                                </div>
+                                            </div>
+
+                                        </button>
+                                    </div>
+                                    <div class="card__content">
+                                        <a href="#" class="card__header">«Цахараджын» со свекольными листьями, сыром и зеленью</a>
+                                        <div class="card__gram">
+                                            <ul class="card__gram-list">
+
+                                                <li class="card__gram-li">
+                                                    <label class="card__checkbox">
+                                                        <input type="radio" name="catalogItem0" class="card__input js-card-input" data-default-price="100" checked>
+                                                        <span class="card__checkbox-icon"></span>
+                                                        <span class="card__checkbox-desc">
+								<span class="card__text-red">800
+									г</span>
+                                                        /
+                                                        <span class="card__text-green">25
+									см</span>
+                                                        </span>
+                                                    </label>
+                                                </li>
+
+                                                <li class="card__gram-li">
+                                                    <label class="card__checkbox">
+                                                        <input type="radio" name="catalogItem0" class="card__input js-card-input" data-default-price="200">
+                                                        <span class="card__checkbox-icon"></span>
+                                                        <span class="card__checkbox-desc">
+								<span class="card__text-red">1000
+									г</span>
+                                                        /
+                                                        <span class="card__text-green">30
+									см</span>
+                                                        </span>
+                                                    </label>
+                                                </li>
+
+                                                <li class="card__gram-li">
+                                                    <label class="card__checkbox">
+                                                        <input type="radio" name="catalogItem0" class="card__input js-card-input" data-default-price="300">
+                                                        <span class="card__checkbox-icon"></span>
+                                                        <span class="card__checkbox-desc">
+								<span class="card__text-red">1200
+									г</span>
+                                                        /
+                                                        <span class="card__text-green">32
+									см</span>
+                                                        </span>
+                                                    </label>
+                                                </li>
+
+                                                <li class="card__gram-li">
+                                                    <label class="card__checkbox">
+                                                        <input type="radio" name="catalogItem0" class="card__input js-card-input" data-default-price="400">
+                                                        <span class="card__checkbox-icon"></span>
+                                                        <span class="card__checkbox-desc">
+								<span class="card__text-red">1400
+									г</span>
+                                                        /
+                                                        <span class="card__text-green">35
+									см</span>
+                                                        </span>
+                                                    </label>
+                                                </li>
+
+                                            </ul>
+                                        </div>
+                                        <div class="card__bottom">
+                                            <div class="counter card__counter js-counter">
+                                                <button type="button" class="counter__btn counter__btn--minus js-counter-prev"></button>
+                                                <div class="counter__number js-counter-number">1</div>
+                                                <button type="button" class="counter__btn counter__btn--plus js-counter-next"></button>
+                                            </div>
+
+                                            <div class="card__price">
+                                                <span class="card__price-number js-card-price">100</span>
+                                                <span class="card__price-value">руб.</span>
+                                            </div>
+                                            <button type="button" class="card__spices">
+                                                <img src="assets/img/icons/spices.png" alt="" class="card__spices-img">
+                                                <div class="tooltip card__spices-tooltip">
+                                                    <div class="tooltip__content">
+                                                        Добавить ингридиенты
+                                                    </div>
+                                                </div>
+
+                                            </button>
+                                        </div>
+                                        <button type="button" class="btn btn--green card__btn">
+
+                                            <span class="btn__text">В корзину</span>
+                                        </button>
+
+                                    </div>
+                                </div>
+
+                            </li>
+
+                            <li class="catalog__li">
+                                <div class="card js-card">
+                                    <div class="card__img-wrap">
+                                        <img src="assets/img/catalogItem0.png" alt="" class="card__img">
+
+                                        <button type="button" class="card__fav">
+                                            <img src="assets/img/icons/heart.png" alt="" class="card__fav-img">
+                                            <div class="tooltip card__fav-tooltip">
+                                                <div class="tooltip__content">
+                                                    В избранное
+                                                </div>
+                                            </div>
+
+                                        </button>
+                                    </div>
+                                    <div class="card__content">
+                                        <a href="#" class="card__header">«Цахараджын» со свекольными листьями, сыром и зеленью</a>
+                                        <div class="card__gram">
+                                            <ul class="card__gram-list">
+
+                                                <li class="card__gram-li">
+                                                    <label class="card__checkbox">
+                                                        <input type="radio" name="catalogItem1" class="card__input js-card-input" data-default-price="100" checked>
+                                                        <span class="card__checkbox-icon"></span>
+                                                        <span class="card__checkbox-desc">
+								<span class="card__text-red">800
+									г</span>
+                                                        /
+                                                        <span class="card__text-green">25
+									см</span>
+                                                        </span>
+                                                    </label>
+                                                </li>
+
+                                                <li class="card__gram-li">
+                                                    <label class="card__checkbox">
+                                                        <input type="radio" name="catalogItem1" class="card__input js-card-input" data-default-price="200">
+                                                        <span class="card__checkbox-icon"></span>
+                                                        <span class="card__checkbox-desc">
+								<span class="card__text-red">1000
+									г</span>
+                                                        /
+                                                        <span class="card__text-green">30
+									см</span>
+                                                        </span>
+                                                    </label>
+                                                </li>
+
+                                                <li class="card__gram-li">
+                                                    <label class="card__checkbox">
+                                                        <input type="radio" name="catalogItem1" class="card__input js-card-input" data-default-price="300">
+                                                        <span class="card__checkbox-icon"></span>
+                                                        <span class="card__checkbox-desc">
+								<span class="card__text-red">1200
+									г</span>
+                                                        /
+                                                        <span class="card__text-green">32
+									см</span>
+                                                        </span>
+                                                    </label>
+                                                </li>
+
+                                                <li class="card__gram-li">
+                                                    <label class="card__checkbox">
+                                                        <input type="radio" name="catalogItem1" class="card__input js-card-input" data-default-price="400">
+                                                        <span class="card__checkbox-icon"></span>
+                                                        <span class="card__checkbox-desc">
+								<span class="card__text-red">1400
+									г</span>
+                                                        /
+                                                        <span class="card__text-green">35
+									см</span>
+                                                        </span>
+                                                    </label>
+                                                </li>
+
+                                            </ul>
+                                        </div>
+                                        <div class="card__bottom">
+                                            <div class="counter card__counter js-counter">
+                                                <button type="button" class="counter__btn counter__btn--minus js-counter-prev"></button>
+                                                <div class="counter__number js-counter-number">1</div>
+                                                <button type="button" class="counter__btn counter__btn--plus js-counter-next"></button>
+                                            </div>
+
+                                            <div class="card__price">
+                                                <span class="card__price-number js-card-price">100</span>
+                                                <span class="card__price-value">руб.</span>
+                                            </div>
+                                            <button type="button" class="card__spices">
+                                                <img src="assets/img/icons/spices.png" alt="" class="card__spices-img">
+                                                <div class="tooltip card__spices-tooltip">
+                                                    <div class="tooltip__content">
+                                                        Добавить ингридиенты
+                                                    </div>
+                                                </div>
+
+                                            </button>
+                                        </div>
+                                        <button type="button" class="btn btn--green card__btn">
+
+                                            <span class="btn__text">В корзину</span>
+                                        </button>
+
+                                    </div>
+                                </div>
+
+                            </li>
+
+                            <li class="catalog__li">
+                                <div class="card js-card">
+                                    <div class="card__img-wrap">
+                                        <img src="assets/img/catalogItem0.png" alt="" class="card__img">
+
+                                        <div class="card__sale">хит продаж</div>
+
+                                        <button type="button" class="card__fav">
+                                            <img src="assets/img/icons/heart.png" alt="" class="card__fav-img">
+                                            <div class="tooltip card__fav-tooltip">
+                                                <div class="tooltip__content">
+                                                    В избранное
+                                                </div>
+                                            </div>
+
+                                        </button>
+                                    </div>
+                                    <div class="card__content">
+                                        <a href="#" class="card__header">«Цахараджын» со свекольными листьями, сыром и зеленью</a>
+                                        <div class="card__gram">
+                                            <ul class="card__gram-list">
+
+                                                <li class="card__gram-li">
+                                                    <label class="card__checkbox">
+                                                        <input type="radio" name="catalogItem2" class="card__input js-card-input" data-default-price="100" checked>
+                                                        <span class="card__checkbox-icon"></span>
+                                                        <span class="card__checkbox-desc">
+								<span class="card__text-red">800
+									г</span>
+                                                        /
+                                                        <span class="card__text-green">25
+									см</span>
+                                                        </span>
+                                                    </label>
+                                                </li>
+
+                                                <li class="card__gram-li">
+                                                    <label class="card__checkbox">
+                                                        <input type="radio" name="catalogItem2" class="card__input js-card-input" data-default-price="200">
+                                                        <span class="card__checkbox-icon"></span>
+                                                        <span class="card__checkbox-desc">
+								<span class="card__text-red">1000
+									г</span>
+                                                        /
+                                                        <span class="card__text-green">30
+									см</span>
+                                                        </span>
+                                                    </label>
+                                                </li>
+
+                                                <li class="card__gram-li">
+                                                    <label class="card__checkbox">
+                                                        <input type="radio" name="catalogItem2" class="card__input js-card-input" data-default-price="300">
+                                                        <span class="card__checkbox-icon"></span>
+                                                        <span class="card__checkbox-desc">
+								<span class="card__text-red">1200
+									г</span>
+                                                        /
+                                                        <span class="card__text-green">32
+									см</span>
+                                                        </span>
+                                                    </label>
+                                                </li>
+
+                                                <li class="card__gram-li">
+                                                    <label class="card__checkbox">
+                                                        <input type="radio" name="catalogItem2" class="card__input js-card-input" data-default-price="400">
+                                                        <span class="card__checkbox-icon"></span>
+                                                        <span class="card__checkbox-desc">
+								<span class="card__text-red">1400
+									г</span>
+                                                        /
+                                                        <span class="card__text-green">35
+									см</span>
+                                                        </span>
+                                                    </label>
+                                                </li>
+
+                                            </ul>
+                                        </div>
+                                        <div class="card__bottom">
+                                            <div class="counter card__counter js-counter">
+                                                <button type="button" class="counter__btn counter__btn--minus js-counter-prev"></button>
+                                                <div class="counter__number js-counter-number">1</div>
+                                                <button type="button" class="counter__btn counter__btn--plus js-counter-next"></button>
+                                            </div>
+
+                                            <div class="card__price">
+                                                <span class="card__price-number js-card-price">100</span>
+                                                <span class="card__price-value">руб.</span>
+                                            </div>
+                                            <button type="button" class="card__spices">
+                                                <img src="assets/img/icons/spices.png" alt="" class="card__spices-img">
+                                                <div class="tooltip card__spices-tooltip">
+                                                    <div class="tooltip__content">
+                                                        Добавить ингридиенты
+                                                    </div>
+                                                </div>
+
+                                            </button>
+                                        </div>
+                                        <button type="button" class="btn btn--green card__btn">
+
+                                            <span class="btn__text">В корзину</span>
+                                        </button>
+
+                                    </div>
+                                </div>
+
+                            </li>
+
+                            <li class="catalog__li">
+                                <div class="card js-card">
+                                    <div class="card__img-wrap">
+                                        <img src="assets/img/catalogItem0.png" alt="" class="card__img">
+
+                                        <button type="button" class="card__fav">
+                                            <img src="assets/img/icons/heart.png" alt="" class="card__fav-img">
+                                            <div class="tooltip card__fav-tooltip">
+                                                <div class="tooltip__content">
+                                                    В избранное
+                                                </div>
+                                            </div>
+
+                                        </button>
+                                    </div>
+                                    <div class="card__content">
+                                        <a href="#" class="card__header">«Цахараджын» со свекольными листьями, сыром и зеленью</a>
+                                        <div class="card__gram">
+                                            <ul class="card__gram-list">
+
+                                                <li class="card__gram-li">
+                                                    <label class="card__checkbox">
+                                                        <input type="radio" name="catalogItem3" class="card__input js-card-input" data-default-price="100" checked>
+                                                        <span class="card__checkbox-icon"></span>
+                                                        <span class="card__checkbox-desc">
+								<span class="card__text-red">800
+									г</span>
+                                                        /
+                                                        <span class="card__text-green">25
+									см</span>
+                                                        </span>
+                                                    </label>
+                                                </li>
+
+                                                <li class="card__gram-li">
+                                                    <label class="card__checkbox">
+                                                        <input type="radio" name="catalogItem3" class="card__input js-card-input" data-default-price="200">
+                                                        <span class="card__checkbox-icon"></span>
+                                                        <span class="card__checkbox-desc">
+								<span class="card__text-red">1000
+									г</span>
+                                                        /
+                                                        <span class="card__text-green">30
+									см</span>
+                                                        </span>
+                                                    </label>
+                                                </li>
+
+                                                <li class="card__gram-li">
+                                                    <label class="card__checkbox">
+                                                        <input type="radio" name="catalogItem3" class="card__input js-card-input" data-default-price="300">
+                                                        <span class="card__checkbox-icon"></span>
+                                                        <span class="card__checkbox-desc">
+								<span class="card__text-red">1200
+									г</span>
+                                                        /
+                                                        <span class="card__text-green">32
+									см</span>
+                                                        </span>
+                                                    </label>
+                                                </li>
+
+                                                <li class="card__gram-li">
+                                                    <label class="card__checkbox">
+                                                        <input type="radio" name="catalogItem3" class="card__input js-card-input" data-default-price="400">
+                                                        <span class="card__checkbox-icon"></span>
+                                                        <span class="card__checkbox-desc">
+								<span class="card__text-red">1400
+									г</span>
+                                                        /
+                                                        <span class="card__text-green">35
+									см</span>
+                                                        </span>
+                                                    </label>
+                                                </li>
+
+                                            </ul>
+                                        </div>
+                                        <div class="card__bottom">
+                                            <div class="counter card__counter js-counter">
+                                                <button type="button" class="counter__btn counter__btn--minus js-counter-prev"></button>
+                                                <div class="counter__number js-counter-number">1</div>
+                                                <button type="button" class="counter__btn counter__btn--plus js-counter-next"></button>
+                                            </div>
+
+                                            <div class="card__price">
+                                                <span class="card__price-number js-card-price">100</span>
+                                                <span class="card__price-value">руб.</span>
+                                            </div>
+                                            <button type="button" class="card__spices">
+                                                <img src="assets/img/icons/spices.png" alt="" class="card__spices-img">
+                                                <div class="tooltip card__spices-tooltip">
+                                                    <div class="tooltip__content">
+                                                        Добавить ингридиенты
+                                                    </div>
+                                                </div>
+
+                                            </button>
+                                        </div>
+                                        <button type="button" class="btn btn--green card__btn">
+
+                                            <span class="btn__text">В корзину</span>
+                                        </button>
+
+                                    </div>
+                                </div>
+
+                            </li>
+
+                            <li class="catalog__li">
+                                <div class="card js-card">
+                                    <div class="card__img-wrap">
+                                        <img src="assets/img/catalogItem0.png" alt="" class="card__img">
+
+                                        <button type="button" class="card__fav">
+                                            <img src="assets/img/icons/heart.png" alt="" class="card__fav-img">
+                                            <div class="tooltip card__fav-tooltip">
+                                                <div class="tooltip__content">
+                                                    В избранное
+                                                </div>
+                                            </div>
+
+                                        </button>
+                                    </div>
+                                    <div class="card__content">
+                                        <a href="#" class="card__header">«Цахараджын» со свекольными листьями, сыром и зеленью</a>
+                                        <div class="card__gram">
+                                            <ul class="card__gram-list">
+
+                                                <li class="card__gram-li">
+                                                    <label class="card__checkbox">
+                                                        <input type="radio" name="catalogItem4" class="card__input js-card-input" data-default-price="100" checked>
+                                                        <span class="card__checkbox-icon"></span>
+                                                        <span class="card__checkbox-desc">
+								<span class="card__text-red">800
+									г</span>
+                                                        /
+                                                        <span class="card__text-green">25
+									см</span>
+                                                        </span>
+                                                    </label>
+                                                </li>
+
+                                                <li class="card__gram-li">
+                                                    <label class="card__checkbox">
+                                                        <input type="radio" name="catalogItem4" class="card__input js-card-input" data-default-price="200">
+                                                        <span class="card__checkbox-icon"></span>
+                                                        <span class="card__checkbox-desc">
+								<span class="card__text-red">1000
+									г</span>
+                                                        /
+                                                        <span class="card__text-green">30
+									см</span>
+                                                        </span>
+                                                    </label>
+                                                </li>
+
+                                                <li class="card__gram-li">
+                                                    <label class="card__checkbox">
+                                                        <input type="radio" name="catalogItem4" class="card__input js-card-input" data-default-price="300">
+                                                        <span class="card__checkbox-icon"></span>
+                                                        <span class="card__checkbox-desc">
+								<span class="card__text-red">1200
+									г</span>
+                                                        /
+                                                        <span class="card__text-green">32
+									см</span>
+                                                        </span>
+                                                    </label>
+                                                </li>
+
+                                                <li class="card__gram-li">
+                                                    <label class="card__checkbox">
+                                                        <input type="radio" name="catalogItem4" class="card__input js-card-input" data-default-price="400">
+                                                        <span class="card__checkbox-icon"></span>
+                                                        <span class="card__checkbox-desc">
+								<span class="card__text-red">1400
+									г</span>
+                                                        /
+                                                        <span class="card__text-green">35
+									см</span>
+                                                        </span>
+                                                    </label>
+                                                </li>
+
+                                            </ul>
+                                        </div>
+                                        <div class="card__bottom">
+                                            <div class="counter card__counter js-counter">
+                                                <button type="button" class="counter__btn counter__btn--minus js-counter-prev"></button>
+                                                <div class="counter__number js-counter-number">1</div>
+                                                <button type="button" class="counter__btn counter__btn--plus js-counter-next"></button>
+                                            </div>
+
+                                            <div class="card__price">
+                                                <span class="card__price-number js-card-price">100</span>
+                                                <span class="card__price-value">руб.</span>
+                                            </div>
+                                            <button type="button" class="card__spices">
+                                                <img src="assets/img/icons/spices.png" alt="" class="card__spices-img">
+                                                <div class="tooltip card__spices-tooltip">
+                                                    <div class="tooltip__content">
+                                                        Добавить ингридиенты
+                                                    </div>
+                                                </div>
+
+                                            </button>
+                                        </div>
+                                        <button type="button" class="btn btn--green card__btn">
+
+                                            <span class="btn__text">В корзину</span>
+                                        </button>
+
+                                    </div>
+                                </div>
+
+                            </li>
+
+                            <li class="catalog__li">
+                                <div class="card js-card">
+                                    <div class="card__img-wrap">
+                                        <img src="assets/img/catalogItem0.png" alt="" class="card__img">
+
+                                        <div class="card__sale">хит продаж</div>
+
+                                        <button type="button" class="card__fav">
+                                            <img src="assets/img/icons/heart.png" alt="" class="card__fav-img">
+                                            <div class="tooltip card__fav-tooltip">
+                                                <div class="tooltip__content">
+                                                    В избранное
+                                                </div>
+                                            </div>
+
+                                        </button>
+                                    </div>
+                                    <div class="card__content">
+                                        <a href="#" class="card__header">«Цахараджын» со свекольными листьями, сыром и зеленью</a>
+                                        <div class="card__gram">
+                                            <ul class="card__gram-list">
+
+                                                <li class="card__gram-li">
+                                                    <label class="card__checkbox">
+                                                        <input type="radio" name="catalogItem5" class="card__input js-card-input" data-default-price="100" checked>
+                                                        <span class="card__checkbox-icon"></span>
+                                                        <span class="card__checkbox-desc">
+								<span class="card__text-red">800
+									г</span>
+                                                        /
+                                                        <span class="card__text-green">25
+									см</span>
+                                                        </span>
+                                                    </label>
+                                                </li>
+
+                                                <li class="card__gram-li">
+                                                    <label class="card__checkbox">
+                                                        <input type="radio" name="catalogItem5" class="card__input js-card-input" data-default-price="200">
+                                                        <span class="card__checkbox-icon"></span>
+                                                        <span class="card__checkbox-desc">
+								<span class="card__text-red">1000
+									г</span>
+                                                        /
+                                                        <span class="card__text-green">30
+									см</span>
+                                                        </span>
+                                                    </label>
+                                                </li>
+
+                                                <li class="card__gram-li">
+                                                    <label class="card__checkbox">
+                                                        <input type="radio" name="catalogItem5" class="card__input js-card-input" data-default-price="300">
+                                                        <span class="card__checkbox-icon"></span>
+                                                        <span class="card__checkbox-desc">
+								<span class="card__text-red">1200
+									г</span>
+                                                        /
+                                                        <span class="card__text-green">32
+									см</span>
+                                                        </span>
+                                                    </label>
+                                                </li>
+
+                                                <li class="card__gram-li">
+                                                    <label class="card__checkbox">
+                                                        <input type="radio" name="catalogItem5" class="card__input js-card-input" data-default-price="400">
+                                                        <span class="card__checkbox-icon"></span>
+                                                        <span class="card__checkbox-desc">
+								<span class="card__text-red">1400
+									г</span>
+                                                        /
+                                                        <span class="card__text-green">35
+									см</span>
+                                                        </span>
+                                                    </label>
+                                                </li>
+
+                                            </ul>
+                                        </div>
+                                        <div class="card__bottom">
+                                            <div class="counter card__counter js-counter">
+                                                <button type="button" class="counter__btn counter__btn--minus js-counter-prev"></button>
+                                                <div class="counter__number js-counter-number">1</div>
+                                                <button type="button" class="counter__btn counter__btn--plus js-counter-next"></button>
+                                            </div>
+
+                                            <div class="card__price">
+                                                <span class="card__price-number js-card-price">100</span>
+                                                <span class="card__price-value">руб.</span>
+                                            </div>
+                                            <button type="button" class="card__spices">
+                                                <img src="assets/img/icons/spices.png" alt="" class="card__spices-img">
+                                                <div class="tooltip card__spices-tooltip">
+                                                    <div class="tooltip__content">
+                                                        Добавить ингридиенты
+                                                    </div>
+                                                </div>
+
+                                            </button>
+                                        </div>
+                                        <button type="button" class="btn btn--green card__btn">
+
+                                            <span class="btn__text">В корзину</span>
+                                        </button>
+
+                                    </div>
+                                </div>
+
+                            </li>
+
+                            <li class="catalog__li">
+                                <div class="card js-card">
+                                    <div class="card__img-wrap">
+                                        <img src="assets/img/catalogItem0.png" alt="" class="card__img">
+
+                                        <button type="button" class="card__fav">
+                                            <img src="assets/img/icons/heart.png" alt="" class="card__fav-img">
+                                            <div class="tooltip card__fav-tooltip">
+                                                <div class="tooltip__content">
+                                                    В избранное
+                                                </div>
+                                            </div>
+
+                                        </button>
+                                    </div>
+                                    <div class="card__content">
+                                        <a href="#" class="card__header">«Цахараджын» со свекольными листьями, сыром и зеленью</a>
+                                        <div class="card__gram">
+                                            <ul class="card__gram-list">
+
+                                                <li class="card__gram-li">
+                                                    <label class="card__checkbox">
+                                                        <input type="radio" name="catalogItem6" class="card__input js-card-input" data-default-price="100" checked>
+                                                        <span class="card__checkbox-icon"></span>
+                                                        <span class="card__checkbox-desc">
+								<span class="card__text-red">800
+									г</span>
+                                                        /
+                                                        <span class="card__text-green">25
+									см</span>
+                                                        </span>
+                                                    </label>
+                                                </li>
+
+                                                <li class="card__gram-li">
+                                                    <label class="card__checkbox">
+                                                        <input type="radio" name="catalogItem6" class="card__input js-card-input" data-default-price="200">
+                                                        <span class="card__checkbox-icon"></span>
+                                                        <span class="card__checkbox-desc">
+								<span class="card__text-red">1000
+									г</span>
+                                                        /
+                                                        <span class="card__text-green">30
+									см</span>
+                                                        </span>
+                                                    </label>
+                                                </li>
+
+                                                <li class="card__gram-li">
+                                                    <label class="card__checkbox">
+                                                        <input type="radio" name="catalogItem6" class="card__input js-card-input" data-default-price="300">
+                                                        <span class="card__checkbox-icon"></span>
+                                                        <span class="card__checkbox-desc">
+								<span class="card__text-red">1200
+									г</span>
+                                                        /
+                                                        <span class="card__text-green">32
+									см</span>
+                                                        </span>
+                                                    </label>
+                                                </li>
+
+                                                <li class="card__gram-li">
+                                                    <label class="card__checkbox">
+                                                        <input type="radio" name="catalogItem6" class="card__input js-card-input" data-default-price="400">
+                                                        <span class="card__checkbox-icon"></span>
+                                                        <span class="card__checkbox-desc">
+								<span class="card__text-red">1400
+									г</span>
+                                                        /
+                                                        <span class="card__text-green">35
+									см</span>
+                                                        </span>
+                                                    </label>
+                                                </li>
+
+                                            </ul>
+                                        </div>
+                                        <div class="card__bottom">
+                                            <div class="counter card__counter js-counter">
+                                                <button type="button" class="counter__btn counter__btn--minus js-counter-prev"></button>
+                                                <div class="counter__number js-counter-number">1</div>
+                                                <button type="button" class="counter__btn counter__btn--plus js-counter-next"></button>
+                                            </div>
+
+                                            <div class="card__price">
+                                                <span class="card__price-number js-card-price">100</span>
+                                                <span class="card__price-value">руб.</span>
+                                            </div>
+                                            <button type="button" class="card__spices">
+                                                <img src="assets/img/icons/spices.png" alt="" class="card__spices-img">
+                                                <div class="tooltip card__spices-tooltip">
+                                                    <div class="tooltip__content">
+                                                        Добавить ингридиенты
+                                                    </div>
+                                                </div>
+
+                                            </button>
+                                        </div>
+                                        <button type="button" class="btn btn--green card__btn">
+
+                                            <span class="btn__text">В корзину</span>
+                                        </button>
+
+                                    </div>
+                                </div>
+
+                            </li>
+
+                            <li class="catalog__li">
+                                <div class="card js-card">
+                                    <div class="card__img-wrap">
+                                        <img src="assets/img/catalogItem0.png" alt="" class="card__img">
+
+                                        <div class="card__sale">хит продаж</div>
+
+                                        <button type="button" class="card__fav">
+                                            <img src="assets/img/icons/heart.png" alt="" class="card__fav-img">
+                                            <div class="tooltip card__fav-tooltip">
+                                                <div class="tooltip__content">
+                                                    В избранное
+                                                </div>
+                                            </div>
+
+                                        </button>
+                                    </div>
+                                    <div class="card__content">
+                                        <a href="#" class="card__header">«Цахараджын» со свекольными листьями, сыром и зеленью</a>
+                                        <div class="card__gram">
+                                            <ul class="card__gram-list">
+
+                                                <li class="card__gram-li">
+                                                    <label class="card__checkbox">
+                                                        <input type="radio" name="catalogItem7" class="card__input js-card-input" data-default-price="100" checked>
+                                                        <span class="card__checkbox-icon"></span>
+                                                        <span class="card__checkbox-desc">
+								<span class="card__text-red">800
+									г</span>
+                                                        /
+                                                        <span class="card__text-green">25
+									см</span>
+                                                        </span>
+                                                    </label>
+                                                </li>
+
+                                                <li class="card__gram-li">
+                                                    <label class="card__checkbox">
+                                                        <input type="radio" name="catalogItem7" class="card__input js-card-input" data-default-price="200">
+                                                        <span class="card__checkbox-icon"></span>
+                                                        <span class="card__checkbox-desc">
+								<span class="card__text-red">1000
+									г</span>
+                                                        /
+                                                        <span class="card__text-green">30
+									см</span>
+                                                        </span>
+                                                    </label>
+                                                </li>
+
+                                                <li class="card__gram-li">
+                                                    <label class="card__checkbox">
+                                                        <input type="radio" name="catalogItem7" class="card__input js-card-input" data-default-price="300">
+                                                        <span class="card__checkbox-icon"></span>
+                                                        <span class="card__checkbox-desc">
+								<span class="card__text-red">1200
+									г</span>
+                                                        /
+                                                        <span class="card__text-green">32
+									см</span>
+                                                        </span>
+                                                    </label>
+                                                </li>
+
+                                                <li class="card__gram-li">
+                                                    <label class="card__checkbox">
+                                                        <input type="radio" name="catalogItem7" class="card__input js-card-input" data-default-price="400">
+                                                        <span class="card__checkbox-icon"></span>
+                                                        <span class="card__checkbox-desc">
+								<span class="card__text-red">1400
+									г</span>
+                                                        /
+                                                        <span class="card__text-green">35
+									см</span>
+                                                        </span>
+                                                    </label>
+                                                </li>
+
+                                            </ul>
+                                        </div>
+                                        <div class="card__bottom">
+                                            <div class="counter card__counter js-counter">
+                                                <button type="button" class="counter__btn counter__btn--minus js-counter-prev"></button>
+                                                <div class="counter__number js-counter-number">1</div>
+                                                <button type="button" class="counter__btn counter__btn--plus js-counter-next"></button>
+                                            </div>
+
+                                            <div class="card__price">
+                                                <span class="card__price-number js-card-price">100</span>
+                                                <span class="card__price-value">руб.</span>
+                                            </div>
+                                            <button type="button" class="card__spices">
+                                                <img src="assets/img/icons/spices.png" alt="" class="card__spices-img">
+                                                <div class="tooltip card__spices-tooltip">
+                                                    <div class="tooltip__content">
+                                                        Добавить ингридиенты
+                                                    </div>
+                                                </div>
+
+                                            </button>
+                                        </div>
+                                        <button type="button" class="btn btn--green card__btn">
+
+                                            <span class="btn__text">В корзину</span>
+                                        </button>
+
+                                    </div>
+                                </div>
+
+                            </li>
+
+                            <li class="catalog__li">
+                                <div class="card js-card">
+                                    <div class="card__img-wrap">
+                                        <img src="assets/img/catalogItem0.png" alt="" class="card__img">
+
+                                        <button type="button" class="card__fav">
+                                            <img src="assets/img/icons/heart.png" alt="" class="card__fav-img">
+                                            <div class="tooltip card__fav-tooltip">
+                                                <div class="tooltip__content">
+                                                    В избранное
+                                                </div>
+                                            </div>
+
+                                        </button>
+                                    </div>
+                                    <div class="card__content">
+                                        <a href="#" class="card__header">«Цахараджын» со свекольными листьями, сыром и зеленью</a>
+                                        <div class="card__gram">
+                                            <ul class="card__gram-list">
+
+                                                <li class="card__gram-li">
+                                                    <label class="card__checkbox">
+                                                        <input type="radio" name="catalogItem8" class="card__input js-card-input" data-default-price="100" checked>
+                                                        <span class="card__checkbox-icon"></span>
+                                                        <span class="card__checkbox-desc">
+								<span class="card__text-red">800
+									г</span>
+                                                        /
+                                                        <span class="card__text-green">25
+									см</span>
+                                                        </span>
+                                                    </label>
+                                                </li>
+
+                                                <li class="card__gram-li">
+                                                    <label class="card__checkbox">
+                                                        <input type="radio" name="catalogItem8" class="card__input js-card-input" data-default-price="200">
+                                                        <span class="card__checkbox-icon"></span>
+                                                        <span class="card__checkbox-desc">
+								<span class="card__text-red">1000
+									г</span>
+                                                        /
+                                                        <span class="card__text-green">30
+									см</span>
+                                                        </span>
+                                                    </label>
+                                                </li>
+
+                                                <li class="card__gram-li">
+                                                    <label class="card__checkbox">
+                                                        <input type="radio" name="catalogItem8" class="card__input js-card-input" data-default-price="300">
+                                                        <span class="card__checkbox-icon"></span>
+                                                        <span class="card__checkbox-desc">
+								<span class="card__text-red">1200
+									г</span>
+                                                        /
+                                                        <span class="card__text-green">32
+									см</span>
+                                                        </span>
+                                                    </label>
+                                                </li>
+
+                                                <li class="card__gram-li">
+                                                    <label class="card__checkbox">
+                                                        <input type="radio" name="catalogItem8" class="card__input js-card-input" data-default-price="400">
+                                                        <span class="card__checkbox-icon"></span>
+                                                        <span class="card__checkbox-desc">
+								<span class="card__text-red">1400
+									г</span>
+                                                        /
+                                                        <span class="card__text-green">35
+									см</span>
+                                                        </span>
+                                                    </label>
+                                                </li>
+
+                                            </ul>
+                                        </div>
+                                        <div class="card__bottom">
+                                            <div class="counter card__counter js-counter">
+                                                <button type="button" class="counter__btn counter__btn--minus js-counter-prev"></button>
+                                                <div class="counter__number js-counter-number">1</div>
+                                                <button type="button" class="counter__btn counter__btn--plus js-counter-next"></button>
+                                            </div>
+
+                                            <div class="card__price">
+                                                <span class="card__price-number js-card-price">100</span>
+                                                <span class="card__price-value">руб.</span>
+                                            </div>
+                                            <button type="button" class="card__spices">
+                                                <img src="assets/img/icons/spices.png" alt="" class="card__spices-img">
+                                                <div class="tooltip card__spices-tooltip">
+                                                    <div class="tooltip__content">
+                                                        Добавить ингридиенты
+                                                    </div>
+                                                </div>
+
+                                            </button>
+                                        </div>
+                                        <button type="button" class="btn btn--green card__btn">
+
+                                            <span class="btn__text">В корзину</span>
+                                        </button>
+
+                                    </div>
+                                </div>
+
+                            </li>
+
+                            <li class="catalog__li">
+                                <div class="card js-card">
+                                    <div class="card__img-wrap">
+                                        <img src="assets/img/catalogItem0.png" alt="" class="card__img">
+
+                                        <button type="button" class="card__fav">
+                                            <img src="assets/img/icons/heart.png" alt="" class="card__fav-img">
+                                            <div class="tooltip card__fav-tooltip">
+                                                <div class="tooltip__content">
+                                                    В избранное
+                                                </div>
+                                            </div>
+
+                                        </button>
+                                    </div>
+                                    <div class="card__content">
+                                        <a href="#" class="card__header">«Цахараджын» со свекольными листьями, сыром и зеленью</a>
+                                        <div class="card__gram">
+                                            <ul class="card__gram-list">
+
+                                                <li class="card__gram-li">
+                                                    <label class="card__checkbox">
+                                                        <input type="radio" name="catalogItem9" class="card__input js-card-input" data-default-price="100" checked>
+                                                        <span class="card__checkbox-icon"></span>
+                                                        <span class="card__checkbox-desc">
+								<span class="card__text-red">800
+									г</span>
+                                                        /
+                                                        <span class="card__text-green">25
+									см</span>
+                                                        </span>
+                                                    </label>
+                                                </li>
+
+                                                <li class="card__gram-li">
+                                                    <label class="card__checkbox">
+                                                        <input type="radio" name="catalogItem9" class="card__input js-card-input" data-default-price="200">
+                                                        <span class="card__checkbox-icon"></span>
+                                                        <span class="card__checkbox-desc">
+								<span class="card__text-red">1000
+									г</span>
+                                                        /
+                                                        <span class="card__text-green">30
+									см</span>
+                                                        </span>
+                                                    </label>
+                                                </li>
+
+                                                <li class="card__gram-li">
+                                                    <label class="card__checkbox">
+                                                        <input type="radio" name="catalogItem9" class="card__input js-card-input" data-default-price="300">
+                                                        <span class="card__checkbox-icon"></span>
+                                                        <span class="card__checkbox-desc">
+								<span class="card__text-red">1200
+									г</span>
+                                                        /
+                                                        <span class="card__text-green">32
+									см</span>
+                                                        </span>
+                                                    </label>
+                                                </li>
+
+                                                <li class="card__gram-li">
+                                                    <label class="card__checkbox">
+                                                        <input type="radio" name="catalogItem9" class="card__input js-card-input" data-default-price="400">
+                                                        <span class="card__checkbox-icon"></span>
+                                                        <span class="card__checkbox-desc">
+								<span class="card__text-red">1400
+									г</span>
+                                                        /
+                                                        <span class="card__text-green">35
+									см</span>
+                                                        </span>
+                                                    </label>
+                                                </li>
+
+                                            </ul>
+                                        </div>
+                                        <div class="card__bottom">
+                                            <div class="counter card__counter js-counter">
+                                                <button type="button" class="counter__btn counter__btn--minus js-counter-prev"></button>
+                                                <div class="counter__number js-counter-number">1</div>
+                                                <button type="button" class="counter__btn counter__btn--plus js-counter-next"></button>
+                                            </div>
+
+                                            <div class="card__price">
+                                                <span class="card__price-number js-card-price">100</span>
+                                                <span class="card__price-value">руб.</span>
+                                            </div>
+                                            <button type="button" class="card__spices">
+                                                <img src="assets/img/icons/spices.png" alt="" class="card__spices-img">
+                                                <div class="tooltip card__spices-tooltip">
+                                                    <div class="tooltip__content">
+                                                        Добавить ингридиенты
+                                                    </div>
+                                                </div>
+
+                                            </button>
+                                        </div>
+                                        <button type="button" class="btn btn--green card__btn">
+
+                                            <span class="btn__text">В корзину</span>
+                                        </button>
+
+                                    </div>
+                                </div>
+
+                            </li>
+
+                            <li class="catalog__li">
+                                <div class="card js-card">
+                                    <div class="card__img-wrap">
+                                        <img src="assets/img/catalogItem0.png" alt="" class="card__img">
+
+                                        <div class="card__sale">хит продаж</div>
+
+                                        <button type="button" class="card__fav">
+                                            <img src="assets/img/icons/heart.png" alt="" class="card__fav-img">
+                                            <div class="tooltip card__fav-tooltip">
+                                                <div class="tooltip__content">
+                                                    В избранное
+                                                </div>
+                                            </div>
+
+                                        </button>
+                                    </div>
+                                    <div class="card__content">
+                                        <a href="#" class="card__header">«Цахараджын» со свекольными листьями, сыром и зеленью</a>
+                                        <div class="card__gram">
+                                            <ul class="card__gram-list">
+
+                                                <li class="card__gram-li">
+                                                    <label class="card__checkbox">
+                                                        <input type="radio" name="catalogItem10" class="card__input js-card-input" data-default-price="100" checked>
+                                                        <span class="card__checkbox-icon"></span>
+                                                        <span class="card__checkbox-desc">
+								<span class="card__text-red">800
+									г</span>
+                                                        /
+                                                        <span class="card__text-green">25
+									см</span>
+                                                        </span>
+                                                    </label>
+                                                </li>
+
+                                                <li class="card__gram-li">
+                                                    <label class="card__checkbox">
+                                                        <input type="radio" name="catalogItem10" class="card__input js-card-input" data-default-price="200">
+                                                        <span class="card__checkbox-icon"></span>
+                                                        <span class="card__checkbox-desc">
+								<span class="card__text-red">1000
+									г</span>
+                                                        /
+                                                        <span class="card__text-green">30
+									см</span>
+                                                        </span>
+                                                    </label>
+                                                </li>
+
+                                                <li class="card__gram-li">
+                                                    <label class="card__checkbox">
+                                                        <input type="radio" name="catalogItem10" class="card__input js-card-input" data-default-price="300">
+                                                        <span class="card__checkbox-icon"></span>
+                                                        <span class="card__checkbox-desc">
+								<span class="card__text-red">1200
+									г</span>
+                                                        /
+                                                        <span class="card__text-green">32
+									см</span>
+                                                        </span>
+                                                    </label>
+                                                </li>
+
+                                                <li class="card__gram-li">
+                                                    <label class="card__checkbox">
+                                                        <input type="radio" name="catalogItem10" class="card__input js-card-input" data-default-price="400">
+                                                        <span class="card__checkbox-icon"></span>
+                                                        <span class="card__checkbox-desc">
+								<span class="card__text-red">1400
+									г</span>
+                                                        /
+                                                        <span class="card__text-green">35
+									см</span>
+                                                        </span>
+                                                    </label>
+                                                </li>
+
+                                            </ul>
+                                        </div>
+                                        <div class="card__bottom">
+                                            <div class="counter card__counter js-counter">
+                                                <button type="button" class="counter__btn counter__btn--minus js-counter-prev"></button>
+                                                <div class="counter__number js-counter-number">1</div>
+                                                <button type="button" class="counter__btn counter__btn--plus js-counter-next"></button>
+                                            </div>
+
+                                            <div class="card__price">
+                                                <span class="card__price-number js-card-price">100</span>
+                                                <span class="card__price-value">руб.</span>
+                                            </div>
+                                            <button type="button" class="card__spices">
+                                                <img src="assets/img/icons/spices.png" alt="" class="card__spices-img">
+                                                <div class="tooltip card__spices-tooltip">
+                                                    <div class="tooltip__content">
+                                                        Добавить ингридиенты
+                                                    </div>
+                                                </div>
+
+                                            </button>
+                                        </div>
+                                        <button type="button" class="btn btn--green card__btn">
+
+                                            <span class="btn__text">В корзину</span>
+                                        </button>
+
+                                    </div>
+                                </div>
+
+                            </li>
+
+                            <li class="catalog__li">
+                                <div class="card js-card">
+                                    <div class="card__img-wrap">
+                                        <img src="assets/img/catalogItem0.png" alt="" class="card__img">
+
+                                        <button type="button" class="card__fav">
+                                            <img src="assets/img/icons/heart.png" alt="" class="card__fav-img">
+                                            <div class="tooltip card__fav-tooltip">
+                                                <div class="tooltip__content">
+                                                    В избранное
+                                                </div>
+                                            </div>
+
+                                        </button>
+                                    </div>
+                                    <div class="card__content">
+                                        <a href="#" class="card__header">«Цахараджын» со свекольными листьями, сыром и зеленью</a>
+                                        <div class="card__gram">
+                                            <ul class="card__gram-list">
+
+                                                <li class="card__gram-li">
+                                                    <label class="card__checkbox">
+                                                        <input type="radio" name="catalogItem11" class="card__input js-card-input" data-default-price="100" checked>
+                                                        <span class="card__checkbox-icon"></span>
+                                                        <span class="card__checkbox-desc">
+								<span class="card__text-red">800
+									г</span>
+                                                        /
+                                                        <span class="card__text-green">25
+									см</span>
+                                                        </span>
+                                                    </label>
+                                                </li>
+
+                                                <li class="card__gram-li">
+                                                    <label class="card__checkbox">
+                                                        <input type="radio" name="catalogItem11" class="card__input js-card-input" data-default-price="200">
+                                                        <span class="card__checkbox-icon"></span>
+                                                        <span class="card__checkbox-desc">
+								<span class="card__text-red">1000
+									г</span>
+                                                        /
+                                                        <span class="card__text-green">30
+									см</span>
+                                                        </span>
+                                                    </label>
+                                                </li>
+
+                                                <li class="card__gram-li">
+                                                    <label class="card__checkbox">
+                                                        <input type="radio" name="catalogItem11" class="card__input js-card-input" data-default-price="300">
+                                                        <span class="card__checkbox-icon"></span>
+                                                        <span class="card__checkbox-desc">
+								<span class="card__text-red">1200
+									г</span>
+                                                        /
+                                                        <span class="card__text-green">32
+									см</span>
+                                                        </span>
+                                                    </label>
+                                                </li>
+
+                                                <li class="card__gram-li">
+                                                    <label class="card__checkbox">
+                                                        <input type="radio" name="catalogItem11" class="card__input js-card-input" data-default-price="400">
+                                                        <span class="card__checkbox-icon"></span>
+                                                        <span class="card__checkbox-desc">
+								<span class="card__text-red">1400
+									г</span>
+                                                        /
+                                                        <span class="card__text-green">35
+									см</span>
+                                                        </span>
+                                                    </label>
+                                                </li>
+
+                                            </ul>
+                                        </div>
+                                        <div class="card__bottom">
+                                            <div class="counter card__counter js-counter">
+                                                <button type="button" class="counter__btn counter__btn--minus js-counter-prev"></button>
+                                                <div class="counter__number js-counter-number">1</div>
+                                                <button type="button" class="counter__btn counter__btn--plus js-counter-next"></button>
+                                            </div>
+
+                                            <div class="card__price">
+                                                <span class="card__price-number js-card-price">100</span>
+                                                <span class="card__price-value">руб.</span>
+                                            </div>
+                                            <button type="button" class="card__spices">
+                                                <img src="assets/img/icons/spices.png" alt="" class="card__spices-img">
+                                                <div class="tooltip card__spices-tooltip">
+                                                    <div class="tooltip__content">
+                                                        Добавить ингридиенты
+                                                    </div>
+                                                </div>
+
+                                            </button>
+                                        </div>
+                                        <button type="button" class="btn btn--green card__btn">
+
+                                            <span class="btn__text">В корзину</span>
+                                        </button>
+
+                                    </div>
+                                </div>
+
+                            </li>
+
+                            <li class="catalog__li">
+                                <div class="card js-card">
+                                    <div class="card__img-wrap">
+                                        <img src="assets/img/catalogItem0.png" alt="" class="card__img">
+
+                                        <div class="card__sale">хит продаж</div>
+
+                                        <button type="button" class="card__fav">
+                                            <img src="assets/img/icons/heart.png" alt="" class="card__fav-img">
+                                            <div class="tooltip card__fav-tooltip">
+                                                <div class="tooltip__content">
+                                                    В избранное
+                                                </div>
+                                            </div>
+
+                                        </button>
+                                    </div>
+                                    <div class="card__content">
+                                        <a href="#" class="card__header">«Цахараджын» со свекольными листьями, сыром и зеленью</a>
+                                        <div class="card__gram">
+                                            <ul class="card__gram-list">
+
+                                                <li class="card__gram-li">
+                                                    <label class="card__checkbox">
+                                                        <input type="radio" name="catalogItem12" class="card__input js-card-input" data-default-price="100" checked>
+                                                        <span class="card__checkbox-icon"></span>
+                                                        <span class="card__checkbox-desc">
+								<span class="card__text-red">800
+									г</span>
+                                                        /
+                                                        <span class="card__text-green">25
+									см</span>
+                                                        </span>
+                                                    </label>
+                                                </li>
+
+                                                <li class="card__gram-li">
+                                                    <label class="card__checkbox">
+                                                        <input type="radio" name="catalogItem12" class="card__input js-card-input" data-default-price="200">
+                                                        <span class="card__checkbox-icon"></span>
+                                                        <span class="card__checkbox-desc">
+								<span class="card__text-red">1000
+									г</span>
+                                                        /
+                                                        <span class="card__text-green">30
+									см</span>
+                                                        </span>
+                                                    </label>
+                                                </li>
+
+                                                <li class="card__gram-li">
+                                                    <label class="card__checkbox">
+                                                        <input type="radio" name="catalogItem12" class="card__input js-card-input" data-default-price="300">
+                                                        <span class="card__checkbox-icon"></span>
+                                                        <span class="card__checkbox-desc">
+								<span class="card__text-red">1200
+									г</span>
+                                                        /
+                                                        <span class="card__text-green">32
+									см</span>
+                                                        </span>
+                                                    </label>
+                                                </li>
+
+                                                <li class="card__gram-li">
+                                                    <label class="card__checkbox">
+                                                        <input type="radio" name="catalogItem12" class="card__input js-card-input" data-default-price="400">
+                                                        <span class="card__checkbox-icon"></span>
+                                                        <span class="card__checkbox-desc">
+								<span class="card__text-red">1400
+									г</span>
+                                                        /
+                                                        <span class="card__text-green">35
+									см</span>
+                                                        </span>
+                                                    </label>
+                                                </li>
+
+                                            </ul>
+                                        </div>
+                                        <div class="card__bottom">
+                                            <div class="counter card__counter js-counter">
+                                                <button type="button" class="counter__btn counter__btn--minus js-counter-prev"></button>
+                                                <div class="counter__number js-counter-number">1</div>
+                                                <button type="button" class="counter__btn counter__btn--plus js-counter-next"></button>
+                                            </div>
+
+                                            <div class="card__price">
+                                                <span class="card__price-number js-card-price">100</span>
+                                                <span class="card__price-value">руб.</span>
+                                            </div>
+                                            <button type="button" class="card__spices">
+                                                <img src="assets/img/icons/spices.png" alt="" class="card__spices-img">
+                                                <div class="tooltip card__spices-tooltip">
+                                                    <div class="tooltip__content">
+                                                        Добавить ингридиенты
+                                                    </div>
+                                                </div>
+
+                                            </button>
+                                        </div>
+                                        <button type="button" class="btn btn--green card__btn">
+
+                                            <span class="btn__text">В корзину</span>
+                                        </button>
+
+                                    </div>
+                                </div>
+
+                            </li>
+
+                            <li class="catalog__li">
+                                <div class="card js-card">
+                                    <div class="card__img-wrap">
+                                        <img src="assets/img/catalogItem0.png" alt="" class="card__img">
+
+                                        <button type="button" class="card__fav">
+                                            <img src="assets/img/icons/heart.png" alt="" class="card__fav-img">
+                                            <div class="tooltip card__fav-tooltip">
+                                                <div class="tooltip__content">
+                                                    В избранное
+                                                </div>
+                                            </div>
+
+                                        </button>
+                                    </div>
+                                    <div class="card__content">
+                                        <a href="#" class="card__header">«Цахараджын» со свекольными листьями, сыром и зеленью</a>
+                                        <div class="card__gram">
+                                            <ul class="card__gram-list">
+
+                                                <li class="card__gram-li">
+                                                    <label class="card__checkbox">
+                                                        <input type="radio" name="catalogItem13" class="card__input js-card-input" data-default-price="100" checked>
+                                                        <span class="card__checkbox-icon"></span>
+                                                        <span class="card__checkbox-desc">
+								<span class="card__text-red">800
+									г</span>
+                                                        /
+                                                        <span class="card__text-green">25
+									см</span>
+                                                        </span>
+                                                    </label>
+                                                </li>
+
+                                                <li class="card__gram-li">
+                                                    <label class="card__checkbox">
+                                                        <input type="radio" name="catalogItem13" class="card__input js-card-input" data-default-price="200">
+                                                        <span class="card__checkbox-icon"></span>
+                                                        <span class="card__checkbox-desc">
+								<span class="card__text-red">1000
+									г</span>
+                                                        /
+                                                        <span class="card__text-green">30
+									см</span>
+                                                        </span>
+                                                    </label>
+                                                </li>
+
+                                                <li class="card__gram-li">
+                                                    <label class="card__checkbox">
+                                                        <input type="radio" name="catalogItem13" class="card__input js-card-input" data-default-price="300">
+                                                        <span class="card__checkbox-icon"></span>
+                                                        <span class="card__checkbox-desc">
+								<span class="card__text-red">1200
+									г</span>
+                                                        /
+                                                        <span class="card__text-green">32
+									см</span>
+                                                        </span>
+                                                    </label>
+                                                </li>
+
+                                                <li class="card__gram-li">
+                                                    <label class="card__checkbox">
+                                                        <input type="radio" name="catalogItem13" class="card__input js-card-input" data-default-price="400">
+                                                        <span class="card__checkbox-icon"></span>
+                                                        <span class="card__checkbox-desc">
+								<span class="card__text-red">1400
+									г</span>
+                                                        /
+                                                        <span class="card__text-green">35
+									см</span>
+                                                        </span>
+                                                    </label>
+                                                </li>
+
+                                            </ul>
+                                        </div>
+                                        <div class="card__bottom">
+                                            <div class="counter card__counter js-counter">
+                                                <button type="button" class="counter__btn counter__btn--minus js-counter-prev"></button>
+                                                <div class="counter__number js-counter-number">1</div>
+                                                <button type="button" class="counter__btn counter__btn--plus js-counter-next"></button>
+                                            </div>
+
+                                            <div class="card__price">
+                                                <span class="card__price-number js-card-price">100</span>
+                                                <span class="card__price-value">руб.</span>
+                                            </div>
+                                            <button type="button" class="card__spices">
+                                                <img src="assets/img/icons/spices.png" alt="" class="card__spices-img">
+                                                <div class="tooltip card__spices-tooltip">
+                                                    <div class="tooltip__content">
+                                                        Добавить ингридиенты
+                                                    </div>
+                                                </div>
+
+                                            </button>
+                                        </div>
+                                        <button type="button" class="btn btn--green card__btn">
+
+                                            <span class="btn__text">В корзину</span>
+                                        </button>
+
+                                    </div>
+                                </div>
+
+                            </li>
+
+                            <li class="catalog__li">
+                                <div class="card js-card">
+                                    <div class="card__img-wrap">
+                                        <img src="assets/img/catalogItem0.png" alt="" class="card__img">
+
+                                        <button type="button" class="card__fav">
+                                            <img src="assets/img/icons/heart.png" alt="" class="card__fav-img">
+                                            <div class="tooltip card__fav-tooltip">
+                                                <div class="tooltip__content">
+                                                    В избранное
+                                                </div>
+                                            </div>
+
+                                        </button>
+                                    </div>
+                                    <div class="card__content">
+                                        <a href="#" class="card__header">«Цахараджын» со свекольными листьями, сыром и зеленью</a>
+                                        <div class="card__gram">
+                                            <ul class="card__gram-list">
+
+                                                <li class="card__gram-li">
+                                                    <label class="card__checkbox">
+                                                        <input type="radio" name="catalogItem14" class="card__input js-card-input" data-default-price="100" checked>
+                                                        <span class="card__checkbox-icon"></span>
+                                                        <span class="card__checkbox-desc">
+								<span class="card__text-red">800
+									г</span>
+                                                        /
+                                                        <span class="card__text-green">25
+									см</span>
+                                                        </span>
+                                                    </label>
+                                                </li>
+
+                                                <li class="card__gram-li">
+                                                    <label class="card__checkbox">
+                                                        <input type="radio" name="catalogItem14" class="card__input js-card-input" data-default-price="200">
+                                                        <span class="card__checkbox-icon"></span>
+                                                        <span class="card__checkbox-desc">
+								<span class="card__text-red">1000
+									г</span>
+                                                        /
+                                                        <span class="card__text-green">30
+									см</span>
+                                                        </span>
+                                                    </label>
+                                                </li>
+
+                                                <li class="card__gram-li">
+                                                    <label class="card__checkbox">
+                                                        <input type="radio" name="catalogItem14" class="card__input js-card-input" data-default-price="300">
+                                                        <span class="card__checkbox-icon"></span>
+                                                        <span class="card__checkbox-desc">
+								<span class="card__text-red">1200
+									г</span>
+                                                        /
+                                                        <span class="card__text-green">32
+									см</span>
+                                                        </span>
+                                                    </label>
+                                                </li>
+
+                                                <li class="card__gram-li">
+                                                    <label class="card__checkbox">
+                                                        <input type="radio" name="catalogItem14" class="card__input js-card-input" data-default-price="400">
+                                                        <span class="card__checkbox-icon"></span>
+                                                        <span class="card__checkbox-desc">
+								<span class="card__text-red">1400
+									г</span>
+                                                        /
+                                                        <span class="card__text-green">35
+									см</span>
+                                                        </span>
+                                                    </label>
+                                                </li>
+
+                                            </ul>
+                                        </div>
+                                        <div class="card__bottom">
+                                            <div class="counter card__counter js-counter">
+                                                <button type="button" class="counter__btn counter__btn--minus js-counter-prev"></button>
+                                                <div class="counter__number js-counter-number">1</div>
+                                                <button type="button" class="counter__btn counter__btn--plus js-counter-next"></button>
+                                            </div>
+
+                                            <div class="card__price">
+                                                <span class="card__price-number js-card-price">100</span>
+                                                <span class="card__price-value">руб.</span>
+                                            </div>
+                                            <button type="button" class="card__spices">
+                                                <img src="assets/img/icons/spices.png" alt="" class="card__spices-img">
+                                                <div class="tooltip card__spices-tooltip">
+                                                    <div class="tooltip__content">
+                                                        Добавить ингридиенты
+                                                    </div>
+                                                </div>
+
+                                            </button>
+                                        </div>
+                                        <button type="button" class="btn btn--green card__btn">
+
+                                            <span class="btn__text">В корзину</span>
+                                        </button>
+
+                                    </div>
+                                </div>
+
+                            </li>
+
+                            <li class="catalog__li">
+                                <div class="card js-card">
+                                    <div class="card__img-wrap">
+                                        <img src="assets/img/catalogItem0.png" alt="" class="card__img">
+
+                                        <div class="card__sale">хит продаж</div>
+
+                                        <button type="button" class="card__fav">
+                                            <img src="assets/img/icons/heart.png" alt="" class="card__fav-img">
+                                            <div class="tooltip card__fav-tooltip">
+                                                <div class="tooltip__content">
+                                                    В избранное
+                                                </div>
+                                            </div>
+
+                                        </button>
+                                    </div>
+                                    <div class="card__content">
+                                        <a href="#" class="card__header">«Цахараджын» со свекольными листьями, сыром и зеленью</a>
+                                        <div class="card__gram">
+                                            <ul class="card__gram-list">
+
+                                                <li class="card__gram-li">
+                                                    <label class="card__checkbox">
+                                                        <input type="radio" name="catalogItem15" class="card__input js-card-input" data-default-price="100" checked>
+                                                        <span class="card__checkbox-icon"></span>
+                                                        <span class="card__checkbox-desc">
+								<span class="card__text-red">800
+									г</span>
+                                                        /
+                                                        <span class="card__text-green">25
+									см</span>
+                                                        </span>
+                                                    </label>
+                                                </li>
+
+                                                <li class="card__gram-li">
+                                                    <label class="card__checkbox">
+                                                        <input type="radio" name="catalogItem15" class="card__input js-card-input" data-default-price="200">
+                                                        <span class="card__checkbox-icon"></span>
+                                                        <span class="card__checkbox-desc">
+								<span class="card__text-red">1000
+									г</span>
+                                                        /
+                                                        <span class="card__text-green">30
+									см</span>
+                                                        </span>
+                                                    </label>
+                                                </li>
+
+                                                <li class="card__gram-li">
+                                                    <label class="card__checkbox">
+                                                        <input type="radio" name="catalogItem15" class="card__input js-card-input" data-default-price="300">
+                                                        <span class="card__checkbox-icon"></span>
+                                                        <span class="card__checkbox-desc">
+								<span class="card__text-red">1200
+									г</span>
+                                                        /
+                                                        <span class="card__text-green">32
+									см</span>
+                                                        </span>
+                                                    </label>
+                                                </li>
+
+                                                <li class="card__gram-li">
+                                                    <label class="card__checkbox">
+                                                        <input type="radio" name="catalogItem15" class="card__input js-card-input" data-default-price="400">
+                                                        <span class="card__checkbox-icon"></span>
+                                                        <span class="card__checkbox-desc">
+								<span class="card__text-red">1400
+									г</span>
+                                                        /
+                                                        <span class="card__text-green">35
+									см</span>
+                                                        </span>
+                                                    </label>
+                                                </li>
+
+                                            </ul>
+                                        </div>
+                                        <div class="card__bottom">
+                                            <div class="counter card__counter js-counter">
+                                                <button type="button" class="counter__btn counter__btn--minus js-counter-prev"></button>
+                                                <div class="counter__number js-counter-number">1</div>
+                                                <button type="button" class="counter__btn counter__btn--plus js-counter-next"></button>
+                                            </div>
+
+                                            <div class="card__price">
+                                                <span class="card__price-number js-card-price">100</span>
+                                                <span class="card__price-value">руб.</span>
+                                            </div>
+                                            <button type="button" class="card__spices">
+                                                <img src="assets/img/icons/spices.png" alt="" class="card__spices-img">
+                                                <div class="tooltip card__spices-tooltip">
+                                                    <div class="tooltip__content">
+                                                        Добавить ингридиенты
+                                                    </div>
+                                                </div>
+
+                                            </button>
+                                        </div>
+                                        <button type="button" class="btn btn--green card__btn">
+
+                                            <span class="btn__text">В корзину</span>
+                                        </button>
+
+                                    </div>
+                                </div>
+
+                            </li>
+
+                            <li class="catalog__li">
+                                <div class="card js-card">
+                                    <div class="card__img-wrap">
+                                        <img src="assets/img/catalogItem0.png" alt="" class="card__img">
+
+                                        <button type="button" class="card__fav">
+                                            <img src="assets/img/icons/heart.png" alt="" class="card__fav-img">
+                                            <div class="tooltip card__fav-tooltip">
+                                                <div class="tooltip__content">
+                                                    В избранное
+                                                </div>
+                                            </div>
+
+                                        </button>
+                                    </div>
+                                    <div class="card__content">
+                                        <a href="#" class="card__header">«Цахараджын» со свекольными листьями, сыром и зеленью</a>
+                                        <div class="card__gram">
+                                            <ul class="card__gram-list">
+
+                                                <li class="card__gram-li">
+                                                    <label class="card__checkbox">
+                                                        <input type="radio" name="catalogItem16" class="card__input js-card-input" data-default-price="100" checked>
+                                                        <span class="card__checkbox-icon"></span>
+                                                        <span class="card__checkbox-desc">
+								<span class="card__text-red">800
+									г</span>
+                                                        /
+                                                        <span class="card__text-green">25
+									см</span>
+                                                        </span>
+                                                    </label>
+                                                </li>
+
+                                                <li class="card__gram-li">
+                                                    <label class="card__checkbox">
+                                                        <input type="radio" name="catalogItem16" class="card__input js-card-input" data-default-price="200">
+                                                        <span class="card__checkbox-icon"></span>
+                                                        <span class="card__checkbox-desc">
+								<span class="card__text-red">1000
+									г</span>
+                                                        /
+                                                        <span class="card__text-green">30
+									см</span>
+                                                        </span>
+                                                    </label>
+                                                </li>
+
+                                                <li class="card__gram-li">
+                                                    <label class="card__checkbox">
+                                                        <input type="radio" name="catalogItem16" class="card__input js-card-input" data-default-price="300">
+                                                        <span class="card__checkbox-icon"></span>
+                                                        <span class="card__checkbox-desc">
+								<span class="card__text-red">1200
+									г</span>
+                                                        /
+                                                        <span class="card__text-green">32
+									см</span>
+                                                        </span>
+                                                    </label>
+                                                </li>
+
+                                                <li class="card__gram-li">
+                                                    <label class="card__checkbox">
+                                                        <input type="radio" name="catalogItem16" class="card__input js-card-input" data-default-price="400">
+                                                        <span class="card__checkbox-icon"></span>
+                                                        <span class="card__checkbox-desc">
+								<span class="card__text-red">1400
+									г</span>
+                                                        /
+                                                        <span class="card__text-green">35
+									см</span>
+                                                        </span>
+                                                    </label>
+                                                </li>
+
+                                            </ul>
+                                        </div>
+                                        <div class="card__bottom">
+                                            <div class="counter card__counter js-counter">
+                                                <button type="button" class="counter__btn counter__btn--minus js-counter-prev"></button>
+                                                <div class="counter__number js-counter-number">1</div>
+                                                <button type="button" class="counter__btn counter__btn--plus js-counter-next"></button>
+                                            </div>
+
+                                            <div class="card__price">
+                                                <span class="card__price-number js-card-price">100</span>
+                                                <span class="card__price-value">руб.</span>
+                                            </div>
+                                            <button type="button" class="card__spices">
+                                                <img src="assets/img/icons/spices.png" alt="" class="card__spices-img">
+                                                <div class="tooltip card__spices-tooltip">
+                                                    <div class="tooltip__content">
+                                                        Добавить ингридиенты
+                                                    </div>
+                                                </div>
+
+                                            </button>
+                                        </div>
+                                        <button type="button" class="btn btn--green card__btn">
+
+                                            <span class="btn__text">В корзину</span>
+                                        </button>
+
+                                    </div>
+                                </div>
+
+                            </li>
+
+                            <li class="catalog__li">
+                                <div class="card js-card">
+                                    <div class="card__img-wrap">
+                                        <img src="assets/img/catalogItem0.png" alt="" class="card__img">
+
+                                        <div class="card__sale">хит продаж</div>
+
+                                        <button type="button" class="card__fav">
+                                            <img src="assets/img/icons/heart.png" alt="" class="card__fav-img">
+                                            <div class="tooltip card__fav-tooltip">
+                                                <div class="tooltip__content">
+                                                    В избранное
+                                                </div>
+                                            </div>
+
+                                        </button>
+                                    </div>
+                                    <div class="card__content">
+                                        <a href="#" class="card__header">«Цахараджын» со свекольными листьями, сыром и зеленью</a>
+                                        <div class="card__gram">
+                                            <ul class="card__gram-list">
+
+                                                <li class="card__gram-li">
+                                                    <label class="card__checkbox">
+                                                        <input type="radio" name="catalogItem17" class="card__input js-card-input" data-default-price="100" checked>
+                                                        <span class="card__checkbox-icon"></span>
+                                                        <span class="card__checkbox-desc">
+								<span class="card__text-red">800
+									г</span>
+                                                        /
+                                                        <span class="card__text-green">25
+									см</span>
+                                                        </span>
+                                                    </label>
+                                                </li>
+
+                                                <li class="card__gram-li">
+                                                    <label class="card__checkbox">
+                                                        <input type="radio" name="catalogItem17" class="card__input js-card-input" data-default-price="200">
+                                                        <span class="card__checkbox-icon"></span>
+                                                        <span class="card__checkbox-desc">
+								<span class="card__text-red">1000
+									г</span>
+                                                        /
+                                                        <span class="card__text-green">30
+									см</span>
+                                                        </span>
+                                                    </label>
+                                                </li>
+
+                                                <li class="card__gram-li">
+                                                    <label class="card__checkbox">
+                                                        <input type="radio" name="catalogItem17" class="card__input js-card-input" data-default-price="300">
+                                                        <span class="card__checkbox-icon"></span>
+                                                        <span class="card__checkbox-desc">
+								<span class="card__text-red">1200
+									г</span>
+                                                        /
+                                                        <span class="card__text-green">32
+									см</span>
+                                                        </span>
+                                                    </label>
+                                                </li>
+
+                                                <li class="card__gram-li">
+                                                    <label class="card__checkbox">
+                                                        <input type="radio" name="catalogItem17" class="card__input js-card-input" data-default-price="400">
+                                                        <span class="card__checkbox-icon"></span>
+                                                        <span class="card__checkbox-desc">
+								<span class="card__text-red">1400
+									г</span>
+                                                        /
+                                                        <span class="card__text-green">35
+									см</span>
+                                                        </span>
+                                                    </label>
+                                                </li>
+
+                                            </ul>
+                                        </div>
+                                        <div class="card__bottom">
+                                            <div class="counter card__counter js-counter">
+                                                <button type="button" class="counter__btn counter__btn--minus js-counter-prev"></button>
+                                                <div class="counter__number js-counter-number">1</div>
+                                                <button type="button" class="counter__btn counter__btn--plus js-counter-next"></button>
+                                            </div>
+
+                                            <div class="card__price">
+                                                <span class="card__price-number js-card-price">100</span>
+                                                <span class="card__price-value">руб.</span>
+                                            </div>
+                                            <button type="button" class="card__spices">
+                                                <img src="assets/img/icons/spices.png" alt="" class="card__spices-img">
+                                                <div class="tooltip card__spices-tooltip">
+                                                    <div class="tooltip__content">
+                                                        Добавить ингридиенты
+                                                    </div>
+                                                </div>
+
+                                            </button>
+                                        </div>
+                                        <button type="button" class="btn btn--green card__btn">
+
+                                            <span class="btn__text">В корзину</span>
+                                        </button>
+
+                                    </div>
+                                </div>
+
+                            </li>
+
+                            <li class="catalog__li">
+                                <div class="card js-card">
+                                    <div class="card__img-wrap">
+                                        <img src="assets/img/catalogItem0.png" alt="" class="card__img">
+
+                                        <button type="button" class="card__fav">
+                                            <img src="assets/img/icons/heart.png" alt="" class="card__fav-img">
+                                            <div class="tooltip card__fav-tooltip">
+                                                <div class="tooltip__content">
+                                                    В избранное
+                                                </div>
+                                            </div>
+
+                                        </button>
+                                    </div>
+                                    <div class="card__content">
+                                        <a href="#" class="card__header">«Цахараджын» со свекольными листьями, сыром и зеленью</a>
+                                        <div class="card__gram">
+                                            <ul class="card__gram-list">
+
+                                                <li class="card__gram-li">
+                                                    <label class="card__checkbox">
+                                                        <input type="radio" name="catalogItem18" class="card__input js-card-input" data-default-price="100" checked>
+                                                        <span class="card__checkbox-icon"></span>
+                                                        <span class="card__checkbox-desc">
+								<span class="card__text-red">800
+									г</span>
+                                                        /
+                                                        <span class="card__text-green">25
+									см</span>
+                                                        </span>
+                                                    </label>
+                                                </li>
+
+                                                <li class="card__gram-li">
+                                                    <label class="card__checkbox">
+                                                        <input type="radio" name="catalogItem18" class="card__input js-card-input" data-default-price="200">
+                                                        <span class="card__checkbox-icon"></span>
+                                                        <span class="card__checkbox-desc">
+								<span class="card__text-red">1000
+									г</span>
+                                                        /
+                                                        <span class="card__text-green">30
+									см</span>
+                                                        </span>
+                                                    </label>
+                                                </li>
+
+                                                <li class="card__gram-li">
+                                                    <label class="card__checkbox">
+                                                        <input type="radio" name="catalogItem18" class="card__input js-card-input" data-default-price="300">
+                                                        <span class="card__checkbox-icon"></span>
+                                                        <span class="card__checkbox-desc">
+								<span class="card__text-red">1200
+									г</span>
+                                                        /
+                                                        <span class="card__text-green">32
+									см</span>
+                                                        </span>
+                                                    </label>
+                                                </li>
+
+                                                <li class="card__gram-li">
+                                                    <label class="card__checkbox">
+                                                        <input type="radio" name="catalogItem18" class="card__input js-card-input" data-default-price="400">
+                                                        <span class="card__checkbox-icon"></span>
+                                                        <span class="card__checkbox-desc">
+								<span class="card__text-red">1400
+									г</span>
+                                                        /
+                                                        <span class="card__text-green">35
+									см</span>
+                                                        </span>
+                                                    </label>
+                                                </li>
+
+                                            </ul>
+                                        </div>
+                                        <div class="card__bottom">
+                                            <div class="counter card__counter js-counter">
+                                                <button type="button" class="counter__btn counter__btn--minus js-counter-prev"></button>
+                                                <div class="counter__number js-counter-number">1</div>
+                                                <button type="button" class="counter__btn counter__btn--plus js-counter-next"></button>
+                                            </div>
+
+                                            <div class="card__price">
+                                                <span class="card__price-number js-card-price">100</span>
+                                                <span class="card__price-value">руб.</span>
+                                            </div>
+                                            <button type="button" class="card__spices">
+                                                <img src="assets/img/icons/spices.png" alt="" class="card__spices-img">
+                                                <div class="tooltip card__spices-tooltip">
+                                                    <div class="tooltip__content">
+                                                        Добавить ингридиенты
+                                                    </div>
+                                                </div>
+
+                                            </button>
+                                        </div>
+                                        <button type="button" class="btn btn--green card__btn">
+
+                                            <span class="btn__text">В корзину</span>
+                                        </button>
+
+                                    </div>
+                                </div>
+
+                            </li>
+
+                            <li class="catalog__li">
+                                <div class="card js-card">
+                                    <div class="card__img-wrap">
+                                        <img src="assets/img/catalogItem0.png" alt="" class="card__img">
+
+                                        <button type="button" class="card__fav">
+                                            <img src="assets/img/icons/heart.png" alt="" class="card__fav-img">
+                                            <div class="tooltip card__fav-tooltip">
+                                                <div class="tooltip__content">
+                                                    В избранное
+                                                </div>
+                                            </div>
+
+                                        </button>
+                                    </div>
+                                    <div class="card__content">
+                                        <a href="#" class="card__header">«Цахараджын» со свекольными листьями, сыром и зеленью</a>
+                                        <div class="card__gram">
+                                            <ul class="card__gram-list">
+
+                                                <li class="card__gram-li">
+                                                    <label class="card__checkbox">
+                                                        <input type="radio" name="catalogItem19" class="card__input js-card-input" data-default-price="100" checked>
+                                                        <span class="card__checkbox-icon"></span>
+                                                        <span class="card__checkbox-desc">
+								<span class="card__text-red">800
+									г</span>
+                                                        /
+                                                        <span class="card__text-green">25
+									см</span>
+                                                        </span>
+                                                    </label>
+                                                </li>
+
+                                                <li class="card__gram-li">
+                                                    <label class="card__checkbox">
+                                                        <input type="radio" name="catalogItem19" class="card__input js-card-input" data-default-price="200">
+                                                        <span class="card__checkbox-icon"></span>
+                                                        <span class="card__checkbox-desc">
+								<span class="card__text-red">1000
+									г</span>
+                                                        /
+                                                        <span class="card__text-green">30
+									см</span>
+                                                        </span>
+                                                    </label>
+                                                </li>
+
+                                                <li class="card__gram-li">
+                                                    <label class="card__checkbox">
+                                                        <input type="radio" name="catalogItem19" class="card__input js-card-input" data-default-price="300">
+                                                        <span class="card__checkbox-icon"></span>
+                                                        <span class="card__checkbox-desc">
+								<span class="card__text-red">1200
+									г</span>
+                                                        /
+                                                        <span class="card__text-green">32
+									см</span>
+                                                        </span>
+                                                    </label>
+                                                </li>
+
+                                                <li class="card__gram-li">
+                                                    <label class="card__checkbox">
+                                                        <input type="radio" name="catalogItem19" class="card__input js-card-input" data-default-price="400">
+                                                        <span class="card__checkbox-icon"></span>
+                                                        <span class="card__checkbox-desc">
+								<span class="card__text-red">1400
+									г</span>
+                                                        /
+                                                        <span class="card__text-green">35
+									см</span>
+                                                        </span>
+                                                    </label>
+                                                </li>
+
+                                            </ul>
+                                        </div>
+                                        <div class="card__bottom">
+                                            <div class="counter card__counter js-counter">
+                                                <button type="button" class="counter__btn counter__btn--minus js-counter-prev"></button>
+                                                <div class="counter__number js-counter-number">1</div>
+                                                <button type="button" class="counter__btn counter__btn--plus js-counter-next"></button>
+                                            </div>
+
+                                            <div class="card__price">
+                                                <span class="card__price-number js-card-price">100</span>
+                                                <span class="card__price-value">руб.</span>
+                                            </div>
+                                            <button type="button" class="card__spices">
+                                                <img src="assets/img/icons/spices.png" alt="" class="card__spices-img">
+                                                <div class="tooltip card__spices-tooltip">
+                                                    <div class="tooltip__content">
+                                                        Добавить ингридиенты
+                                                    </div>
+                                                </div>
+
+                                            </button>
+                                        </div>
+                                        <button type="button" class="btn btn--green card__btn">
+
+                                            <span class="btn__text">В корзину</span>
+                                        </button>
+
+                                    </div>
+                                </div>
+
+                            </li>
+
+                        </ul>
+                    </div>
+                </section>
+
             </main>
 
         </main>
