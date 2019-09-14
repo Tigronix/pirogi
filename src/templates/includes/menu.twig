@@ -1,7 +1,8 @@
 {% set menuBtns = {
 	item0: {
     text: 'Сытные',
-    counter: '12'
+    counter: '12',
+    active: true
   },
 	item1: {
     text: 'Постные',
@@ -76,8 +77,8 @@
 	<div class="container menu__container">
 		<ul class="menu__btns">
 			{% for item in menuBtns %}
-				<li class="menu__btns-li">
-					<button type="button" data-tabclass="js-menu-content" data-tabnumber="{{item.tabNumber}}" class="menu__btns-item">
+				<li class="menu__btns-li {% if item.active %}active{% endif %}" data-tabclass="js-menu-content" data-tabnumber="{{item.tabNumber}}">
+					<button type="button" class="menu__btns-item">
 						<span class="menu__btn-text">{{item.text}}</span>
 						<span class="menu__counter">{{item.counter}}</span>
 					</button>
@@ -100,10 +101,10 @@
 			</ul>
 			<form class="menu__metro">
 				<div class="menu__select-wrap">
-					<select name="" id="" class="menu__select" placeholder="Выберите станцию метро">
-						<option value="1">1</option>
-						<option value="2">2</option>
-						<option value="3">3</option>
+					<select name="" id="" class="menu__select" placeholder="">
+						<option class="menu__select-option" value="">Выберите станцию метро</option>
+						<option class="menu__select-option" value="2">2</option>
+						<option class="menu__select-option" value="3">3</option>
 					</select>
 				</div>
         {% include 'btn.twig' with {

@@ -2297,4 +2297,214 @@ body.compensate-for-scrollbar {
   padding-top: 6px;
 }
 
+.menu {
+  margin-bottom: 23px;
+}
+
+.menu__btns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin: -2px;
+}
+
+.menu__btns-li {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  padding: 2px;
+}
+
+.menu__btns-item {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 2.60417vw;
+  background: #eef2f7;
+  border-radius: 10px 10px 0px 0px;
+  font-size: 0.9375vw;
+  line-height: 0.9375vw;
+  font-weight: 500;
+  color: #666;
+  position: relative;
+  -webkit-transition: background 0.3s, color 0.3s;
+  -o-transition: background 0.3s, color 0.3s;
+  transition: background 0.3s, color 0.3s;
+}
+
+.menu__btns-li.active .menu__btns-item {
+  background: #ffdd2d;
+  color: #666;
+}
+
+@media screen and (min-width: 1025px) {
+  .menu__btns-item:hover {
+    background: #ffdd2d;
+    color: #666;
+  }
+}
+
+.menu__counter {
+  width: 26px;
+  height: 26px;
+  background: #38cfa0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-size: 0.72917vw;
+  line-height: 0.88542vw;
+  color: #fff;
+  font-family: 'AvantGardeCTT';
+  position: absolute;
+  right: 0.625vw;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.menu__bottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.menu__content {
+  position: relative;
+  z-index: 5;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border: 3px solid #ffdc64;
+  border-radius: 0px 0px 10px 10px;
+  width: 59.84375vw;
+  height: 98px;
+}
+
+.menu__content-li {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  padding: 0 1.30208vw;
+}
+
+.menu__content-item {
+  text-align: center;
+}
+
+.menu__img {
+  width: 2.34375vw;
+}
+
+.menu__desc {
+  margin-top: 5px;
+  font-size: 0.9375vw;
+  line-height: 0.9375vw;
+  color: #666;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.menu__text {
+  border-bottom: 1px dashed #666;
+  margin-right: 0.26042vw;
+}
+
+.menu__index {
+  color: #a9a9a9;
+}
+
+.menu__metro {
+  margin-left: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 25.625vw;
+}
+
+.menu__select-wrap {
+  position: relative;
+  margin-right: 0.26042vw;
+  width: 14.6875vw;
+  height: 45px;
+  border: 2px solid #f8cf26;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.menu__select-wrap:after {
+  display: block;
+  content: "";
+  width: 0.625vw;
+  height: 0.41667vw;
+  background: url(../img/icons/chevron-down.png) no-repeat center;
+  background-size: 100% auto;
+  position: absolute;
+  right: 0.9375vw;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.menu__select {
+  border: none;
+  font-size: 0.83333vw;
+  line-height: 0.83333vw;
+  color: #9299a2;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 100%;
+  padding-left: 0.72917vw;
+  padding-right: 1.5625vw;
+}
+
+.menu__btn {
+  max-width: 10.625vw;
+  height: 45px;
+}
+
+.menu__select-option:first-child {
+  display: none;
+}
+
 /*# sourceMappingURL=main.css.map */
