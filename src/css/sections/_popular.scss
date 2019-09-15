@@ -1,0 +1,142 @@
+.popular {
+  background: #F9F0EA;
+  margin-bottom: 30px;
+  padding: 20px 0;
+
+  &__header {
+    font-size: vw(28px);
+    line-height: vw(28px);
+    font-weight: 500;
+    color: #70544F;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  &__slider-container {
+    margin: 0 vw(-17px);
+  }
+
+  &__content {
+
+  }
+
+  &__card {
+    padding: vw(17px);
+  }
+
+  &__img-wrap {
+    position: relative;
+    height: vw(346px);
+
+  }
+
+  &__img {
+    width: 100%;
+    height: 100%;
+  }
+
+  &__sale {
+    position: absolute;
+    right: vw(20px);
+    top: vw(20px);
+    height: vw(35px);
+    padding: vw(6px) vw(25px) 0 vw(25px);
+    font-size: vw(15px);
+    line-height: 1;
+    color: #fff;
+    text-transform: uppercase;
+    background: no-repeat center;
+    background-size: 100% auto;
+    white-space: nowrap;
+    text-align: center;
+
+    &--hit {
+      background-image: url(../img/sale.png);
+    }
+
+    &--new {
+      background-image: url(../img/sale--blue.png);
+    }
+  }
+
+  &__title {
+    width: vw(191px);
+    height: vw(56px);
+    background: url(../img/popular-btn.png) no-repeat center;
+    background-size: 100% auto;
+    font-size: vw(18px);
+    font-weight: vw(18px);
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+
+  }
+
+  &__title-text {
+    border-bottom: 1px solid #fff;
+  }
+
+  &__info {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: vw(169px);
+    height: vw(136px);
+    background: url(../img/popular__info.png) no-repeat center;
+    background-size: 100% auto;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    align-content: center;
+    flex-direction: column;
+    padding-bottom: vw(20px);
+
+  }
+
+  &__params {
+
+    margin-bottom: 2px;
+  }
+
+  &__params-text {
+    font-size: vw(18px);
+    line-height: vw(22px);
+    @include avant;
+    color: #fff;
+    border-bottom: 1px solid #fff;
+  }
+
+  &__price {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    @include avant;
+    color: #fff;
+  }
+
+  &__price-number {
+    font-size: vw(36px);
+    line-height: vw(43px);
+
+  }
+
+  &__price-value {
+    font-size: vw(16px);
+    line-height: 1;
+    margin-left: 5px;
+  }
+
+  &__bottom {
+    padding: vw(20px);
+    background: #fff;
+  }
+
+  @include slickDots;
+  @include slickArrows;
+}

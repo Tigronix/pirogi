@@ -1,0 +1,77 @@
+{% set sliderList = {
+	popular0: {
+		title: 'С МЯСОМ',
+		sale: 'hit'
+	},
+	popular1: {
+		title: 'С СЫРОМ',
+		sale: 'new'
+	},
+	popular2: {
+		title: 'С КАПУСТОЙ'
+	},
+	popular3: {
+		title: 'С РЫБОЙ'
+	},
+	popular4: {
+		title: 'С ЛИМОНОМ'
+	},
+	popular5: {
+		title: 'С МЯСОМ'
+	},
+	popular6: {
+		title: 'С СЫРОМ'
+	},
+	popular7: {
+		title: 'С КАПУСТОЙ'
+	},
+	popular8: {
+		title: 'С РЫБОЙ'
+	},
+	popular9: {
+		title: 'С ЛИМОНОМ'
+	}
+} %}
+
+<div class="popular__header">Популярные осетинские пироги</div>
+<section class="popular">
+	<div class="container popular__container">
+		<div class="popular__content">
+			<div class="popular__slider-container js-popular-slider-container">
+				<div class="popular__slider js-popular-slider">
+					{% for key, item in sliderList %}
+						<div class="popular__card">
+							<div class="popular__img-wrap">
+								{% if loop.index >= 4 %}
+									<img src="assets/img/popular4.png" alt="" class="popular__img">
+								{% else %}
+									<img src="assets/img/{{key}}.png" alt="" class="popular__img">
+								{% endif %}
+								<div class="popular__title"><span class="popular__title-text">{{item.title}}</span></div>
+								<div class="popular__info">
+									<div class="popular__params"><span class="popular__params-text">{{item.params|default('1000 г / 30 см')}}</span></div>
+									<div class="popular__price">
+										<span class="popular__price-number">{{item.priceNumber|default('650')}}</span>
+										<span class="popular__value">руб.</span></div>
+								</div>
+								{% if item.sale == 'hit' %}
+									<div class="popular__sale popular__sale--hit">Хит продаж</div>
+								{% endif %}
+								{% if item.sale == 'new' %}
+									<div class="popular__sale popular__sale--new">Новинка</div>
+								{% endif %}
+							</div>
+							<div class="popular__bottom">
+								{% include 'btn--btn.twig' with {
+                mod: 'btn--green popular__btn',
+                text: 'В корзину'
+              } %}
+							</div>
+						</div>
+					{% endfor %}
+				</div>
+				<div class="popular__dots js-popular-slider-dots"></div>
+			</div>
+		</div>
+	</div>
+</section>

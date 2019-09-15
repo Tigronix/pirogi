@@ -11,6 +11,43 @@ var APP = {
 };
 
 (function () {
+	// sliders
+	var popularSlider = function popularSlider() {
+		var $sliderContainers = $('.js-popular-slider-container');
+
+		$sliderContainers.each(function () {
+			var $sliderContainer = $(this);
+			var $slider = $sliderContainer.find('.js-popular-slider');
+			var options = {
+				slidesToShow: 5,
+				arrows: true,
+				appendDots: '.js-popular-slider-dots',
+				dots: true,
+				infinite: false
+			};
+
+			$slider.slick(options);
+		});
+	};
+
+	var setsSlider = function setsSlider() {
+		var $sliderContainers = $('.js-sets-slider-container');
+
+		$sliderContainers.each(function () {
+			var $sliderContainer = $(this);
+			var $slider = $sliderContainer.find('.js-sets-slider');
+			var options = {
+				slidesToShow: 5,
+				arrows: true,
+				appendDots: '.js-sets-slider-dots',
+				dots: true,
+				infinite: false
+			};
+
+			$slider.slick(options);
+		});
+	};
+
 	// specific
 	var cardCalc = function cardCalc() {
 		var cards = document.querySelectorAll('.js-card');
@@ -39,19 +76,6 @@ var APP = {
 				quantity++;
 
 				return this.cardArr[index].quantity = quantity;
-			},
-			'calcTotalQuantity': function calcTotalQuantity(index) {
-				var totalQuantityArr = [];
-
-				this.cardArr.forEach(function (elem) {
-					totalQuantityArr.push(parseInt(elem.quantity));
-				});
-
-				var result = totalQuantityArr.reduce(function (sum, current) {
-					return sum + current;
-				}, 0);
-
-				this.totalQuantity = result;
 			}
 		};
 
@@ -68,7 +92,6 @@ var APP = {
 			var insertText = function insertText() {
 				counterNumber.innerText = cardObj.cardArr[index].quantity;
 				price.innerText = cardObj.cardArr[index].summ;
-				basketCounter.innerText = cardObj.totalQuantity;
 			};
 
 			// data for obj
@@ -87,7 +110,6 @@ var APP = {
 			counterMinusBtn.addEventListener('click', function () {
 				cardObj.quantityMinus(index);
 				cardObj.calcPrice(index);
-				cardObj.calcTotalQuantity();
 
 				insertText();
 			});
@@ -95,7 +117,6 @@ var APP = {
 			counterPlusBtn.addEventListener('click', function () {
 				cardObj.quantityPlus(index);
 				cardObj.calcPrice(index);
-				cardObj.calcTotalQuantity();
 
 				insertText();
 			});
@@ -106,7 +127,6 @@ var APP = {
 
 					cardObj.cardArr[index].price = defaultPrice;
 					cardObj.calcPrice(index);
-					cardObj.calcTotalQuantity();
 
 					insertText();
 				});
@@ -114,8 +134,89 @@ var APP = {
 		});
 	};
 
+	var setCalc = function setCalc() {
+		var cards = document.querySelectorAll('.js-set-card');
+
+		var setObj = {
+			'cardArr': [],
+			'calcPrice': function calcPrice(index) {
+				var quantity = this.cardArr[index].quantity;
+				var price = this.cardArr[index].price;
+
+				var summ = quantity * price;
+
+				return this.cardArr[index].summ = summ;
+			},
+			'quantityMinus': function quantityMinus(index) {
+				var quantity = this.cardArr[index].quantity;
+				quantity--;
+
+				if (quantity <= 0) {
+					quantity = 1;
+				}
+
+				return this.cardArr[index].quantity = quantity;
+			},
+			'quantityPlus': function quantityPlus(index) {
+				var quantity = this.cardArr[index].quantity;
+				quantity++;
+
+				return this.cardArr[index].quantity = quantity;
+			}
+		};
+
+		cards.forEach(function (card, index) {
+			var basketCounter = document.querySelector('.js-basket-counter');
+			var counter = card.querySelector('.js-counter');
+			var counterMinusBtn = counter.querySelector('.js-counter-prev');
+			var counterPlusBtn = counter.querySelector('.js-counter-next');
+			var counterNumber = counter.querySelector('.js-counter-number');
+			var price = card.querySelector('.js-set-card-price');
+
+			var insertText = function insertText() {
+				counterNumber.innerText = setObj.cardArr[index].quantity;
+				price.innerText = setObj.cardArr[index].summ;
+			};
+
+			// data for obj
+			var quantity = counterNumber.innerText;
+			var defaultPrice = price.getAttribute('data-default-price');
+
+			var itemObj = {
+				quantity: quantity,
+				price: defaultPrice
+			};
+
+			// data created
+			setObj.cardArr.push(itemObj);
+
+			// listeners
+			counterMinusBtn.addEventListener('click', function () {
+				setObj.quantityMinus(index);
+				setObj.calcPrice(index);
+
+				insertText();
+			});
+
+			counterPlusBtn.addEventListener('click', function () {
+				setObj.quantityPlus(index);
+				setObj.calcPrice(index);
+
+				insertText();
+			});
+		});
+	};
+
 	var onPageRdy = function onPageRdy() {
+		// sliders
+		popularSlider();
+		setsSlider();
+
+		// utility
+
+		// specific
 		cardCalc();
+		setCalc();
 	};
 
 	onPageRdy();

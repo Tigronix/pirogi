@@ -1,0 +1,133 @@
+.sets {
+  background: #F9F0EA;
+  @include slickArrows;
+  @include slickDots;
+  margin-bottom: 30px;
+
+  &__header {
+    font-size: vw(28px);
+    line-height: vw(28px);
+    font-weight: 500;
+    color: #F94848;
+    margin-bottom: 11px;
+    text-align: center;
+  }
+
+  &__slider-container {
+    margin: 0 vw(-17px);
+  }
+
+  &__slide {
+    padding: vw(17px);
+    border-radius: 10px;
+  }
+
+  &__img-box {
+    height: vw(345px);
+    position: relative;
+    border-radius: 10px 10px 0 0;
+  }
+
+  &__img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px 10px 0 0;
+  }
+
+  &__title {
+    padding: 0 vw(13px);
+    height: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background: #50536E;
+    font-size: vw(18px);
+    line-height: vw(18px);
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+  }
+
+  &__consist-list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 0 vw(-9px);
+    margin-bottom: calc(10px - 9px);
+  }
+
+  &__consist-li {
+    padding: 0 vw(9px);
+    position: relative;
+
+    &:last-child {
+      &:after {
+        display: none;
+      }
+    }
+
+    &:after {
+      display: block;
+      content: '';
+      width: vw(9px);
+      height: vw(9px);
+      border-radius: 50%;
+      background: #F94848;
+      position: absolute;
+      left: 100%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  &__consist-item {
+    font-size: vw(16px);
+    line-height: vw(20px);
+    color: #009471;
+  }
+
+  &__calc {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-top: vw(10px);
+
+  }
+
+  &__price {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-left: vw(40px);
+    @include avant;
+    color: #F94848;
+
+  }
+
+  &__price-number {
+    font-size: vw(32px);
+    line-height: vw(38px);
+    font-weight: bold;
+  }
+
+  &__price-value {
+    font-size: 16px;
+    line-height: 1;
+    margin-left: vw(10px);
+
+  }
+
+  &__btn {
+    margin-top: vw(17px);
+  }
+
+  &__content {
+    padding: vw(10px) vw(16px) vw(30px) vw(16px);
+    background: #fff;
+    border-radius: 0 0 10px 10px;
+  }
+}
