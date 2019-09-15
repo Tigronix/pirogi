@@ -17,10 +17,14 @@
     color: #fff;
   }
 
+  &--red {
+    background: #F94848;
+    color: #fff;
+  }
+
   &__icon {
     width: vw(20px);
     height: vw(20px);
     margin-right: vw(10px);
-
   }
 }

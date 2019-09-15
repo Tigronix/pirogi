@@ -1,0 +1,116 @@
+.order {
+  $self: &;
+  background: url(../img/order__bg.png) no-repeat center;
+  background-size: cover;
+  position: relative;
+
+  &:after {
+    display: block;
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 243, 193, 0.9);
+  }
+
+  &__container {
+    position: relative;
+    z-index: 5;
+    padding: vw(55px) vw(85px) vw(55px) vw(115px);
+
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  &__header {
+    max-width: vw(750px);
+    background: #fff3c1;
+    border-radius: 40px 40px 0px 0px;
+    padding: 0 vw(60px);
+    position: relative;
+    height: vw(60px);
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .h2 {
+      margin-bottom: 0;
+      color: #E43950;
+    }
+
+    &:before, &:after {
+      display: block;
+      content: '';
+      width: vw(18px);
+      height: vw(18px);
+      position: absolute;
+      bottom: 0;
+      background: no-repeat center;
+      background-size: 100% auto;
+    }
+
+    &:before {
+      right: 100%;
+      background-image: url(../img/order__header0.png);
+    }
+
+    &:after {
+      left: 100%;
+      background-image: url(../img/order__header1.png);
+    }
+  }
+
+  &__list {
+    width: vw(1290px);
+    display: flex;
+    flex-wrap: wrap;
+    margin: vw(-10px);
+    counter-reset: order;
+    list-style: none;
+  }
+
+  &__li {
+    padding: vw(10px);
+    counter-increment: order;
+    width: calc(100% / 3);
+    display: flex;
+    justify-content: flex-end;
+
+    &:nth-child(3n+1){
+      justify-content: flex-start;
+    }
+  }
+
+  &__item {
+    @include avant;
+    font-size: vw(24px);
+    line-height: vw(28px);
+    color: #70544F;
+    min-width: vw(306px);
+
+    &:before {
+      display: inline;
+      content: counter(order) '. ';
+    }
+
+    &--birthday {
+      color: #E43950;
+    }
+  }
+
+  &__text {
+    #{$self}__item--birthday & {
+      border-bottom: 1px solid #E43950;
+    }
+  }
+
+  &__btn {
+    max-width: vw(318px);
+    margin-left: auto;
+    height: vw(60px);
+  }
+}

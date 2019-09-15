@@ -2,6 +2,12 @@
   $self: &;
   margin-bottom: 40px;
 
+  &__container {
+    padding-left: vw(50px);
+    padding-right: vw(50px);
+    
+  }
+
   &__table {
     width: 100%;
     border-collapse: collapse;

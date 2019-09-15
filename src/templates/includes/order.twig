@@ -1,6 +1,7 @@
 {% set orderList = {
   item0: {
-    text: 'акция в день рождения (-10%);'
+    text: 'акция в день рождения (-10%);',
+    birthday: true
   },
   item1: {
     text: 'свадьбу;'
@@ -36,9 +37,7 @@
 		<ol class="order__list">
 			{% for item in orderList %}
 				<li class="order__li">
-					<div class="order__item">
-            <a href="#" class="order__link">{{item.text}}</a>
-          </div>
+          <div href="#" class="order__item {% if item.birthday %}order__item--birthday{% endif %}"><span class="order__text">{{item.text}}</span></div>
 				</li>
 			{% endfor %}
 		</ol>
