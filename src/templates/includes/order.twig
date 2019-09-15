@@ -1,0 +1,50 @@
+{% set orderList = {
+  item0: {
+    text: 'акция в день рождения (-10%);'
+  },
+  item1: {
+    text: 'свадьбу;'
+  },
+  item2: {
+    text: 'юбилей;'
+  },
+  item3: {
+    text: 'на дом;'
+  },
+  item4: {
+    text: 'в офис за 45 минут;'
+  },
+  item5: {
+    text: 'на работу;'
+  },
+  item6: {
+    text: 'на торжество;'
+  },
+  item7: {
+    text: 'на Новый Год 2018-2019;'
+  },
+  item8: {
+    text: 'оптом;'
+  },
+} %}
+
+<div class="order__header">
+	<h2 class="h2 h2--red">У нас вы можете заказать осетинские пироги:</h2>
+</div>
+<section class="order">
+	<div class="container order__container">
+		<ol class="order__list">
+			{% for item in orderList %}
+				<li class="order__li">
+					<div class="order__item">
+            <a href="#" class="order__link">{{item.text}}</a>
+          </div>
+				</li>
+			{% endfor %}
+		</ol>
+		{% include 'btn--btn.twig' with {
+      mod: 'btn--red order__btn',
+      text: 'Заказать пироги'
+    } %}
+	</div>
+</section>

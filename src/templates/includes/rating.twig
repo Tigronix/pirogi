@@ -242,22 +242,31 @@
 } %}
 
 <section class="rating">
-	<h2 class="h2">Рейтинг лучших осетинских пирогов и стоимость:</h2>
-	<table class="rating__table">
-		{% for item in tableList %}
-			<tr class="rating__tr">
-				{% for item in item.tdList %}
-					<td class="rating__td">
-						{{item.text}}
-						{% if item.btn %}
-							{% include 'btn.twig' with {
-                text: 'заказать',
-                mod: 'btn--green'
-              } %}
-						{% endif %}
-					</td>
-				{% endfor %}
-			</tr>
-		{% endfor %}
-	</table>
+  <div class="container rating__container">
+    <h2 class="h2">Рейтинг лучших осетинских пирогов и стоимость:</h2>
+  	<table class="rating__table">
+      <tr class="rating__tr rating__tr--head">
+        <td class="rating__td rating__td--head">Виды осетинских пирогов</td>
+        <td class="rating__td rating__td--head">1 000 г</td>
+        <td class="rating__td rating__td--head">1 200 г</td>
+        <td class="rating__td rating__td--head">1 400 г</td>
+        <td class="rating__td rating__td--head">Заказали в 2019 году</td>
+      </tr>
+  		{% for item in tableList %}
+  			<tr class="rating__tr">
+  				{% for item in item.tdList %}
+  					<td class="rating__td">
+  						{{item.text}}
+  						{% if item.btn %}
+  							{% include 'btn.twig' with {
+                  text: 'Заказать',
+                  mod: 'btn--green rating__btn'
+                } %}
+  						{% endif %}
+  					</td>
+  				{% endfor %}
+  			</tr>
+  		{% endfor %}
+  	</table>
+  </div>
 </section>
