@@ -5,7 +5,7 @@
   padding-bottom: vw(14px);
 
   &__img-wrap {
-    height: 350px;
+    height: vw(350px);
     position: relative;
     border-radius: 10px 10px 0px 0px;
     margin-bottom: 8px;
@@ -70,10 +70,10 @@
   }
 
   &__header {
-    font-size: 20px;
-    line-height: 25px;
+    font-size: vw(20px);
+    line-height: vw(25px);
     color: #3c763d;
-    margin-bottom: 16px;
+    margin-bottom: vw(16px);
     text-align: center;
     text-decoration: none;
     display: block;
@@ -116,8 +116,8 @@
   }
 
   &__checkbox-icon {
-    width: 30px;
-    height: 30px;
+    width: vw(30px);
+    height: vw(30px);
     border-radius: 3px;
     background: #ecf1f7 no-repeat center;
     background-size: 60% auto;
@@ -149,8 +149,8 @@
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    margin-top: 34px;
-    margin-bottom: 15px;
+    margin-top: vw(34px);
+    margin-bottom: vw(15px);
   }
 
   &__price {
@@ -184,7 +184,7 @@
     position: relative;
 
     @include hover {
-      
+
       .tooltip {
         display: block;
       }

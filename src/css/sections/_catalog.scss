@@ -12,4 +12,12 @@
     padding: vw(32px) vw(16px);
     width: calc(100% / 5);
   }
+
+  &__header {
+    font-size: vw(28px);
+    line-height: vw(28px);
+    font-weight: 500;
+    color: #70544F;
+    margin-bottom: 6px;
+  }
 }

@@ -550,7 +550,12 @@ ul {
 p {
   font-size: 16px;
   line-height: 25px;
-  color: #57555C;
+  color: #666666;
+  margin-bottom: 30px;
+}
+
+p:last-child {
+  margin-bottom: 0;
 }
 
 @media screen and (max-width: 767px) {
@@ -1656,7 +1661,7 @@ body.compensate-for-scrollbar {
 }
 
 .card__img-wrap {
-  height: 350px;
+  height: 18.22917vw;
   position: relative;
   border-radius: 10px 10px 0px 0px;
   margin-bottom: 8px;
@@ -1735,10 +1740,10 @@ body.compensate-for-scrollbar {
 }
 
 .card__header {
-  font-size: 20px;
-  line-height: 25px;
+  font-size: 1.04167vw;
+  line-height: 1.30208vw;
   color: #3c763d;
-  margin-bottom: 16px;
+  margin-bottom: 0.83333vw;
   text-align: center;
   text-decoration: none;
   display: block;
@@ -1791,8 +1796,8 @@ body.compensate-for-scrollbar {
 }
 
 .card__checkbox-icon {
-  width: 30px;
-  height: 30px;
+  width: 1.5625vw;
+  height: 1.5625vw;
   border-radius: 3px;
   background: #ecf1f7 no-repeat center;
   background-size: 60% auto;
@@ -1831,8 +1836,8 @@ body.compensate-for-scrollbar {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  margin-top: 34px;
-  margin-bottom: 15px;
+  margin-top: 1.77083vw;
+  margin-bottom: 0.78125vw;
 }
 
 .card__price {
@@ -1937,7 +1942,7 @@ body.compensate-for-scrollbar {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  height: 40px;
+  height: 2.08333vw;
 }
 
 .counter__btn {
@@ -2914,6 +2919,53 @@ body.compensate-for-scrollbar {
 .catalog__li {
   padding: 1.66667vw 0.83333vw;
   width: calc(100% / 5);
+}
+
+.catalog__header {
+  font-size: 1.45833vw;
+  line-height: 1.45833vw;
+  font-weight: 500;
+  color: #70544F;
+  margin-bottom: 6px;
+}
+
+.about {
+  position: relative;
+  padding: 10px 0;
+  padding-left: 28.64583vw;
+}
+
+.about__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  min-height: 20.57292vw;
+}
+
+.about__img {
+  width: 27.70833vw;
+  position: absolute;
+  left: -1.04167vw;
+  top: 10px;
+}
+
+.about__content {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.about__header {
+  font-size: 1.45833vw;
+  line-height: 1.45833vw;
+  font-weight: 500;
+  color: #70544F;
+  margin-bottom: 14px;
 }
 
 /*# sourceMappingURL=main.css.map */

@@ -53,7 +53,12 @@ ul {
 p {
   font-size: 16px;
   line-height: 25px;
-  color: #57555C;
+  color: #666666;
+  margin-bottom: 30px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 
   @include mobile {
     line-height: 19px;
