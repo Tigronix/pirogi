@@ -1,0 +1,27 @@
+.choose-inside {
+  padding: vw(50px) 0 vw(100px) 0;
+
+  &__header {
+    font-size: vw(32px);
+    line-height: vw(40px);
+    color: #fff;
+    font-weight: 300;
+    margin-bottom: 56px;
+  }
+
+  &__list {
+    padding: vw(25px) vw(55px);
+    margin: vw(-5px) vw(-30px);
+  }
+
+  &__li {
+    padding: vw(5px) vw(30px);
+    width: calc(100% / 11);
+  }
+
+  &__checkbox {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+}
