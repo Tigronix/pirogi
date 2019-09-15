@@ -1,40 +1,4 @@
 (function () {
-	// sliders
-	const popularSlider = function(){
-		const $sliderContainers = $('.js-popular-slider-container');
-
-		$sliderContainers.each(function(){
-			const $sliderContainer = $(this);
-			const $slider = $sliderContainer.find('.js-popular-slider');
-			const options = {
-				slidesToShow: 5,
-				arrows: true,
-				appendDots: '.js-popular-slider-dots',
-				dots: true,
-				infinite: false
-			};
-
-			$slider.slick(options);
-		});
-	};
-
-	const setsSlider = function(){
-		const $sliderContainers = $('.js-sets-slider-container');
-
-		$sliderContainers.each(function(){
-			const $sliderContainer = $(this);
-			const $slider = $sliderContainer.find('.js-sets-slider');
-			const options = {
-				slidesToShow: 5,
-				arrows: true,
-				appendDots: '.js-sets-slider-dots',
-				dots: true,
-				infinite: false
-			};
-
-			$slider.slick(options);
-		});
-	};
 
 	// specific
 	const cardCalc = function () {
@@ -122,7 +86,7 @@
 		});
 	};
 
-	const setCalc = function(){
+	const setCalc = function () {
 		const cards = document.querySelectorAll('.js-set-card');
 
 		const setObj = {
@@ -153,7 +117,7 @@
 			},
 		};
 
-		cards.forEach(function(card, index){
+		cards.forEach(function (card, index) {
 			const basketCounter = document.querySelector('.js-basket-counter');
 			const counter = card.querySelector('.js-counter');
 			const counterMinusBtn = counter.querySelector('.js-counter-prev');
@@ -195,10 +159,61 @@
 		});
 	};
 
+	// sliders
+	const popularSlider = function () {
+		const $sliderContainers = $('.js-popular-slider-container');
+
+		$sliderContainers.each(function () {
+			const $sliderContainer = $(this);
+			const $slider = $sliderContainer.find('.js-popular-slider');
+			const options = {
+				slidesToShow: 5,
+				arrows: true,
+				appendDots: '.js-popular-slider-dots',
+				dots: true,
+				infinite: false
+			};
+
+			$slider.slick(options);
+		});
+	};
+
+	const setsSlider = function () {
+		const $sliderContainers = $('.js-sets-slider-container');
+
+		$sliderContainers.each(function () {
+			const $sliderContainer = $(this);
+			const $slider = $sliderContainer.find('.js-sets-slider');
+			const options = {
+				slidesToShow: 5,
+				arrows: true,
+				appendDots: '.js-sets-slider-dots',
+				dots: true,
+				infinite: false
+			};
+
+			$slider.slick(options);
+		});
+	};
+
+	const clientsSlider = function () {
+		const $slider = $('.js-clients-slider');
+		const options = {
+			slidesToShow: 7,
+			arrows: true,
+			infinite: false
+		};
+
+		$slider.slick(options);
+	};
+
+
+	// <****************PAGE READY****************>
 	const onPageRdy = function () {
 		// sliders
 		popularSlider();
 		setsSlider();
+		clientsSlider();
 
 		// utility
 

@@ -1,0 +1,12 @@
+<section class="clients">
+	<div class="container clients__container">
+		<h3 class="h3">Среди наших клиентов</h3>
+		<div class="clients__slider-container">
+			<div class="clients__slider js-clients-slider">
+				{% for i in 0..14 %}
+					<div class="clients__slide"><img src="assets/img/{% if i > 6 %}clients6{% else %}clients{{i}}{% endif %}.png" alt="" class="clients__img"></div>
+				{% endfor %}
+			</div>
+		</div>
+	</div>
+</section>

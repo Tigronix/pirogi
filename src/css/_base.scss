@@ -7,7 +7,7 @@
 
 body {
   @include helvetica;
-  color: #57555C;
+  color: #57555c;
 
   &.overflow {
     overflow: hidden;
@@ -42,15 +42,29 @@ ul {
 }
 
 .h1 {
-  font-size: 24px;
-  line-height: 24px;
+  font-size: vw(28px);
+  line-height: vw(28px);
   font-weight: 500;
-  margin-bottom: 15px;
+  color: #70544f;
+  margin: 0;
+  margin-bottom: 11px;
+}
 
-  @include mobile {
-    font-size: 18px;
-    line-height: 21px;
-    text-align: center;
+.h2, .h3 {
+  font-size: vw(28px);
+  line-height: vw(28px);
+  font-weight: 500;
+  color: #70544f;
+  text-align: center;
+  margin: 0;
+  margin-bottom: 6px;
+
+  &--left {
+    text-align: left;
+  }
+
+  &--red {
+    color: #F94848;
   }
 }
 

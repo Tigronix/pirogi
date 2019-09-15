@@ -361,7 +361,7 @@
   },
 } %}
 
-<div class="sets__header">Покупайте Сеты. Это выгодно!</div>
+<h2 class="h2 h2--red">Покупайте Сеты. Это выгодно!</h2>
 <section class="sets">
 	<div class="container sets__container">
 		<div class="sets__slider-container js-sets-slider-container">
@@ -369,7 +369,7 @@
 				{% for key, item in sliderList %}
 					<div class="sets__slide js-set-card">
 						<div class="sets__img-box">
-							<img src="assets/img/{% if loop.index > 4 %}{{key}}{% else %}set4{% endif %}.png" alt="" class="sets__img">
+							<img src="assets/img/{% if loop.index > 4 %}set4{% else %}{{key}}{% endif %}.png" alt="" class="sets__img">
 							<div class="sets__title">{{item.title}}</div>
 						</div>
 						<div class="sets__content">

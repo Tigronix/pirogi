@@ -1,0 +1,263 @@
+{% set tableList = {
+  trItem0: {
+    tdList: {
+      item0: {
+        text: '«Фыдджин» - с мясом',
+      },
+      item1: {
+        text: '700 руб.',
+      },
+      item2: {
+        text: '750 руб.',
+      },
+      item3: {
+        text: '820 руб.',
+      },
+      item4: {
+        text: '1 125 пирогов',
+        btn: true
+      },
+    }
+  },
+  trItem1: {
+    tdList: {
+      item0: {
+        text: 'Цахараджын (со свекольными листьями, сыром и зеленью)',
+      },
+      item1: {
+        text: '450 руб.',
+      },
+      item2: {
+        text: '500 руб.',
+      },
+      item3: {
+        text: '550 руб.',
+      },
+      item4: {
+        text: '1 023 пирогов',
+        btn: true
+      },
+    }
+  },
+  trItem2: {
+    tdList: {
+      item0: {
+        text: '«Кабушкаджин» - с капустой',
+      },
+      item1: {
+        text: '700 руб.',
+      },
+      item2: {
+        text: '750 руб.',
+      },
+      item3: {
+        text: '820 руб.',
+      },
+      item4: {
+        text: '1 125 пирогов',
+        btn: true
+      },
+    }
+  },
+  trItem3: {
+    tdList: {
+      item0: {
+        text: 'С капустой, яйцом и жареным луком',
+      },
+      item1: {
+        text: '700 руб.',
+      },
+      item2: {
+        text: '750 руб.',
+      },
+      item3: {
+        text: '820 руб.',
+      },
+      item4: {
+        text: '1 125 пирогов',
+        btn: true
+      },
+    }
+  },
+  trItem4: {
+    tdList: {
+      item0: {
+        text: 'С сыром, картофелем и грибами',
+      },
+      item1: {
+        text: '450 руб.',
+      },
+      item2: {
+        text: '500 руб.',
+      },
+      item3: {
+        text: '550 руб.',
+      },
+      item4: {
+        text: '1 023 пирогов',
+        btn: true
+      },
+    }
+  },
+  trItem5: {
+    tdList: {
+      item0: {
+        text: 'С сыром, курицей и грибами',
+      },
+      item1: {
+        text: '700 руб.',
+      },
+      item2: {
+        text: '750 руб.',
+      },
+      item3: {
+        text: '820 руб.',
+      },
+      item4: {
+        text: '1 125 пирогов',
+        btn: true
+      },
+    }
+  },
+  trItem6: {
+    tdList: {
+      item0: {
+        text: 'С сыром, картофелем и грибами',
+      },
+      item1: {
+        text: '450 руб.',
+      },
+      item2: {
+        text: '500 руб.',
+      },
+      item3: {
+        text: '550 руб.',
+      },
+      item4: {
+        text: '1 023 пирогов',
+        btn: true
+      },
+    }
+  },
+  trItem7: {
+    tdList: {
+      item0: {
+        text: 'С сыром, курицей и грибами',
+      },
+      item1: {
+        text: '700 руб.',
+      },
+      item2: {
+        text: '750 руб.',
+      },
+      item3: {
+        text: '820 руб.',
+      },
+      item4: {
+        text: '1 125 пирогов',
+        btn: true
+      },
+    }
+  },
+  trItem8: {
+    tdList: {
+      item0: {
+        text: 'С сыром, картофелем и грибами',
+      },
+      item1: {
+        text: '450 руб.',
+      },
+      item2: {
+        text: '500 руб.',
+      },
+      item3: {
+        text: '550 руб.',
+      },
+      item4: {
+        text: '1 023 пирогов',
+        btn: true
+      },
+    }
+  },
+  trItem9: {
+    tdList: {
+      item0: {
+        text: 'С сыром, курицей и грибами',
+      },
+      item1: {
+        text: '700 руб.',
+      },
+      item2: {
+        text: '750 руб.',
+      },
+      item3: {
+        text: '820 руб.',
+      },
+      item4: {
+        text: '1 125 пирогов',
+        btn: true
+      },
+    }
+  },
+  trItem10: {
+    tdList: {
+      item0: {
+        text: 'С сыром, картофелем и грибами',
+      },
+      item1: {
+        text: '450 руб.',
+      },
+      item2: {
+        text: '500 руб.',
+      },
+      item3: {
+        text: '550 руб.',
+      },
+      item4: {
+        text: '1 023 пирогов',
+        btn: true
+      },
+    }
+  },
+  trItem11: {
+    tdList: {
+      item0: {
+        text: 'С сыром, курицей и грибами',
+      },
+      item1: {
+        text: '700 руб.',
+      },
+      item2: {
+        text: '750 руб.',
+      },
+      item3: {
+        text: '820 руб.',
+      },
+      item4: {
+        text: '1 125 пирогов',
+        btn: true
+      },
+    }
+  },
+} %}
+
+<section class="rating">
+	<h2 class="h2">Рейтинг лучших осетинских пирогов и стоимость:</h2>
+	<table class="rating__table">
+		{% for item in tableList %}
+			<tr class="rating__tr">
+				{% for item in item.tdList %}
+					<td class="rating__td">
+						{{item.text}}
+						{% if item.btn %}
+							{% include 'btn.twig' with {
+                text: 'заказать',
+                mod: 'btn--green'
+              } %}
+						{% endif %}
+					</td>
+				{% endfor %}
+			</tr>
+		{% endfor %}
+	</table>
+</section>

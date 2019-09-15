@@ -11,42 +11,6 @@ var APP = {
 };
 
 (function () {
-	// sliders
-	var popularSlider = function popularSlider() {
-		var $sliderContainers = $('.js-popular-slider-container');
-
-		$sliderContainers.each(function () {
-			var $sliderContainer = $(this);
-			var $slider = $sliderContainer.find('.js-popular-slider');
-			var options = {
-				slidesToShow: 5,
-				arrows: true,
-				appendDots: '.js-popular-slider-dots',
-				dots: true,
-				infinite: false
-			};
-
-			$slider.slick(options);
-		});
-	};
-
-	var setsSlider = function setsSlider() {
-		var $sliderContainers = $('.js-sets-slider-container');
-
-		$sliderContainers.each(function () {
-			var $sliderContainer = $(this);
-			var $slider = $sliderContainer.find('.js-sets-slider');
-			var options = {
-				slidesToShow: 5,
-				arrows: true,
-				appendDots: '.js-sets-slider-dots',
-				dots: true,
-				infinite: false
-			};
-
-			$slider.slick(options);
-		});
-	};
 
 	// specific
 	var cardCalc = function cardCalc() {
@@ -207,10 +171,60 @@ var APP = {
 		});
 	};
 
+	// sliders
+	var popularSlider = function popularSlider() {
+		var $sliderContainers = $('.js-popular-slider-container');
+
+		$sliderContainers.each(function () {
+			var $sliderContainer = $(this);
+			var $slider = $sliderContainer.find('.js-popular-slider');
+			var options = {
+				slidesToShow: 5,
+				arrows: true,
+				appendDots: '.js-popular-slider-dots',
+				dots: true,
+				infinite: false
+			};
+
+			$slider.slick(options);
+		});
+	};
+
+	var setsSlider = function setsSlider() {
+		var $sliderContainers = $('.js-sets-slider-container');
+
+		$sliderContainers.each(function () {
+			var $sliderContainer = $(this);
+			var $slider = $sliderContainer.find('.js-sets-slider');
+			var options = {
+				slidesToShow: 5,
+				arrows: true,
+				appendDots: '.js-sets-slider-dots',
+				dots: true,
+				infinite: false
+			};
+
+			$slider.slick(options);
+		});
+	};
+
+	var clientsSlider = function clientsSlider() {
+		var $slider = $('.js-clients-slider');
+		var options = {
+			slidesToShow: 7,
+			arrows: true,
+			infinite: false
+		};
+
+		$slider.slick(options);
+	};
+
+	// <****************PAGE READY****************>
 	var onPageRdy = function onPageRdy() {
 		// sliders
 		popularSlider();
 		setsSlider();
+		clientsSlider();
 
 		// utility
 
