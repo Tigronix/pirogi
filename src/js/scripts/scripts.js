@@ -222,8 +222,9 @@
 
 
 				fieldRoute.addEventListener('keyup', function(){
-					const from = this.value;
-					const to = this.getAttribute('data-destination');
+					const from = this.getAttribute('data-source');
+					const to = this.value;
+
 					getRouteInfo(from, to);
 				});
 			});

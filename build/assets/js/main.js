@@ -231,8 +231,9 @@ var APP = {
 				};
 
 				fieldRoute.addEventListener('keyup', function () {
-					var from = this.value;
-					var to = this.getAttribute('data-destination');
+					var from = this.getAttribute('data-source');
+					var to = this.value;
+
 					getRouteInfo(from, to);
 				});
 			});
