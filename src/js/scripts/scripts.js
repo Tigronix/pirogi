@@ -159,6 +159,77 @@
 		});
 	};
 
+	// utility
+	const map = function () {
+		const maps = document.querySelectorAll('.js-map');
+
+		maps.forEach(function (map, index) {
+			const id = `map${index}`;
+			const mapSection = map.closest('.js-map-section');
+			const fieldRoute = mapSection.querySelector('.js-field-route');
+			const timeTravelNode = mapSection.querySelector('.js-field-route-time-travel');
+
+			map.id = id;
+
+			ymaps.ready(function () {
+				var myMap = new ymaps.Map(id, {
+					center: [55.753994, 37.622093],
+					zoom: 9,
+					controls: ['routePanelControl']
+				});
+
+				// Получение ссылки на панель маршрутизации.
+				var control = myMap.controls.get('routePanelControl');
+
+				const getRouteInfo = function(from, to){
+					// Задание состояния для панели маршрутизации.
+					control.routePanel.state.set({
+						// Адрес начальной точки.
+						from: from,
+						// Адрес конечной точки.
+						to: to
+					});
+
+					// Получение мультимаршрута.
+					var multiRoutePromise = control.routePanel.getRouteAsync();
+
+					multiRoutePromise.then(function (multiRoute) {
+						// Подписка на событие обновления мультимаршрута.
+						multiRoute.model.events.add('requestsuccess', function () {
+							// Получение ссылки на активный маршрут.
+							var activeRoute = multiRoute.getActiveRoute();
+							// Когда панель добавляется на карту, она
+							// создает маршрут с изначально пустой геометрией.
+							// Только когда пользователь выберет начальную и конечную точки,
+							// маршрут будет перестроен с непустой геометрией.
+							// Поэтому для избежания ошибки нужно добавить проверку,
+							// что маршрут не пустой.
+							if(activeRoute) {
+								// Вывод информации об активном маршруте.
+								// console.log("Длина: " + activeRoute.properties.get("distance").text);
+								// console.log("Время прохождения: " + activeRoute.properties.get("duration").text);
+
+								const timeTravel = activeRoute.properties.get("duration").text;
+								timeTravelNode.innerText = timeTravel;
+
+							}
+						});
+					}, function (err) {
+						console.log(err);
+					});
+				};
+
+
+
+				fieldRoute.addEventListener('keyup', function(){
+					const from = this.value;
+					const to = this.getAttribute('data-destination');
+					getRouteInfo(from, to);
+				});
+			});
+		});
+	};
+
 	// sliders
 	const popularSlider = function () {
 		const $sliderContainers = $('.js-popular-slider-container');
@@ -216,6 +287,7 @@
 		clientsSlider();
 
 		// utility
+		map();
 
 		// specific
 		cardCalc();

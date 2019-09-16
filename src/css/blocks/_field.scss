@@ -1,0 +1,77 @@
+.field {
+  $self: &;
+  position: relative;
+  height: 52px;
+
+  &--route {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  &--select {
+    &:after {
+      display: block;
+      content: '';
+      width: 12px;
+      height: 8px;
+      position: absolute;
+      right: vw(20px);
+      top: 50%;
+      transform: translateY(-50%);
+      background: url(../img/icons/chevron-down.png) no-repeat center;
+      background-size: 100% auto;
+    }
+  }
+
+  &__icon {
+    position: absolute;
+    left: vw(17px);
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  &__input {
+    padding-left: vw(48px);
+    width: 100%;
+    height: 100%;
+    font-size: vw(15px);
+    line-height: vw(18px);
+    color: #9299a2;
+    padding-right: vw(20px);
+    appearance: none;
+    border: none;
+
+    #{$self}--route & {
+      width: 100%;
+    }
+
+    #{$self}--select & {
+      padding-right: vw(50px);
+
+    }
+  }
+
+  &__route {
+    height: 100%;
+    padding: 0 vw(10px);
+    text-align: center;
+    font-size: vw(18px);
+    line-height: 52px;
+    color: #fff;
+    font-weight: 500;
+    background: #f94848;
+    border-radius: 0px 3px 3px 0px;
+  }
+
+  &__route-wrap {
+    flex: 1;
+    height: 100%;
+  }
+
+  &__option {
+    &:first-child {
+      display: none;
+    }
+  }
+}
