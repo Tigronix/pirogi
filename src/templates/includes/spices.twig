@@ -1,0 +1,180 @@
+{% set spicesList = {
+	spiceItem0: {
+		key: 'Соль:',
+    spicesList: {
+      valuesList: {
+        item0: {
+          text: 'без соли'
+        },
+        item1: {
+          text: 'меньше соли'
+        },
+        item2: {
+          text: 'по рецепту',
+					active: true
+        },
+        item3: {
+          text: 'больше соли'
+        },
+        item4: {
+          text: 'много соли'
+        },
+      }
+    }
+  },
+	spiceItem1: {
+		key: 'Перец:',
+		red: true,
+    spicesList: {
+      valuesList: {
+        item0: {
+          text: 'без перца'
+        },
+        item1: {
+          text: 'меньше перца'
+        },
+        item2: {
+          text: 'по рецепту'
+        },
+        item3: {
+          text: 'больше перца'
+        },
+        item4: {
+          text: 'много перца',
+					active: true
+        },
+      }
+    }
+  },
+	spiceItem2: {
+		key: 'Лук:',
+    spicesList: {
+      valuesList: {
+        item0: {
+          text: 'без лука'
+        },
+        item1: {
+          text: 'меньше лука'
+        },
+        item2: {
+          text: 'по рецепту'
+        },
+        item3: {
+          text: 'больше лука',
+					active: true
+        },
+        item4: {
+          text: 'много лука'
+        },
+      }
+    }
+  },
+	spiceItem3: {
+		key: 'Сыр:',
+    spicesList: {
+      valuesList: {
+        item0: {
+          text: 'без сыра'
+        },
+        item1: {
+          text: 'меньше сыра',
+					active: true
+        },
+        item2: {
+          text: 'по рецепту'
+        },
+        item3: {
+          text: 'больше сыра'
+        },
+        item4: {
+          text: 'много сыра'
+        },
+      }
+    }
+  },
+	spiceItem4: {
+		key: 'Зелень:',
+    spicesList: {
+      valuesList: {
+        item0: {
+          text: 'без зелени'
+        },
+        item1: {
+          text: 'меньше зелени'
+        },
+        item2: {
+          text: 'по рецепту',
+					active: true
+        },
+        item3: {
+          text: 'больше зелени'
+        },
+        item4: {
+          text: 'много зелени'
+        },
+      }
+    }
+  },
+	spiceItem5: {
+		key: 'Чеснок:',
+    spicesList: {
+      valuesList: {
+        item0: {
+          text: 'без чеснока'
+        },
+        item1: {
+          text: 'меньше чеснока'
+        },
+        item2: {
+          text: 'по рецепту'
+        },
+        item3: {
+          text: 'больше чеснока'
+        },
+        item4: {
+          text: 'много чеснока',
+					active: true
+        },
+      }
+    }
+  },
+} %}
+
+<div class="spices">
+	<div class="spices__container">
+  	<button type="button" class="spices__close"><img src="assets/img/icons/cancel.png" alt="" class="spices__icon-close"></button>
+		<div class="spices__header">
+			<img src="assets/img/icons/spices.png" alt="" class="spices__img">
+			<div class="spices__header-text">Ингредиенты:</div>
+			<div class="spices__question">
+				?
+				{% include 'tooltip.twig' with {
+					text : 'Добавить или убавить ингридиенты'
+				} %}
+			</div>
+		</div>
+		<ul class="spices__list">
+			{% for item in spicesList %}
+				<li class="spices__li js-spices-li">
+					<div class="spices__item {% if item.red %}red{% endif %}">
+						<div class="spices__key">{{item.key}}</div>
+						<ul class="spices__valuelist">
+							{% for item in item.spicesList.valuesList %}
+								<li class="spices__value-li js-spices-values{% if item.active %} active{% endif %}">
+									<span class="spices__value-item {% if item.red %}spices__value-item--red{% endif %}">{{item.text}}</span>
+								</li>
+							{% endfor %}
+						</ul>
+						<div class="spices__range-slider-container">
+							<input type="text" class="spices__range-slider js-range-slider" value="" />
+						</div>
+					</div>
+				</li>
+			{% endfor %}
+		</ul>
+    {% include 'btn--btn.twig' with {
+      text: 'В корзину',
+      mod: 'spices__btn'
+    } %}
+	</div>
+</div>

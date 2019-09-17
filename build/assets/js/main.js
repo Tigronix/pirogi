@@ -11,6 +11,7 @@ var APP = {
 };
 
 (function () {
+	var PG = {};
 
 	// specific
 	var cardCalc = function cardCalc() {
@@ -171,6 +172,63 @@ var APP = {
 		});
 	};
 
+	var rangeSlider = function rangeSlider() {
+		var rangeSliders = document.querySelectorAll('.js-range-slider');
+		PG.rangeSliderObj = {
+			valuesArr: [],
+			getValuesLength: function getValuesLength(index) {
+				return this.valuesArr[index].length - 1;
+			},
+			filterValuesActive: function filterValuesActive(index) {
+				var result = this.valuesArr[index].findIndex(function (item, index, array) {
+					var isActive = item.classList.contains('active');
+
+					if (isActive) {
+						return index;
+					}
+				});
+
+				return result;
+			}
+		};
+
+		rangeSliders.forEach(function (rangeSlider, index) {
+			var rangeSlidersStr = 'js-range-slider' + index;
+			var item = rangeSlider.closest('.js-spices-li');
+			var valuesCollection = item.querySelectorAll('.js-spices-values');
+			var valuesRealArray = Array.from(valuesCollection);
+			// console.log(valuesRealArray);
+
+			PG.rangeSliderObj.valuesArr.push(valuesRealArray);
+
+			rangeSlider.id = rangeSlidersStr;
+			rangeSlider.name = rangeSlidersStr;
+
+			$('#' + rangeSlidersStr).ionRangeSlider({
+				type: "double",
+				min: 0,
+				max: PG.rangeSliderObj.getValuesLength(index),
+				from: PG.rangeSliderObj.filterValuesActive(index),
+				onChange: function onChange(data) {
+					var activeIndex = data.from;
+
+					valuesCollection.forEach(function (value, index) {
+						var isIndexMatch = index === activeIndex;
+
+						if (isIndexMatch) {
+							value.classList.add('active');
+						} else {
+							value.classList.remove('active');
+						}
+					});
+				}
+			});
+		});
+
+		// console.log(PG.rangeSliderObj.valuesArr);
+
+	};
+
 	// utility
 	var map = function map() {
 		var maps = document.querySelectorAll('.js-map');
@@ -297,6 +355,7 @@ var APP = {
 
 		// utility
 		map();
+		rangeSlider();
 
 		// specific
 		cardCalc();

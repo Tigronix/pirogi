@@ -1,4 +1,5 @@
 (function () {
+	const PG = {};
 
 	// specific
 	const cardCalc = function () {
@@ -159,6 +160,65 @@
 		});
 	};
 
+	const rangeSlider = function () {
+		const rangeSliders = document.querySelectorAll('.js-range-slider');
+		 PG.rangeSliderObj = {
+			 valuesArr: [],
+			 getValuesLength: function(index){
+				 return this.valuesArr[index].length - 1;
+			 },
+			 filterValuesActive: function(index){
+				 let result = this.valuesArr[index].findIndex(function(item, index, array) {
+				  const isActive = item.classList.contains('active');
+
+					if(isActive){
+						 return index
+					}
+				});
+
+				return result
+			 }
+		};
+
+		rangeSliders.forEach(function (rangeSlider, index) {
+			const rangeSlidersStr = `js-range-slider${index}`;
+			const item = rangeSlider.closest('.js-spices-li');
+			const valuesCollection = item.querySelectorAll('.js-spices-values');
+			const valuesRealArray = Array.from(valuesCollection);
+			// console.log(valuesRealArray);
+
+			PG.rangeSliderObj.valuesArr.push(valuesRealArray);
+
+			rangeSlider.id = rangeSlidersStr;
+			rangeSlider.name = rangeSlidersStr;
+
+			$(`#${rangeSlidersStr}`).ionRangeSlider({
+				type: "double",
+				min: 0,
+				max: PG.rangeSliderObj.getValuesLength(index),
+				from: PG.rangeSliderObj.filterValuesActive(index),
+				onChange: function (data) {
+					const activeIndex = data.from;
+
+					valuesCollection.forEach(function(value, index){
+						const isIndexMatch = index === activeIndex;
+
+						if(isIndexMatch){
+							value.classList.add('active');
+						}else{
+							value.classList.remove('active');
+						}
+					});
+				}
+			});
+		});
+
+
+		// console.log(PG.rangeSliderObj.valuesArr);
+
+
+	};
+
 	// utility
 	const map = function () {
 		const maps = document.querySelectorAll('.js-map');
@@ -181,7 +241,7 @@
 				// Получение ссылки на панель маршрутизации.
 				var control = myMap.controls.get('routePanelControl');
 
-				const getRouteInfo = function(from, to){
+				const getRouteInfo = function (from, to) {
 					// Задание состояния для панели маршрутизации.
 					control.routePanel.state.set({
 						// Адрес начальной точки.
@@ -221,7 +281,7 @@
 
 
 
-				fieldRoute.addEventListener('keyup', function(){
+				fieldRoute.addEventListener('keyup', function () {
 					const from = this.getAttribute('data-source');
 					const to = this.value;
 
@@ -289,6 +349,7 @@
 
 		// utility
 		map();
+		rangeSlider();
 
 		// specific
 		cardCalc();
