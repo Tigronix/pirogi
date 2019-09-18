@@ -62,19 +62,23 @@
 } %}
 
 <section class="choose-inside">
-	<div class="container choose-isinde__container">
-		<div class="choose-inside__header">Выберите начинки <br> и наш сервис подберет лучшие варианты пирогов</div>
-		<ul class="choose-inside__list">
-			{% for item in checkList %}
-				<li class="choose-inside__li">
-					<label class="choose-inside__checkbox">
-						<input class="choose-inside__input" type="checkbox" name="choose-inside" {% if item.checked %} checked="checked" {% endif %}>
-						<span class="choose-inside__icon"></span>
-						<span class="choose-inside__desc">{{item.text}}</span>
-					</label>
-				</li>
-			{% endfor %}
-		</ul>
-    <a href="#" class="choose-inside__btn">Показать 48 пирогов</a>
+	<div class="container choose-inside__container">
+		<div class="choose-inside__header">Выберите начинки
+			<br>
+			и наш сервис подберет лучшие варианты пирогов</div>
+		<div class="choose-inside__list-wrap">
+			<ul class="choose-inside__list">
+				{% for item in checkList %}
+					<li class="choose-inside__li">
+						<label class="choose-inside__checkbox">
+							<input class="choose-inside__input" type="radio" name="choose-inside" {% if item.checked %} checked="checked" {% endif %}>
+							<span class="choose-inside__icon"></span>
+							<span class="choose-inside__desc">{{item.text}}</span>
+						</label>
+					</li>
+				{% endfor %}
+			</ul>
+		</div>
+		<a href="#" class="choose-inside__btn">Показать 48 пирогов</a>
 	</div>
 </section>

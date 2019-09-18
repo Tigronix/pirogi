@@ -1,17 +1,44 @@
 .choose-inside {
   padding: vw(50px) 0 vw(100px) 0;
+  background: url(../img/choose-inside.png) no-repeat center;
+  background-size: cover;
+  position: relative;
+
+  &:after {
+    display: block;
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(#000, .3);
+  }
+
+  &__container {
+    position: relative;
+    z-index: 5;
+  }
 
   &__header {
     font-size: vw(32px);
     line-height: vw(40px);
     color: #fff;
     font-weight: 300;
-    margin-bottom: 56px;
+    margin-bottom: vw(56px);
+    text-align: center;
+  }
+
+  &__list-wrap {
+    padding: vw(25px) vw(55px);
   }
 
   &__list {
-    padding: vw(25px) vw(55px);
     margin: vw(-5px) vw(-30px);
+    background: #fff;
+    border-radius: 10px;
+    display: flex;
+    flex-wrap: wrap;
   }
 
   &__li {
@@ -23,5 +50,6 @@
     position: relative;
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
   }
 }
