@@ -162,30 +162,64 @@
 
 	const rangeSlider = function () {
 		const rangeSliders = document.querySelectorAll('.js-range-slider');
-		 PG.rangeSliderObj = {
-			 valuesArr: [],
-			 getValuesLength: function(index){
-				 return this.valuesArr[index].length - 1;
-			 },
-			 filterValuesActive: function(index){
-				 let result = this.valuesArr[index].findIndex(function(item, index, array) {
-				  const isActive = item.classList.contains('active');
+		const openSpiceBtns = document.querySelectorAll('.js-open-spices');
 
-					if(isActive){
-						 return index
+		PG.rangeSliderObj = {
+			valuesArr: [],
+			getValuesLength: function (index) {
+				return this.valuesArr[index].length - 1;
+			},
+			filterValuesActive: function (index) {
+				let result = this.valuesArr[index].findIndex(function (item, index, array) {
+					const isActive = item.classList.contains('active');
+
+					if(isActive) {
+						return index
 					}
 				});
 
 				return result
-			 }
+			}
 		};
 
+		openSpiceBtns.forEach((openSpiceBtn) => {
+			openSpiceBtn.addEventListener('click', function () {
+				const card = this.closest('.js-card');
+				const spices = card.querySelector('.spices');
+				const sliderContainers = spices.querySelectorAll('.spices__range-slider-container');
+
+				spices.classList.add('active');
+
+				sliderContainers.forEach((sliderContainer) => {
+					setTimeout(() => {
+						sliderContainer.classList.add('active');
+					}, 300);
+				});
+			});
+		});
+
+
 		rangeSliders.forEach(function (rangeSlider, index) {
+			const spicesSection = rangeSlider.closest('.js-spices');
 			const rangeSlidersStr = `js-range-slider${index}`;
 			const item = rangeSlider.closest('.js-spices-li');
 			const valuesCollection = item.querySelectorAll('.js-spices-values');
 			const valuesRealArray = Array.from(valuesCollection);
-			// console.log(valuesRealArray);
+			const btnMinus = item.querySelector('.js-spices-btn-minus');
+			const btnPlus = item.querySelector('.js-spices-btn-plus');
+			const btnClose = spicesSection.querySelector('.js-spices-close');
+
+			const updateValues = function (activeIndex) {
+				valuesCollection.forEach(function (value, index) {
+					const isIndexMatch = index === activeIndex;
+
+					if(isIndexMatch) {
+						value.classList.add('active');
+					} else {
+						value.classList.remove('active');
+					}
+				});
+			};
 
 			PG.rangeSliderObj.valuesArr.push(valuesRealArray);
 
@@ -200,23 +234,57 @@
 				onChange: function (data) {
 					const activeIndex = data.from;
 
-					valuesCollection.forEach(function(value, index){
-						const isIndexMatch = index === activeIndex;
-
-						if(isIndexMatch){
-							value.classList.add('active');
-						}else{
-							value.classList.remove('active');
-						}
-					});
+					updateValues(activeIndex);
 				}
 			});
+
+			const instance = $(`#${rangeSlidersStr}`).data("ionRangeSlider");
+
+			btnMinus.addEventListener('click', function () {
+				let activeIndex = instance.result.from - 1;
+
+				if(activeIndex < 0) {
+					activeIndex = 0;
+				}
+
+				const from = activeIndex;
+
+				instance.update({
+					from: from,
+				});
+
+				updateValues(activeIndex);
+			});
+
+			btnPlus.addEventListener('click', function () {
+				let activeIndex = instance.result.from + 1;
+				const max = instance.result.max;
+
+				if(activeIndex > max) {
+					activeIndex = max;
+				}
+
+				const from = activeIndex;
+
+				instance.update({
+					from: from,
+				});
+
+				updateValues(activeIndex);
+			});
+
+			btnClose.addEventListener('click', () => {
+				const card = btnClose.closest('.js-card');
+				const spices = card.querySelector('.spices');
+				const sliderContainers = spices.querySelectorAll('.spices__range-slider-container');
+
+				spicesSection.classList.remove('active');
+
+				sliderContainers.forEach((sliderContainer) => {
+					// sliderContainer.classList.remove('active');
+				});
+			});
 		});
-
-
-		// console.log(PG.rangeSliderObj.valuesArr);
-
-
 	};
 
 	// utility

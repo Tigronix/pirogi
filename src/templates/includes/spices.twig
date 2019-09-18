@@ -140,9 +140,9 @@
   },
 } %}
 
-<div class="spices">
+<div class="spices js-spices">
 	<div class="spices__container">
-  	<button type="button" class="spices__close"><img src="assets/img/icons/cancel.png" alt="" class="spices__icon-close"></button>
+  	<button type="button" class="spices__close js-spices-close"><img src="assets/img/icons/cancel.png" alt="" class="spices__icon-close"></button>
 		<div class="spices__header">
 			<img src="assets/img/icons/spices.png" alt="" class="spices__img">
 			<div class="spices__header-text">Ингредиенты:</div>
@@ -168,13 +168,17 @@
 						<div class="spices__range-slider-container">
 							<input type="text" class="spices__range-slider js-range-slider" value="" />
 						</div>
+						<div class="spices__slider-btns">
+							<button class="spices__slider-btn spices__slider-btn--prev js-spices-btn-minus" type="button"></button>
+							<button class="spices__slider-btn spices__slider-btn--next js-spices-btn-plus" type="button"></button>
+						</div>
 					</div>
 				</li>
 			{% endfor %}
 		</ul>
     {% include 'btn--btn.twig' with {
       text: 'В корзину',
-      mod: 'spices__btn'
+      mod: 'spices__btn btn--green'
     } %}
 	</div>
 </div>

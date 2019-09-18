@@ -174,6 +174,8 @@ var APP = {
 
 	var rangeSlider = function rangeSlider() {
 		var rangeSliders = document.querySelectorAll('.js-range-slider');
+		var openSpiceBtns = document.querySelectorAll('.js-open-spices');
+
 		PG.rangeSliderObj = {
 			valuesArr: [],
 			getValuesLength: function getValuesLength(index) {
@@ -192,12 +194,43 @@ var APP = {
 			}
 		};
 
+		openSpiceBtns.forEach(function (openSpiceBtn) {
+			openSpiceBtn.addEventListener('click', function () {
+				var card = this.closest('.js-card');
+				var spices = card.querySelector('.spices');
+				var sliderContainers = spices.querySelectorAll('.spices__range-slider-container');
+
+				spices.classList.add('active');
+
+				sliderContainers.forEach(function (sliderContainer) {
+					setTimeout(function () {
+						sliderContainer.classList.add('active');
+					}, 300);
+				});
+			});
+		});
+
 		rangeSliders.forEach(function (rangeSlider, index) {
+			var spicesSection = rangeSlider.closest('.js-spices');
 			var rangeSlidersStr = 'js-range-slider' + index;
 			var item = rangeSlider.closest('.js-spices-li');
 			var valuesCollection = item.querySelectorAll('.js-spices-values');
 			var valuesRealArray = Array.from(valuesCollection);
-			// console.log(valuesRealArray);
+			var btnMinus = item.querySelector('.js-spices-btn-minus');
+			var btnPlus = item.querySelector('.js-spices-btn-plus');
+			var btnClose = spicesSection.querySelector('.js-spices-close');
+
+			var updateValues = function updateValues(activeIndex) {
+				valuesCollection.forEach(function (value, index) {
+					var isIndexMatch = index === activeIndex;
+
+					if (isIndexMatch) {
+						value.classList.add('active');
+					} else {
+						value.classList.remove('active');
+					}
+				});
+			};
 
 			PG.rangeSliderObj.valuesArr.push(valuesRealArray);
 
@@ -212,21 +245,57 @@ var APP = {
 				onChange: function onChange(data) {
 					var activeIndex = data.from;
 
-					valuesCollection.forEach(function (value, index) {
-						var isIndexMatch = index === activeIndex;
-
-						if (isIndexMatch) {
-							value.classList.add('active');
-						} else {
-							value.classList.remove('active');
-						}
-					});
+					updateValues(activeIndex);
 				}
 			});
+
+			var instance = $('#' + rangeSlidersStr).data("ionRangeSlider");
+
+			btnMinus.addEventListener('click', function () {
+				var activeIndex = instance.result.from - 1;
+
+				if (activeIndex < 0) {
+					activeIndex = 0;
+				}
+
+				var from = activeIndex;
+
+				instance.update({
+					from: from
+				});
+
+				updateValues(activeIndex);
+			});
+
+			btnPlus.addEventListener('click', function () {
+				var activeIndex = instance.result.from + 1;
+				var max = instance.result.max;
+
+				if (activeIndex > max) {
+					activeIndex = max;
+				}
+
+				var from = activeIndex;
+
+				instance.update({
+					from: from
+				});
+
+				updateValues(activeIndex);
+			});
+
+			btnClose.addEventListener('click', function () {
+				var card = btnClose.closest('.js-card');
+				var spices = card.querySelector('.spices');
+				var sliderContainers = spices.querySelectorAll('.spices__range-slider-container');
+
+				spicesSection.classList.remove('active');
+
+				sliderContainers.forEach(function (sliderContainer) {
+					// sliderContainer.classList.remove('active');
+				});
+			});
 		});
-
-		// console.log(PG.rangeSliderObj.valuesArr);
-
 	};
 
 	// utility

@@ -11,5 +11,10 @@
   &__li {
     padding: vw(32px) vw(16px);
     width: calc(100% / 5);
+    position: relative;
+
+    &:hover {
+      z-index: 5;
+    }
   }
 }
