@@ -432,12 +432,96 @@ var APP = {
 		$slider.slick(options);
 	};
 
+	var productSlider = function productSlider() {
+		var $slider = $('.js-product-slider');
+		var sliders = document.querySelectorAll('.js-product-slider');
+		var options = {
+			slidesToShow: 5,
+			arrows: true,
+			infinite: false,
+			vertical: true,
+			swipe: false,
+			appendArrows: '.js-product-arrows',
+			prevArrow: '<button class="product__small-btn product__small-btn--prev js-product-btn-prev" type="button"><img src="assets/img/icons/chevron-up.png" alt=""></button>',
+			nextArrow: '<button class="product__small-btn product__small-btn--next js-product-btn-next" type="button"><img src="assets/img/icons/chevron-down1.png" alt=""></button>'
+		};
+
+		$slider.slick(options);
+
+		sliders.forEach(function (slider) {
+			var section = slider.closest('.js-product');
+			var prevBtnEdge = section.querySelector('.js-product-btn-edge-prev');
+			var btnNext = section.querySelector('.js-product-btn-next');
+			var $slider = $('.' + slider.classList[1]);
+			var START_NUMBER = -1;
+			var countFlag = START_NUMBER;
+			var isNextDisabled = false;
+			var activeSlides = '';
+			var slidesArr = '';
+			var arrows = '';
+			var prevBtn = '';
+
+			$slider.on('afterChange', function (event, slick, direction) {
+				isNextDisabled = btnNext.classList.contains('slick-disabled');
+				activeSlides = slider.querySelectorAll('.slick-active');
+				slidesArr = Array.from(activeSlides);
+				arrows = section.querySelector('.js-product-arrows');
+				prevBtn = arrows.querySelector('.js-product-btn-prev');
+
+				if (isNextDisabled) {
+					countFlag++;
+
+					if (countFlag >= 4) {
+						countFlag = 4;
+					}
+
+					if (countFlag >= 1) {
+						slidesArr[0].classList.add('edge-hide');
+						prevBtn.classList.add('hide');
+						prevBtnEdge.classList.add('active');
+					}
+
+					slidesArr.forEach(function (elem, index) {
+						elem.classList.remove('edge-active');
+					});
+
+					slidesArr[countFlag].classList.add('edge-active');
+				} else {
+					countFlag = START_NUMBER;
+
+					prevBtnEdge.classList.remove('active');
+
+					slidesArr.forEach(function (elem, index) {
+						elem.classList.remove('edge-active', 'edge-hide');
+					});
+				}
+			});
+
+			prevBtnEdge.addEventListener('click', function () {
+				countFlag--;
+
+				slidesArr.forEach(function (elem, index) {
+					elem.classList.remove('edge-active');
+				});
+
+				slidesArr[countFlag].classList.add('edge-active');
+
+				if (countFlag == 0) {
+					slidesArr[0].classList.remove('edge-hide');
+					prevBtn.classList.remove('hide');
+					prevBtnEdge.classList.remove('active');
+				}
+			});
+		});
+	};
+
 	// <****************PAGE READY****************>
 	var onPageRdy = function onPageRdy() {
 		// sliders
 		popularSlider();
 		setsSlider();
 		clientsSlider();
+		productSlider();
 
 		// utility
 		map();

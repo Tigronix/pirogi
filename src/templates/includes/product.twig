@@ -1,0 +1,18 @@
+<div class="product js-product">
+	<div class="container product__container">
+		<div class="product__small-gallery">
+	    <div class="js-product-arrows"></div>
+			<button class="product__small-btn product__small-btn--prev js-product-btn-edge-prev" type="button"><img src="assets/img/icons/chevron-up.png" alt=""></button>
+			<button class="product__small-btn product__small-btn--prev js-product-btn-edge-next" type="button"><img src="assets/img/icons/chevron-up.png" alt=""></button>
+			<div class="product__small-slider js-product-slider">
+				{% for index in 0..6 %}
+					<div class="product__small-slide">
+						<div class="product__small-img-box">
+	            <img src="assets/img/product0.png" alt="">
+	          </div>
+					</div>
+				{% endfor %}
+			</div>
+		</div>
+	</div>
+</div>

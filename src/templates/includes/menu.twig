@@ -1,76 +1,76 @@
 {% set menuBtns = {
 	item0: {
-    text: 'Сытные',
-    counter: '12',
-    active: true
-  },
+		text: 'Сытные',
+		counter: '12',
+		active: true
+	},
 	item1: {
-    text: 'Постные',
-    counter: '24'
-  },
+		text: 'Постные',
+		counter: '24'
+	},
 	item2: {
-    text: 'Традиционные',
-    counter: '24'
-  },
+		text: 'Традиционные',
+		counter: '24'
+	},
 	item3: {
-    text: 'С зеленью',
-    counter: '24'
-  },
+		text: 'С зеленью',
+		counter: '24'
+	},
 	item4: {
-    text: 'Сладкие',
-    counter: '24'
-  },
+		text: 'Сладкие',
+		counter: '24'
+	},
 	item5: {
-    text: 'Фруктовые',
-    counter: '24'
-  },
+		text: 'Фруктовые',
+		counter: '24'
+	},
 	item6: {
-    text: 'Овощные',
-    counter: '24'
-  },
+		text: 'Овощные',
+		counter: '24'
+	}
 } %}
 
 {% set menuContent = {
 	item0: {
-    imgSrc: 'meat',
-    text: 'Мясо',
-    index: '(7)'
-  },
+		imgSrc: 'meat',
+		text: 'Мясо',
+		index: '(7)'
+	},
 	item1: {
-    imgSrc: 'turkey',
-    text: 'Индейка',
-    index: '(5)'
-  },
+		imgSrc: 'turkey',
+		text: 'Индейка',
+		index: '(5)'
+	},
 	item2: {
-    imgSrc: 'turkey(1)',
-    text: 'Курица',
-    index: '(10)'
-  },
+		imgSrc: 'turkey(1)',
+		text: 'Курица',
+		index: '(10)'
+	},
 	item3: {
-    imgSrc: 'salmon',
-    text: 'Форель',
-    index: '(4)'
-  },
+		imgSrc: 'salmon',
+		text: 'Форель',
+		index: '(4)'
+	},
 	item4: {
-    imgSrc: 'fish',
-    text: 'Лосось',
-    index: '(3)'
-  },
+		imgSrc: 'fish',
+		text: 'Лосось',
+		index: '(3)'
+	},
 	item5: {
-    imgSrc: 'fish(1)',
-    text: 'Сёмга',
-    index: '(7)'
-  },
+		imgSrc: 'fish(1)',
+		text: 'Сёмга',
+		index: '(7)'
+	},
 	item6: {
-    imgSrc: 'cheese',
-    text: 'Сыр',
-    index: '(6)'
-  },
+		imgSrc: 'cheese',
+		text: 'Сыр',
+		index: '(6)'
+	},
 	item7: {
-    imgSrc: 'turkey(2)',
-    text: 'Курица',
-    index: '(10)'
-  },
+		imgSrc: 'turkey(2)',
+		text: 'Курица',
+		index: '(10)'
+	}
 } %}
 
 <section class="menu">
@@ -85,34 +85,36 @@
 				</li>
 			{% endfor %}
 		</ul>
-		<div class="menu__bottom">
-			<ul class="menu__content js-menu-content">
-				{% for item in menuContent %}
-					<li class="menu__content-li" data-tabnumber="{{item.tabNumber}}">
-						<div class="menu__content-item">
-							<img src="assets/img/icons/{{item.imgSrc}}.png" alt="" class="menu__img">
-							<div class="menu__desc">
-								<span class="menu__text">{{item.text}}</span>
-								<span class="menu__index">{{item.index}}</span>
+		{% if short %}
+			<div class="menu__bottom">
+				<ul class="menu__content js-menu-content">
+					{% for item in menuContent %}
+						<li class="menu__content-li" data-tabnumber="{{item.tabNumber}}">
+							<div class="menu__content-item">
+								<img src="assets/img/icons/{{item.imgSrc}}.png" alt="" class="menu__img">
+								<div class="menu__desc">
+									<span class="menu__text">{{item.text}}</span>
+									<span class="menu__index">{{item.index}}</span>
+								</div>
 							</div>
-						</div>
-					</li>
-				{% endfor %}
-			</ul>
-			<form class="menu__metro">
-				<div class="menu__select-wrap">
-					<select name="" id="" class="menu__select" placeholder="">
-						<option class="menu__select-option" value="">Выберите станцию метро</option>
-						<option class="menu__select-option" value="2">2</option>
-						<option class="menu__select-option" value="3">3</option>
-					</select>
-				</div>
-        {% include 'btn.twig' with {
-          mod: 'menu__btn',
-          imgSrc: 'my_location_24px',
-          text: 'Заказать доставку'
-        } %}
-			</form>
-		</div>
+						</li>
+					{% endfor %}
+				</ul>
+				<form class="menu__metro">
+					<div class="menu__select-wrap">
+						<select name="" id="" class="menu__select" placeholder="">
+							<option class="menu__select-option" value="">Выберите станцию метро</option>
+							<option class="menu__select-option" value="2">2</option>
+							<option class="menu__select-option" value="3">3</option>
+						</select>
+					</div>
+					{% include 'btn.twig' with {
+						mod : 'menu__btn',
+						imgSrc: 'my_location_24px',
+						text: 'Заказать доставку'
+					} %}
+				</form>
+			</div>
+		{% endif %}
 	</div>
 </section>

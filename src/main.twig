@@ -3,7 +3,9 @@
 {% block page %}
 	<main class="page-main">
 		{% include 'templates/includes/big-choice.twig' %}
-		{% include 'templates/includes/menu.twig' %}
+		{% include 'templates/includes/menu.twig' with {
+			short: true
+		} %}
 		{% include 'templates/includes/text-block.twig' %}
 		{% include 'templates/includes/catalog.twig' %}
 		{% include 'templates/includes/about.twig' %}

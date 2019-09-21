@@ -1,0 +1,149 @@
+.breadcrumbs {
+  $self: &;
+  margin-bottom: vw(25px);
+
+  &__container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  &__back {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: vw(100px);
+    height: vw(30px);
+    font-size: vw(16px);
+    line-height: vw(16px);
+    color: #666;
+    border: 1px solid #dddfe0;
+    border-radius: 5px;
+    margin-right: vw(24px);
+    text-decoration: none;
+  }
+
+  &__back-img {
+    width: vw(10px);
+    margin-right: vw(10px);
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: vw(-15px);
+  }
+
+  &__li {
+    padding: vw(15px);
+    position: relative;
+
+    &:hover {
+      &:after {
+        transform: translate(-50%, -50%) rotate(0deg);
+      }
+    }
+
+    &:last-child {
+      &:after {
+        display: none;
+      }
+    }
+
+    &:after {
+      display: block;
+      content: "";
+      width: vw(10px);
+      height: vw(10px);
+      background: url(../img/icons/down-arrow.png) no-repeat center;
+      position: absolute;
+      left: 100%;
+      top: 50%;
+      transform: translate(-50%, -50%) rotate(-90deg);
+      transition: transform 0.2s;
+    }
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    position: relative;
+  }
+
+  &__icon {
+    width: vw(20px);
+    margin-right: vw(5px);
+  }
+
+  &__text {
+    font-size: vw(16px);
+    line-height: vw(16px);
+    color: #666;
+    text-decoration: underline;
+    transition: color 0.3s;
+
+    #{$self}__link:hover & {
+      color: #1081e0;
+    }
+  }
+
+  &__dropdown {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    padding-top: vw(26px);
+    width: vw(270px);
+    display: none;
+
+    &:before {
+      display: block;
+      content: "";
+      position: absolute;
+      left: 50%;
+      top: 0;
+      width: vw(26px);
+      height: vw(26px);
+      background: url(../img/triangle-top.png) no-repeat center;
+      z-index: 10;
+    }
+
+    #{$self}__link:hover + & {
+      display: block;
+    }
+  }
+
+  &__dropdown-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -vw(5px);
+    box-shadow: 0px 3px 20px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    background: #fff;
+
+    padding: vw(25px);
+  }
+
+  &__dropdown-li {
+    width: 50%;
+    padding: vw(5px);
+  }
+
+  &__dropdown-link {
+    display: flex;
+    align-items: center;
+    font-size: vw(16px);
+    line-height: vw(16px);
+    color: #666;
+  }
+
+  &__dropdown-icon {
+    width: vw(20px);
+    height: vw(20px);
+    margin-right: vw(10px);
+  }
+}
