@@ -287,6 +287,24 @@
 		});
 	};
 
+	const insideNumbers = function(){
+		const inputs = document.querySelectorAll('.js-inside-input');
+
+		inputs.forEach(function(input){
+			input.addEventListener('click', () => {
+				const section = input.closest('.js-inside');
+				const dataNumber = input.getAttribute('data-inside-number');
+				const nodeNumber = section.querySelector('.js-inside-number');
+				const isChecked = input.checked;
+
+				if(isChecked){
+					nodeNumber.innerText = dataNumber;
+				}
+
+			});
+		});
+	};
+
 	// utility
 	const map = function () {
 		const maps = document.querySelectorAll('.js-map');
@@ -422,6 +440,7 @@
 		// specific
 		cardCalc();
 		setCalc();
+		insideNumbers();
 	};
 
 	onPageRdy();

@@ -4908,7 +4908,7 @@ body.compensate-for-scrollbar {
 
 .choose-inside:after {
   display: block;
-  content: '';
+  content: "";
   position: absolute;
   left: 0;
   top: 0;
@@ -4931,12 +4931,7 @@ body.compensate-for-scrollbar {
   text-align: center;
 }
 
-.choose-inside__list-wrap {
-  padding: 1.30208vw 2.86458vw;
-}
-
 .choose-inside__list {
-  margin: -0.26042vw -1.5625vw;
   background: #fff;
   border-radius: 10px;
   display: -webkit-box;
@@ -4944,10 +4939,11 @@ body.compensate-for-scrollbar {
   display: flex;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  padding: 1.30208vw 2.86458vw;
 }
 
 .choose-inside__li {
-  padding: 0.26042vw 1.5625vw;
+  padding: 0.52083vw 0.26042vw;
   width: calc(100% / 11);
 }
 
@@ -4961,6 +4957,76 @@ body.compensate-for-scrollbar {
   align-items: center;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+}
+
+.choose-inside__checkbox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.choose-inside__input {
+  display: none;
+}
+
+.choose-inside__input:checked + .choose-inside__icon {
+  background-image: url(../img/icons/check.png);
+  background-color: #f94848;
+}
+
+.choose-inside__icon {
+  width: 1.30208vw;
+  height: 1.30208vw;
+  border-radius: 3px;
+  margin-right: 0.52083vw;
+  background: #ecf1f7 no-repeat center;
+  background-size: 60% auto;
+  -webkit-transition: background 0.3s;
+  -o-transition: background 0.3s;
+  transition: background 0.3s;
+}
+
+.choose-inside__desc {
+  font-size: 0.9375vw;
+  line-height: 0.9375vw;
+  color: #666;
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.choose-inside__btn {
+  width: 19.0625vw;
+  height: 3.64583vw;
+  border-radius: 76px;
+  background: #ffea2c;
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-size: 1.14583vw;
+  line-height: 1.14583vw;
+  color: #000;
+  text-decoration: none;
+  margin: 0 auto;
+  margin-top: 2.8125vw;
+}
+
+.choose-inside__btn-text {
+  margin: 0 0.26042vw;
 }
 
 .map {

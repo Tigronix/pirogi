@@ -1,84 +1,21 @@
-{% set checkList = {
-	item0: {
-		text: 'с мясом'
-	},
-	item1: {
-		text: 'с курицей'
-	},
-	item2: {
-		text: 'с капустой'
-	},
-	item3: {
-		text: 'с грибами'
-	},
-	item4: {
-		text: 'с кабачком'
-	},
-	item5: {
-		text: 'постные'
-	},
-	item6: {
-		text: 'с грибами'
-	},
-	item7: {
-		text: 'с кабачком'
-	},
-	item8: {
-		text: 'постные'
-	},
-	item9: {
-		text: 'с кабачком'
-	},
-	item10: {
-		text: 'с картошкой'
-	},
-	item11: {
-		text: 'с сыром'
-	},
-	item12: {
-		text: 'с рыбой'
-	},
-	item13: {
-		text: 'с творогом'
-	},
-	item14: {
-		text: 'сладкие'
-	},
-	item15: {
-		text: 'с ягодами'
-	},
-	item16: {
-		text: 'с творогом'
-	},
-	item17: {
-		text: 'сладкие'
-	},
-	item18: {
-		text: 'с ягодами'
-	},
-	item19: {
-		text: 'сладкие'
-	}
-} %}
-
-<section class="choose-inside">
+<section class="choose-inside js-inside">
 	<div class="container choose-inside__container">
 		<div class="choose-inside__header">Выберите начинки
 			<br>
 			и наш сервис подберет лучшие варианты пирогов</div>
 		<div class="choose-inside__list-wrap">
 			<ul class="choose-inside__list">
-				{% for item in checkList %}
+				{% for index in 0..21 %}
 					<li class="choose-inside__li">
 						<label class="choose-inside__checkbox">
-							<input class="choose-inside__input" type="radio" name="choose-inside" {% if item.checked %} checked="checked" {% endif %}>
+							<input class="choose-inside__input js-inside-input" data-inside-number="20" type="radio" name="choose-inside">
 							<span class="choose-inside__icon"></span>
-							<span class="choose-inside__desc">{{item.text}}</span>
+							<span class="choose-inside__desc">с мясом</span>
 						</label>
 					</li>
 				{% endfor %}
 			</ul>
 		</div>
-		<a href="#" class="choose-inside__btn">Показать 48 пирогов</a>
+		<a href="#" class="choose-inside__btn">Показать <span class="choose-inside__btn-text js-inside-number">48</span> пирогов</a>
 	</div>
 </section>
