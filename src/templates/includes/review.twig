@@ -1,0 +1,15 @@
+<div class="review {{mod}}">
+  <ul class="review__list">
+    {% for index in 0..4 %}
+      <li class="review__li">
+        <div class="review__item">
+          {% if loop.last %}
+            <img src="assets/img/icons/star--grey.png" alt="" class="review__img">
+          {% else %}
+            <img src="assets/img/icons/star.png" alt="" class="review__img">
+          {% endif %}
+        </div>
+      </li>
+    {% endfor %}
+  </ul>
+</div>

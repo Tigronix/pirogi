@@ -140,7 +140,7 @@
   },
 } %}
 
-<div class="spices js-spices">
+<div class="spices js-spices {{modif}}">
 	<div class="spices__container">
   	<button type="button" class="spices__close js-spices-close"><img src="assets/img/icons/cancel.png" alt="" class="spices__icon-close"></button>
 		<div class="spices__header">
@@ -165,7 +165,7 @@
 								</li>
 							{% endfor %}
 						</ul>
-						<div class="spices__range-slider-container">
+						<div class="spices__range-slider-container {% if modif %}active{% endif %}">
 							<input type="text" class="spices__range-slider js-range-slider" value="" />
 						</div>
 						<div class="spices__slider-btns">
@@ -176,9 +176,5 @@
 				</li>
 			{% endfor %}
 		</ul>
-    {% include 'btn--btn.twig' with {
-      text: 'В корзину',
-      mod: 'spices__btn btn--green'
-    } %}
 	</div>
 </div>

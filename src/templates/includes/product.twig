@@ -1,17 +1,128 @@
+{% set gramList = {
+	item0: {
+		gram: '800',
+		checked: true,
+		radius: '25',
+		gramName: 'catalog__gram',
+		defaultPrice: '100'
+	},
+	item1: {
+		gram: '1000',
+		radius: '30',
+		gramName: 'catalog__gram',
+		defaultPrice: '200'
+	},
+	item2: {
+		gram: '1200',
+		radius: '32',
+		gramName: 'catalog__gram',
+		defaultPrice: '300'
+	},
+	item3: {
+		gram: '1400',
+		radius: '35',
+		gramName: 'catalog__gram',
+		defaultPrice: '400'
+	}
+} %}
+
 <div class="product js-product">
 	<div class="container product__container">
 		<div class="product__small-gallery">
-	    <div class="js-product-arrows"></div>
+			<div class="js-product-arrows"></div>
 			<button class="product__small-btn product__small-btn--prev js-product-btn-edge-prev" type="button"><img src="assets/img/icons/chevron-up.png" alt=""></button>
 			<button class="product__small-btn product__small-btn--prev js-product-btn-edge-next" type="button"><img src="assets/img/icons/chevron-up.png" alt=""></button>
 			<div class="product__small-slider js-product-slider">
 				{% for index in 0..6 %}
 					<div class="product__small-slide">
 						<div class="product__small-img-box">
-	            <img src="assets/img/product0.png" alt="">
-	          </div>
+							<img src="assets/img/product0.png" alt="">
+						</div>
 					</div>
 				{% endfor %}
+			</div>
+		</div>
+		<div class="product__big-gallery">
+			<div class="product__big-img-container">
+				<div class="product__big-img-box">
+					<img src="assets/img/productBig0.png" alt="" class="product__big-img">
+					<div class="popular__sale popular__sale--hit product__sale">Хит продаж</div>
+				</div>
+				<div class="product__big-img-desc">Стоимость пирога с семгой, помидорами, сыром и зеленью: от 700 рублей за пирог весом 800 грамм. Пирог с семгой, помидорами, сыром и зеленью весом 1 кг стоит 750 рублей, а 1,2 кг - 800 рублей. Цена пирога с семгой,
+					помидорами, сыром и зеленью весом 1,4 кг - 850 рублей с доставкой.</div>
+			</div>
+			<div class="product__content js-card">
+				<div class="product__header">Осетинский пирог с капустой и сыром</div>
+				<div class="product__content-left">
+					<div class="product__head-info">
+						<div class="product__tag">Артикул: 147059</div>
+						{% include 'review.twig' with {
+							mod : 'product__review'
+						} %}
+						<a href="#" class="link product__review-link">5 отзывов</a>
+					</div>
+					<div class="product__weight">
+						<div class="product__weight-title"></div>
+						<ul class="card__gram-list">
+							{% for item in gramList %}
+								<li class="card__gram-li">
+									<label class="card__checkbox">
+										<input type="radio" name="productWeight" class="card__input js-card-input" data-default-price="{{item.defaultPrice}}" {% if item.checked %} checked="checked" {% endif %}>
+										<span class="card__checkbox-icon"></span>
+										<span class="card__checkbox-desc">
+											<span class="card__text-red">{{item.gram}}
+												г</span>
+											/
+											<span class="card__text-green">{{item.radius}}
+												см</span>
+										</span>
+									</label>
+								</li>
+							{% endfor %}
+						</ul>
+					</div>
+					<div class="product__price-wrap">
+						{% include 'counter.twig' with {
+							mod : 'product__counter'
+						} %}
+						<div class="card__price product__price">
+							<span class="card__price-number js-card-price">100</span>
+							<span class="card__price-value">руб.</span>
+						</div>
+						<div class="product__user-wrap">
+							<img src="assets/img/icons/user.png" alt="" class="product__user-icon">
+							<div class="product__user-text">1-2 персон</div>
+						</div>
+
+					</div>
+					<ul class="product__tag-list">
+						{% for index in 0..2 %}
+							<li class="product__tag-li">
+								<div class="product__tag">
+									Меньше соли
+									<button type="button" class="product__tag-close"><img src="assets/img/icons/close.png" alt="" class="product__tag-icon"></button>
+								</div>
+							</li>
+						{% endfor %}
+					</ul>
+					{% include 'btn.twig' with {
+						text : 'В корзину',
+						mod: 'product__btn'
+					} %}
+					<div class="product__bottom">
+						<ul class="product__payment-list">
+							{% for index in 0..2 %}
+								<li class="product__payment-li"><img src="assets/img/visa.png" alt="" class="product__payment-img"></li>
+							{% endfor %}
+						</ul>
+						<div class="product__social"><img src="assets/img/icons/soc.png" alt="" class="product__social-img"></div>
+					</div>
+				</div>
+				<div class="product__content-right">
+					{% include 'spices.twig' with {
+						modif : 'product__spices'
+					} %}
+				</div>
 			</div>
 		</div>
 	</div>

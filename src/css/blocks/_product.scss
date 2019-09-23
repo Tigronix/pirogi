@@ -5,11 +5,13 @@
   &__container {
     display: flex;
     flex-wrap: wrap;
+    align-items: flex-start;
   }
 
   &__small-gallery {
     width: vw(160px);
     position: relative;
+    align-items: flex-start;
   }
 
   &__small-btn {
@@ -33,7 +35,6 @@
   &__small-gallery {
     padding: vw(30px) 0 0 0;
     margin-bottom: vw(30px);
-
   }
 
   &__small-slide {
@@ -67,7 +68,6 @@
 
     &--next {
       bottom: -vw(30px);
-      
     }
   }
 
@@ -86,5 +86,126 @@
     &.active {
       display: block;
     }
+  }
+
+  &__big-gallery {
+    flex: 1;
+    padding-left: vw(10px);
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__big-img-container {
+    width: vw(915px);
+  }
+
+  &__big-img-box {
+    height: vw(626px);
+    position: relative;
+  }
+
+  &__big-img {
+    height: 100%;
+  }
+
+  &__content {
+    flex: 1;
+    padding-left: vw(10px);
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+  }
+
+  &__content-left {
+    flex: 1;
+  }
+
+  &__content-right {
+    width: vw(296px);
+    margin-left: vw(20px);
+
+  }
+
+  &__header {
+    width: 100%;
+    font-size: vw(28px);
+    line-height: vw(28px);
+    color: #70544f;
+    font-weight: 500;
+    margin-bottom: vw(20px);
+  }
+
+  &__head-info {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding-bottom: vw(16px);
+    border-bottom: 1px solid #DDDFE0;
+    margin-bottom: vw(16px);
+
+  }
+
+  &__tag {
+    padding: vw(6px) vw(13px);
+    background: #FFE5E5;
+    border-radius: 3px;
+    font-size: vw(16px);
+    line-height: vw(16px);
+    color: #A94442;
+  }
+
+  &__review {
+    margin-left: vw(20px);
+
+  }
+
+  &__review-link {
+    margin-left: auto;
+  }
+
+  &__spices {
+    display: block;
+    position: relative;
+    padding: 0;
+    background: none;
+
+    .spices {
+      &__close {
+        display: none;
+      }
+
+      &__container {
+        padding: 0;
+      }
+    }
+  }
+
+  &__price-wrap {
+    margin-top: vw(30px);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: vw(16px);
+    border-bottom: 1px solid #DDDFE0;
+  }
+
+  &__user-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  &__user-icon {
+    width: vw(15px);
+    margin-right: vw(5px);
+
+  }
+
+  &__user-text {
+    @include avant;
+    font-size: vw(18px);
+    line-height: vw(21px);
+    color: #009471;
   }
 }

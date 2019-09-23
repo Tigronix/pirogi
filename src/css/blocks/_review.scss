@@ -1,0 +1,25 @@
+.review {
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: -vw(3px);
+
+  }
+
+  &__li {
+    padding: vw(3px);
+
+  }
+
+  &__item {
+    width: vw(20px);
+    height: vw(20px);
+
+  }
+
+  &__img {
+    width: 100%;
+    height: 100%;
+  }
+}
