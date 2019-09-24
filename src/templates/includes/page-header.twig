@@ -108,3 +108,29 @@
 		</div>
 	</div>
 </header>
+
+<div class="page-header__mobile">
+  <div class="container">
+    <div class="page-header__mobile-container">
+			<div class="page-header__rating">
+				<div class="page-header__rating-score">4.8</div>
+        <div class="page-header__rating-content">
+          <ul class="page-header__rating-list">
+  					{% for index in 0..4 %}
+  						<li class="page-header__rating-li"><img src="assets/img/icons/star.png" alt="" class="page-header__rating-img"></li>
+  					{% endfor %}
+  				</ul>
+  				<div class="page-header__rating-desc">рейтинг пекарни</div>
+        </div>
+			</div>
+			<div class="page-header__quality">
+				<img src="assets/img/medal.png" alt="" class="page-header__quality-img">
+				<div class="page-header__quality-desc">
+					<div class="page-header__quality-big">11 лет</div>
+					качества
+				</div>
+			</div>
+    </div>
+    <div class="page-header__desc">Самый большой выбор пирогов в Москве - более 350 видов начинок в наличии:</div>
+  </div>
+</div>

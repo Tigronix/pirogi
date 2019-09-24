@@ -12,6 +12,12 @@
   color: #333;
   font-weight: 500;
 
+  @include mobile {
+    height: 40px;
+    font-size: 22px;
+    line-height: 22px;
+  }
+
   &--green {
     background: #23B75F;
     color: #fff;

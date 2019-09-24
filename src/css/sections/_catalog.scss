@@ -2,16 +2,30 @@
   padding: vw(22px) 0;
   background: #F9F0EA;
 
+  @include mobile {
+    padding: 0;
+    background: none;
+  }
+
   &__list {
     margin: vw(-32px) vw(-16px);
     display: flex;
     flex-wrap: wrap;
+
+    @include mobile {
+      margin: 0 -15px;
+    }
   }
 
   &__li {
     padding: vw(32px) vw(16px);
     width: calc(100% / 5);
     position: relative;
+
+    @include mobile {
+      padding: 15px;
+      width: 100%;
+    }
 
     &:hover {
       z-index: 5;

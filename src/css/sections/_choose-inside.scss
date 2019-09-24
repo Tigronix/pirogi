@@ -5,6 +5,10 @@
   position: relative;
   $self: &;
 
+  @include mobile {
+    padding: 50px 0;
+  }
+
   &:after {
     display: block;
     content: "";
@@ -28,6 +32,10 @@
     font-weight: 300;
     margin-bottom: vw(56px);
     text-align: center;
+
+    @include mobile {
+      display: none;
+    }
   }
 
   &__list {
@@ -36,11 +44,20 @@
     display: flex;
     flex-wrap: wrap;
     padding: vw(25px) vw(55px);
+
+    @include mobile {
+      padding: 19px 24px;
+    }
   }
 
   &__li {
     padding: vw(10px) vw(5px);
     width: calc(100% / 11);
+
+    @include mobile {
+      width: 50%;
+      padding: 12px 2px;;
+    }
   }
 
   &__checkbox {
@@ -74,6 +91,12 @@
     background: #ecf1f7 no-repeat center;
     background-size: 60% auto;
     transition: background 0.3s;
+
+    @include mobile {
+      width: 25px;
+      height: 25px;
+      margin-right: 10px;
+    }
   }
 
   &__desc {
@@ -81,6 +104,11 @@
     line-height: vw(18px);
     color: #666;
     flex: 1;
+
+    @include mobile {
+      font-size: 18px;
+      line-height: 18px;
+    }
   }
 
   &__btn {
@@ -99,10 +127,21 @@
     margin: 0 auto;
     margin-top: vw(54px);
 
+    @include mobile {
+      width: 315px;
+      height: 70px;
+      font-size: 22px;
+      line-height: 22px;
+      margin-top: 30px;
+    }
+
   }
 
   &__btn-text {
     margin: 0 vw(5px);
-    
+
+    @include mobile {
+      margin: 0 5px;
+    }
   }
 }

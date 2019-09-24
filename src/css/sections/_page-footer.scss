@@ -8,17 +8,31 @@
   color: #fff;
   $self: &;
 
+  @include mobile {
+    padding-top: 25px;
+  }
+
   &__top {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     margin: vw(-10px);
     margin-bottom: vw(40px);
+
+    @include mobile {
+      margin: -5px;
+      margin-bottom: 20px;
+    }
   }
 
   &__links-item {
     width: 50%;
     padding: vw(10px);
+
+    @include mobile {
+      width: 100%;
+      padding: 5px;
+    }
   }
 
   &__links-header {
@@ -26,34 +40,66 @@
     flex-wrap: wrap;
     align-items: center;
     margin-bottom: vw(40px);
+
+    @include mobile {
+      margin-bottom: 20px;
+    }
   }
 
   &__links-header-icon {
     width: vw(20px);
     height: vw(20px);
     margin-right: vw(10px);
+
+    @include mobile {
+      width: 20px;
+      height: 20px;
+      margin-right: 10px;
+    }
   }
 
   &__links-header-text {
     font-size: vw(22px);
     line-height: vw(22px);
+
+    @include mobile {
+      font-size: 22px;
+      line-height: 22px;
+    }
   }
 
   &__links-container {
     display: flex;
     flex-wrap: wrap;
     margin: vw(-10px);
+
+    @include mobile {
+      margin: 0px;
+    }
   }
 
   &__list {
     padding: vw(5px);
 
+    @include mobile {
+      padding: 5px;
+    }
+
     #{$self}__links-container--3 & {
       width: calc(100% / 3);
+
+      @include mobile {
+        width: 100%;
+        padding: 0;
+      }
     }
 
     #{$self}__links-container--4 & {
       width: calc(100% / 4);
+
+      @include mobile {
+        width: 50%;
+      }
     }
   }
 
@@ -71,6 +117,12 @@
     text-decoration: underline;
     transition: color 0.3s;
 
+    @include mobile {
+      font-size: 16px;
+      line-height: 16px;
+      display: inline-flex;
+    }
+
     &:hover {
       color: #fff;
     }
@@ -80,6 +132,12 @@
     width: vw(20px);
     height: vw(20px);
     margin-right: vw(5px);
+
+    @include mobile {
+      width: 20px;
+      height: 20px;
+      margin-right: 5px;
+    }
   }
 
   &__center {
@@ -88,12 +146,20 @@
     justify-content: space-between;
     align-items: center;
     margin-bottom: vw(50px);
+
+    @include mobile {
+      margin-bottom: 30px;
+    }
   }
 
   &__center-item {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+
+    @include mobile {
+      margin-top: 24px;
+    }
   }
 
   &__logo {
@@ -102,6 +168,10 @@
     align-items: center;
     margin-right: vw(35px);
     text-decoration: none;
+
+    @include mobile {
+      display: none;
+    }
   }
 
   &__logo-img {
@@ -135,9 +205,18 @@
     font-size: vw(16px);
     line-height: vw(25px);
 
+    @include mobile {
+      font-size: 16px;
+      line-height: 25px;
+    }
+
     &--copyright {
       margin-bottom: vw(10px);
       width: 100%;
+
+      @include mobile {
+        margin-bottom: 10px;
+      }
     }
   }
 
@@ -146,17 +225,31 @@
     flex-wrap: wrap;
     align-items: center;
     margin-right: vw(30px);
+
+    @include mobile {
+      margin-right: 0;
+    }
   }
 
   &__payment-desc {
     font-size: vw(16px);
     line-height: vw(16px);
     margin-right: vw(5px);
+
+    @include mobile {
+      font-size: 16px;
+      line-height: 16px;
+      margin-right: 5px;
+    }
   }
 
   &__calc {
     height: vw(60px);
     border-bottom: vw(10px) solid #23b75f;
+
+    @include mobile {
+      display: none;
+    }
   }
 
   &__calc-content {
@@ -192,5 +285,37 @@
 
     line-height: vw(20px);
     text-transform: uppercase;
+  }
+
+  &__metr {
+    @include mobile {
+      display: none;
+    }
+  }
+
+  &__by {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 17px;
+    margin-top: 36px;
+    font-size: 14px;
+    line-height: 14px;
+    color: #fff;
+    width: 100%;
+    text-align: right;
+  }
+
+  &__by-text {
+    margin-right: 10px;
+  }
+
+  &__mobile-copyright {
+    padding: 8px 0;
+    text-align: center;
+    font-size: 14px;
+    line-height: 25px;
+    color: #fff;
+    width: 100%;
   }
 }

@@ -4,12 +4,20 @@
   align-items: center;
   height: vw(40px);
 
+  @include mobile {
+    height: 40px;
+  }
+
   &__btn {
     width: vw(40px);
     height: 100%;
     border: 2px solid #DFF0D8;
     position: relative;
     background: #fff;
+
+    @include mobile {
+      width: 40px;
+    }
 
     &--minus {
       border-radius: 3px 0px 0px 3px;
@@ -24,6 +32,11 @@
         left: 50%;
         top: 50%;
         transform: translate(-50%, -50%);
+
+        @include mobile {
+          width: 20px;
+          height: 1px;
+        }
       }
     }
 
@@ -40,6 +53,11 @@
         left: 50%;
         top: 50%;
         transform: translate(-50%, -50%);
+
+        @include mobile {
+          width: 20px;
+          height: 1px;
+        }
       }
 
       &:after {
@@ -52,6 +70,11 @@
         left: 50%;
         top: 50%;
         transform: translate(-50%, -50%);
+
+        @include mobile {
+          width: 1px;
+          height: 20px;
+        }
       }
     }
   }
@@ -67,5 +90,11 @@
     justify-content: center;
     align-items: center;
     background: #DFF0D8;
+
+    @include mobile {
+      font-size: 18px;
+      line-height: 21px;
+      width: 40px;
+    }
   }
 }

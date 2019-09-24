@@ -104,6 +104,10 @@
       align-items: center;
       margin: -7px;
 
+      @include mobile {
+        margin: 20px -7px 0 -7px;
+      }
+
       li {
         padding: 7px;
 
@@ -147,16 +151,30 @@
       position: absolute;
       top: vw(150px);
       z-index: 10;
+
+      @include mobile {
+        top: 150px;
+        width: 50px;
+        height: 50px;
+      }
     }
 
     &-prev {
       background-image: url(../img/arr-prev.png);
       left: 30px;
+
+      @include mobile {
+        left: 10px;
+      }
     }
 
     &-next {
       background-image: url(../img/arr-next.png);
       right: 30px;
+
+      @include mobile {
+        right: 10px;
+      }
     }
   }
 }

@@ -305,6 +305,22 @@
 		});
 	};
 
+	const metroRelocation = () => {
+		const metro = document.querySelector('.js-metro');
+		const select = metro.querySelector('.js-metro-select');
+		const options = select.querySelectorAll('.js-metro-option');
+		const btn = metro.querySelector('.js-metro-btn');
+		let value = '';
+
+		select.addEventListener('change', () => {
+			value = select.options[select.selectedIndex].value;
+		});
+
+		btn.addEventListener('click', () => {
+			window.location.href = value;
+		});
+	};
+
 	// utility
 	const map = function () {
 		const maps = document.querySelectorAll('.js-map');
@@ -377,6 +393,10 @@
 		});
 	};
 
+	const lazyLoad = () => {
+		lazyload();
+	};
+
 	// sliders
 	const popularSlider = function () {
 		const $sliderContainers = $('.js-popular-slider-container');
@@ -389,7 +409,15 @@
 				arrows: true,
 				appendDots: '.js-popular-slider-dots',
 				dots: true,
-				infinite: false
+				infinite: false,
+				responsive: [
+					{
+						breakpoint: 1280,
+						settings: {
+							slidesToShow: 1
+						}
+					}
+				]
 			};
 
 			$slider.slick(options);
@@ -419,7 +447,15 @@
 		const options = {
 			slidesToShow: 7,
 			arrows: true,
-			infinite: false
+			infinite: false,
+			responsive: [
+				{
+					breakpoint: 1280,
+					settings: {
+						slidesToShow: 3
+					}
+				}
+			]
 		};
 
 		$slider.slick(options);
@@ -464,7 +500,7 @@
 				if(isNextDisabled) {
 					countFlag++;
 
-					if (countFlag >= 4) {
+					if(countFlag >= 4) {
 						countFlag = 4;
 					}
 
@@ -520,11 +556,13 @@
 		// utility
 		map();
 		rangeSlider();
+		lazyLoad();
 
 		// specific
 		cardCalc();
 		setCalc();
 		insideNumbers();
+		metroRelocation();
 	};
 
 	onPageRdy();

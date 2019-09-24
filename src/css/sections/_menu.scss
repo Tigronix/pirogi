@@ -2,15 +2,32 @@
   $self: &;
   margin-bottom: 23px;
 
+  &__btns-container {
+    @include mobile {
+      overflow: auto;
+    }
+  }
+
   &__btns {
     display: flex;
     flex-wrap: wrap;
     margin: -2px;
+
+    @include mobile {
+      width: 1000px;
+      overflow: auto;
+      min-height: 0;
+      margin-bottom: 15px;
+    }
   }
 
   &__btns-li {
     flex: 1;
     padding: 2px;
+
+    @include mobile {
+      padding: 0;
+    }
   }
 
   &__btns-item {
@@ -31,11 +48,37 @@
     #{$self}__btns-li.active & {
       background: #ffdd2d;
       color: #666;
+
+      @include mobile {
+        background: none;
+        color: #01973E;
+
+        &:after {
+          display: block;
+          content: '';
+          width: 100%;
+          height: .2rem;
+          background: #01973E;
+          position: absolute;
+          left: 0;
+          bottom: -.1rem;
+          right: 0;
+        }
+      }
     }
 
     @include hover {
       background: #ffdd2d;
       color: #666;
+    }
+
+    @include mobile {
+      height: auto;
+      font-size: 1.8rem;
+      line-height: 1.8rem;
+      background: none;
+      padding-bottom: 1.2rem;
+      border-bottom: 1px solid #DDDFE0;
     }
   }
 
@@ -54,6 +97,10 @@
     right: vw(12px);
     top: 50%;
     transform: translateY(-50%);
+
+    @include mobile {
+      display: none;
+    }
   }
 
   &__bottom {
@@ -61,6 +108,12 @@
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
+
+    @include mobile {
+      overflow-x: auto;
+      overflow-y: hidden;
+      display: block;
+    }
   }
 
   &__content {
@@ -73,11 +126,24 @@
     border-radius: 0px 0px 10px 10px;
     width: vw(1149px);
     height: 98px;
+
+    @include mobile {
+      width: 1000px;
+      padding: 0;
+      border: none;
+      height: auto;
+      margin: -4px;
+      margin-bottom: 20px;
+    }
   }
 
   &__content-li {
     flex: 1;
     padding: 0 vw(25px);
+
+    @include mobile {
+      padding: 4px;
+    }
   }
 
   &__content-item {
@@ -86,6 +152,10 @@
 
   &__img {
     width: vw(45px);
+
+    @include mobile {
+      width: 36px;
+    }
   }
 
   &__desc {
@@ -95,6 +165,11 @@
     color: #666;
     display: flex;
     justify-content: center;
+
+    @include mobile {
+      font-size: 16px;
+      line-height: 16px;
+    }
   }
 
   &__text {
@@ -112,6 +187,10 @@
     flex-wrap: wrap;
     align-items: center;
     width: vw(492px);
+
+    @include mobile {
+      display: none;
+    }
   }
 
   &__select-wrap {

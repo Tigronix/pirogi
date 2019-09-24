@@ -10,10 +10,19 @@
     color: #70544F;
     text-align: center;
     margin-bottom: 20px;
+
+    @include mobile {
+      font-size: 28px;
+      line-height: 28px;
+    }
   }
 
   &__slider-container {
     margin: 0 vw(-17px);
+
+    @include mobile {
+      margin: 0;
+    }
   }
 
   &__content {
@@ -22,11 +31,24 @@
 
   &__card {
     padding: vw(17px);
+
+    @include mobile {
+      padding: 0px;
+
+      & > * {
+        margin: 0 auto;
+        max-width: 343px;
+      }
+    }
   }
 
   &__img-wrap {
     position: relative;
     height: vw(346px);
+
+    @include mobile {
+      height: 346px;
+    }
 
   }
 
@@ -50,6 +72,14 @@
     white-space: nowrap;
     text-align: center;
 
+    @include mobile {
+      right: 20px;
+      top: 20px;
+      height: 35px;
+      padding: 6px 25px 0 25px;
+      font-size: 15px;
+    }
+
     &--hit {
       background-image: url(../img/sale.png);
     }
@@ -65,7 +95,7 @@
     background: url(../img/popular-btn.png) no-repeat center;
     background-size: 100% auto;
     font-size: vw(18px);
-    font-weight: vw(18px);
+    line-height: vw(18px);
     font-weight: bold;
     text-transform: uppercase;
     color: #fff;
@@ -75,6 +105,13 @@
     position: absolute;
     left: 0;
     bottom: 0;
+
+    @include mobile {
+      width: 191px;
+      height: 56px;
+      font-size: 18px;
+      line-height: 18px;
+    }
 
   }
 
@@ -97,6 +134,12 @@
     flex-direction: column;
     padding-bottom: vw(20px);
 
+    @include mobile {
+      width: 170px;
+      height: 136px;
+      padding-bottom: 20px;
+    }
+
   }
 
   &__params {
@@ -110,6 +153,11 @@
     @include avant;
     color: #fff;
     border-bottom: 1px solid #fff;
+
+    @include mobile {
+      font-size: 18px;
+      line-height: 22px;
+    }
   }
 
   &__price {
@@ -124,17 +172,31 @@
     font-size: vw(36px);
     line-height: vw(43px);
 
+    @include mobile {
+      font-size: 36px;
+      line-height: 43px;
+    }
+
   }
 
   &__price-value {
     font-size: vw(16px);
     line-height: 1;
     margin-left: 5px;
+
+    @include mobile {
+      font-size: 16px;
+    }
   }
 
   &__bottom {
     padding: vw(20px);
     background: #fff;
+
+    @include mobile {
+      padding: 20px;
+      border-radius: 0 0 10px 10px;
+    }
   }
 
   @include slickDots;

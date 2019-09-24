@@ -5,6 +5,12 @@
   margin: 0;
 }
 
+html, body {
+  @include mobile {
+    font-size: 10px;
+  }
+}
+
 body {
   @include helvetica;
   color: #57555c;
@@ -48,6 +54,12 @@ ul {
   color: #70544f;
   margin: 0;
   margin-bottom: 11px;
+
+  @include mobile {
+    font-size: 18px;
+    line-height: 25px;
+    text-align: center;
+  }
 }
 
 .h2, .h3 {
@@ -59,8 +71,18 @@ ul {
   margin: 0;
   margin-bottom: 6px;
 
+  @include mobile {
+    font-size: 18px;
+    line-height: 25px;
+    margin-bottom: 9px;
+  }
+
   &--left {
     text-align: left;
+
+    @include mobile {
+      text-align: center;
+    }
   }
 
   &--red {
@@ -91,5 +113,25 @@ p {
 
   @include hover {
     text-decoration: underline;
+  }
+}
+
+.mobile {
+  display: none;
+
+  @include mobile {
+    display: block;
+  }
+}
+
+.desktop {
+  @include mobile {
+    display: none;
+  }
+}
+
+.no-container {
+  .container {
+    padding: 0;
   }
 }

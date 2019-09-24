@@ -3,12 +3,21 @@
   padding: 10px 0;
   padding-left: vw(550px);
 
+  @include mobile {
+    padding-left: 0;
+  }
 
   &__container {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     min-height: vw(430px);
+
+    @include mobile {
+      min-height: none;
+      flex-direction: column;
+      padding: 0;
+    }
   }
 
   &__img {
@@ -16,10 +25,22 @@
     position: absolute;
     left: vw(-20px);
     top: 10px;
+
+    @include mobile {
+      position: static;
+      width: 100%;
+      order: 1;
+      margin-top: 15px;
+    }
   }
 
   &__content {
     flex: 1;
+
+    @include mobile {
+      flex: none;
+      padding: 0 16px;
+    }
   }
 
   &__header {
@@ -28,5 +49,10 @@
     font-weight: 500;
     color: #70544F;
     margin-bottom: 14px;
+
+    @include mobile {
+      font-size: 28px;
+      line-height: 28px;
+    }
   }
 }

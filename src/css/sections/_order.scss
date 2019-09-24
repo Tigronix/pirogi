@@ -23,6 +23,10 @@
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+
+    @include mobile {
+      padding: 16px;
+    }
   }
 
   &__header {
@@ -36,6 +40,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
+    @include mobile {
+      max-width: none;
+      height: auto;
+      background: none;
+      margin-bottom: 10px;
+    }
 
     .h2 {
       margin-bottom: 0;
@@ -51,6 +62,10 @@
       bottom: 0;
       background: no-repeat center;
       background-size: 100% auto;
+
+      @include mobile {
+        display: none;
+      }
     }
 
     &:before {
@@ -71,6 +86,11 @@
     margin: vw(-10px);
     counter-reset: order;
     list-style: none;
+
+    @include mobile {
+      width: 100%;
+      margin: -10px;
+    }
   }
 
   &__li {
@@ -83,6 +103,16 @@
     &:nth-child(3n+1){
       justify-content: flex-start;
     }
+
+    @include mobile {
+      padding: 10px;
+      width: 50%;
+      display: block;
+
+      &:first-child {
+        width: 100%;
+      }
+    }
   }
 
   &__item {
@@ -91,6 +121,12 @@
     line-height: vw(28px);
     color: #70544F;
     min-width: vw(306px);
+
+    @include mobile {
+      font-size: 16px;
+      line-height: 19px;
+      min-width: auto;
+    }
 
     &:before {
       display: inline;
@@ -112,5 +148,12 @@
     max-width: vw(318px);
     margin-left: auto;
     height: vw(60px);
+
+    @include mobile {
+      max-width: 308px;
+      height: 60px;
+      margin: 0 auto;
+      margin-top: 30px;
+    }
   }
 }

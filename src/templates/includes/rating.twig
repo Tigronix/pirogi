@@ -256,7 +256,7 @@
   			<tr class="rating__tr">
   				{% for item in item.tdList %}
   					<td class="rating__td">
-  						{{item.text}}
+              <div class="rating__text">{{item.text}}</div>
   						{% if item.btn %}
   							{% include 'btn.twig' with {
                   text: 'Заказать',

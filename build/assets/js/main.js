@@ -315,6 +315,22 @@ var APP = {
 		});
 	};
 
+	var metroRelocation = function metroRelocation() {
+		var metro = document.querySelector('.js-metro');
+		var select = metro.querySelector('.js-metro-select');
+		var options = select.querySelectorAll('.js-metro-option');
+		var btn = metro.querySelector('.js-metro-btn');
+		var value = '';
+
+		select.addEventListener('change', function () {
+			value = select.options[select.selectedIndex].value;
+		});
+
+		btn.addEventListener('click', function () {
+			window.location.href = value;
+		});
+	};
+
 	// utility
 	var map = function map() {
 		var maps = document.querySelectorAll('.js-map');
@@ -384,6 +400,10 @@ var APP = {
 		});
 	};
 
+	var lazyLoad = function lazyLoad() {
+		lazyload();
+	};
+
 	// sliders
 	var popularSlider = function popularSlider() {
 		var $sliderContainers = $('.js-popular-slider-container');
@@ -396,7 +416,13 @@ var APP = {
 				arrows: true,
 				appendDots: '.js-popular-slider-dots',
 				dots: true,
-				infinite: false
+				infinite: false,
+				responsive: [{
+					breakpoint: 1280,
+					settings: {
+						slidesToShow: 1
+					}
+				}]
 			};
 
 			$slider.slick(options);
@@ -426,7 +452,13 @@ var APP = {
 		var options = {
 			slidesToShow: 7,
 			arrows: true,
-			infinite: false
+			infinite: false,
+			responsive: [{
+				breakpoint: 1280,
+				settings: {
+					slidesToShow: 3
+				}
+			}]
 		};
 
 		$slider.slick(options);
@@ -526,11 +558,13 @@ var APP = {
 		// utility
 		map();
 		rangeSlider();
+		lazyLoad();
 
 		// specific
 		cardCalc();
 		setCalc();
 		insideNumbers();
+		metroRelocation();
 	};
 
 	onPageRdy();

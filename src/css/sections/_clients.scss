@@ -5,12 +5,20 @@
   &__container {
     padding-left: vw(50px);
     padding-right: vw(50px);
-    
+
+    @include mobile {
+      padding: 0 10px;
+    }
   }
 
   &__slider-container {
     padding: 0 vw(40px);
     margin: 0 vw(-10px);
+
+    @include mobile {
+      padding: 0;
+      margin: 0 -10px;
+    }
   }
 
   &__slide {
@@ -21,9 +29,17 @@
     height: auto;
     padding: 0 vw(10px);
 
+    @include mobile {
+      padding: 0 10px;
+    }
+
 
     &.slick-active {
       display: flex!important;
+
+      @include mobile {
+        display: block!important;
+      }
     }
   }
 
@@ -31,6 +47,11 @@
     &-track {
       display: flex;
       flex-wrap: wrap;
+      align-items: center;
+
+      @include mobile {
+
+      }
     }
 
     &-arrow {
@@ -42,6 +63,10 @@
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
+
+      @include mobile {
+        display: none;
+      }
     }
 
     &-prev {

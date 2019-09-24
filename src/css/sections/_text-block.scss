@@ -5,5 +5,10 @@
     font-size: vw(18px);
     line-height: vw(25px);
     color: #666;
+
+    @include mobile {
+      font-size: 13px;
+      line-height: 20px;
+    }
   }
 }

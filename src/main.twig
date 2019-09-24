@@ -2,19 +2,21 @@
 {% block title %}Главная{% endblock %}
 {% block page %}
 	<main class="page-main">
-		{% include 'templates/includes/big-choice.twig' %}
+		{% include 'templates/includes/big-choice.twig' with {
+			mod: 'desktop'
+		} %}
 		{% include 'templates/includes/menu.twig' with {
 			short: true
 		} %}
 		{% include 'templates/includes/text-block.twig' %}
 		{% include 'templates/includes/catalog.twig' %}
 		{% include 'templates/includes/about.twig' %}
-		{% include 'templates/includes/popular.twig' %}
+	  {% include 'templates/includes/popular.twig' %}
 		{% include 'templates/includes/sets.twig' %}
 		{% include 'templates/includes/clients.twig' %}
 		{% include 'templates/includes/rating.twig' %}
 		{% include 'templates/includes/order.twig' %}
 		{% include 'templates/includes/choose-inside.twig' %}
-		{% include 'templates/includes/map.twig' %}
+		<!-- {% include 'templates/includes/map.twig' %} -->
 	</main>
 {% endblock %}

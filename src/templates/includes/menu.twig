@@ -75,16 +75,19 @@
 
 <section class="menu">
 	<div class="container menu__container">
-		<ul class="menu__btns">
-			{% for item in menuBtns %}
-				<li class="menu__btns-li {% if item.active %}active{% endif %}" data-tabclass="js-menu-content" data-tabnumber="{{item.tabNumber}}">
-					<button type="button" class="menu__btns-item">
-						<span class="menu__btn-text">{{item.text}}</span>
-						<span class="menu__counter">{{item.counter}}</span>
-					</button>
-				</li>
-			{% endfor %}
-		</ul>
+		<div class="menu__btns-container">
+			<ul class="menu__btns">
+				{% for item in menuBtns %}
+					<li class="menu__btns-li {% if item.active %}active{% endif %}" data-tabclass="js-menu-content" data-tabnumber="{{item.tabNumber}}">
+						<button type="button" class="menu__btns-item">
+							<span class="menu__btn-text">{{item.text}}</span>
+							<span class="menu__counter">{{item.counter}}</span>
+						</button>
+					</li>
+				{% endfor %}
+			</ul>
+		</div>
+
 		{% if short %}
 			<div class="menu__bottom">
 				<ul class="menu__content js-menu-content">
@@ -100,21 +103,24 @@
 						</li>
 					{% endfor %}
 				</ul>
-				<form class="menu__metro">
+				<form class="menu__metro js-metro">
 					<div class="menu__select-wrap">
-						<select name="" id="" class="menu__select" placeholder="">
-							<option class="menu__select-option" value="">Выберите станцию метро</option>
-							<option class="menu__select-option" value="2">2</option>
-							<option class="menu__select-option" value="3">3</option>
+						<select name="" id="" class="menu__select js-metro-select" placeholder="">
+							<option class="menu__select-option js-metro-option" value="">Выберите станцию метро</option>
+							<option class="menu__select-option js-metro-option" value="https://www.google.com/">2</option>
+							<option class="menu__select-option js-metro-option" value="https://www.google.com/">3</option>
 						</select>
 					</div>
 					{% include 'btn.twig' with {
-						mod : 'menu__btn',
+						mod : 'menu__btn js-metro-btn',
 						imgSrc: 'my_location_24px',
 						text: 'Заказать доставку'
 					} %}
 				</form>
 			</div>
 		{% endif %}
+		{% include 'big-choice.twig' with {
+			mod: 'mobile no-container'
+		} %}
 	</div>
 </section>

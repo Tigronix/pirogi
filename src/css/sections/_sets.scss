@@ -4,6 +4,10 @@
   @include slickDots;
   padding: 30px 0;
 
+  @include mobile {
+    display: none;
+  }
+
   &__header {
     font-size: vw(28px);
     line-height: vw(28px);
