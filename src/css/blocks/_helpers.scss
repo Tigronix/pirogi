@@ -1,0 +1,13 @@
+.mobile {
+  display: none;
+
+  @include mobile {
+    display: block;
+  }
+}
+
+.desktop {
+  @include mobile {
+    display: none;
+  }
+}

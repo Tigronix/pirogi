@@ -304,6 +304,10 @@
     color: #fff;
     width: 100%;
     text-align: right;
+
+    @include mobile {
+      display: flex!important;
+    }
   }
 
   &__by-text {

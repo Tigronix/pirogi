@@ -397,6 +397,24 @@
 		lazyload();
 	};
 
+	const tabs = function tabs() {
+		$(document).on('click', '[data-tabclass]', function onClick() {
+			const $this = $(this);
+			const content = $this.data('tabclass');
+			const number = $this.data('tabnumber');
+
+			$('[data-tabclass="' + content + '"]').each(function each() {
+				const $element = $(this);
+
+				if($element.data('tabnumber') === number) {
+					$element.addClass('active').siblings().removeClass('active');
+				}
+			});
+
+			$('.' + content + ' > [data-tabnumber="' + number + '"]').addClass('active').siblings().removeClass('active');
+		});
+	};
+
 	// sliders
 	const popularSlider = function () {
 		const $sliderContainers = $('.js-popular-slider-container');
@@ -557,6 +575,7 @@
 		map();
 		rangeSlider();
 		lazyLoad();
+		tabs();
 
 		// specific
 		cardCalc();

@@ -2,31 +2,38 @@
 	item0: {
 		text: 'Сытные',
 		counter: '12',
-		active: true
+		active: true,
+		tabNumber: '0'
 	},
 	item1: {
 		text: 'Постные',
-		counter: '24'
+		counter: '24',
+		tabNumber: '1'
 	},
 	item2: {
 		text: 'Традиционные',
-		counter: '24'
+		counter: '24',
+		tabNumber: '2'
 	},
 	item3: {
 		text: 'С зеленью',
-		counter: '24'
+		counter: '24',
+		tabNumber: '3'
 	},
 	item4: {
 		text: 'Сладкие',
-		counter: '24'
+		counter: '24',
+		tabNumber: '4'
 	},
 	item5: {
 		text: 'Фруктовые',
-		counter: '24'
+		counter: '24',
+		tabNumber: '5'
 	},
 	item6: {
 		text: 'Овощные',
-		counter: '24'
+		counter: '24',
+		tabNumber: '6'
 	}
 } %}
 
@@ -74,6 +81,7 @@
 } %}
 
 <section class="menu">
+	{% include 'big-choice.twig' %}
 	<div class="container menu__container">
 		<div class="menu__btns-container">
 			<ul class="menu__btns">
@@ -90,19 +98,23 @@
 
 		{% if short %}
 			<div class="menu__bottom">
-				<ul class="menu__content js-menu-content">
-					{% for item in menuContent %}
-						<li class="menu__content-li" data-tabnumber="{{item.tabNumber}}">
-							<div class="menu__content-item">
-								<img src="assets/img/icons/{{item.imgSrc}}.png" alt="" class="menu__img">
-								<div class="menu__desc">
-									<span class="menu__text">{{item.text}}</span>
-									<span class="menu__index">{{item.index}}</span>
-								</div>
-							</div>
-						</li>
+				<div class="js-menu-content">
+					{% for index in 0..6 %}
+						<ul class="menu__content {% if index == 0 %}active{% endif %}" data-tabnumber="{{index}}">
+							{% for item in menuContent %}
+								<li class="menu__content-li">
+									<a href="#" class="menu__content-item">
+										<img src="assets/img/icons/{{item.imgSrc}}.png" alt="" class="menu__img">
+										<div class="menu__desc">
+											<span class="menu__text">{{item.text}}</span>
+											<span class="menu__index">{{item.index}}</span>
+										</div>
+									</a>
+								</li>
+							{% endfor %}
+						</ul>
 					{% endfor %}
-				</ul>
+				</div>
 				<form class="menu__metro js-metro">
 					<div class="menu__select-wrap">
 						<select name="" id="" class="menu__select js-metro-select" placeholder="">
@@ -119,8 +131,5 @@
 				</form>
 			</div>
 		{% endif %}
-		{% include 'big-choice.twig' with {
-			mod: 'mobile no-container'
-		} %}
 	</div>
 </section>

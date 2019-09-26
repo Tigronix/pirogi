@@ -2,9 +2,6 @@
 {% block title %}Главная{% endblock %}
 {% block page %}
 	<main class="page-main">
-		{% include 'templates/includes/big-choice.twig' with {
-			mod: 'desktop'
-		} %}
 		{% include 'templates/includes/menu.twig' with {
 			short: true
 		} %}
@@ -17,6 +14,6 @@
 		{% include 'templates/includes/rating.twig' %}
 		{% include 'templates/includes/order.twig' %}
 		{% include 'templates/includes/choose-inside.twig' %}
-		<!-- {% include 'templates/includes/map.twig' %} -->
+		{% include 'templates/includes/map.twig' %} 
 	</main>
 {% endblock %}

@@ -2,6 +2,10 @@
   padding: vw(36px) 0 vw(57px) 0;
   position: relative;
 
+  @include mobile {
+    display: none;
+  }
+
   &__h2 {
     font-size: vw(32px);
     line-height: vw(40px);

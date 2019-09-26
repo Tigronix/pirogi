@@ -91,17 +91,18 @@ ul {
 }
 
 p {
-  font-size: 16px;
-  line-height: 25px;
-  color: #666666;
+  font-size: vw(18px);
+  line-height: vw(25px);
+  color: #666;
   margin-bottom: 30px;
+
+  @include mobile {
+    font-size: 13px;
+    line-height: 20px;
+  }
 
   &:last-child {
     margin-bottom: 0;
-  }
-
-  @include mobile {
-    line-height: 19px;
   }
 }
 
@@ -113,20 +114,6 @@ p {
 
   @include hover {
     text-decoration: underline;
-  }
-}
-
-.mobile {
-  display: none;
-
-  @include mobile {
-    display: block;
-  }
-}
-
-.desktop {
-  @include mobile {
-    display: none;
   }
 }
 

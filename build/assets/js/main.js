@@ -404,6 +404,24 @@ var APP = {
 		lazyload();
 	};
 
+	var tabs = function tabs() {
+		$(document).on('click', '[data-tabclass]', function onClick() {
+			var $this = $(this);
+			var content = $this.data('tabclass');
+			var number = $this.data('tabnumber');
+
+			$('[data-tabclass="' + content + '"]').each(function each() {
+				var $element = $(this);
+
+				if ($element.data('tabnumber') === number) {
+					$element.addClass('active').siblings().removeClass('active');
+				}
+			});
+
+			$('.' + content + ' > [data-tabnumber="' + number + '"]').addClass('active').siblings().removeClass('active');
+		});
+	};
+
 	// sliders
 	var popularSlider = function popularSlider() {
 		var $sliderContainers = $('.js-popular-slider-container');
@@ -559,6 +577,7 @@ var APP = {
 		map();
 		rangeSlider();
 		lazyLoad();
+		tabs();
 
 		// specific
 		cardCalc();
