@@ -107,7 +107,7 @@
 					</ul>
 					{% include 'btn.twig' with {
 						text : 'В корзину',
-						mod: 'product__btn'
+						mod: 'product__btn btn--green'
 					} %}
 					<div class="product__bottom">
 						<ul class="product__payment-list">
@@ -117,13 +117,34 @@
 						</ul>
 						<div class="product__social"><img src="assets/img/icons/soc.png" alt="" class="product__social-img"></div>
 					</div>
+					<div class="product__inside-title">
+						<div class="product__inside-title-text">Состав пирога:</div>
+						<div class="product__inside-title-text product__inside-title-text--red">Время приготовления: ~23 мин.</div>
+					</div>
 				</div>
 				<div class="product__content-right">
 					{% include 'spices.twig' with {
 						modif : 'product__spices'
 					} %}
 				</div>
+				<div class="product__food-container">
+					<div class="product__food js-product-food">
+						{% for index in 0..13 %}
+							<div class="product__food-item">
+								<img src="assets/img/icons/fish.png" alt="" class="product__food-img">
+								<div class="product__food-desc">Сёмга</div>
+							</div>
+						{% endfor %}
+					</div>
+				</div>
 			</div>
 		</div>
+		<ul class="product__tags-list">
+			{% for index in 0..12 %}
+				<li class="product__tags-li">
+					<a href="#" class="product__tags-item">С капустой</a>
+				</li>
+			{% endfor %}
+		</ul>
 	</div>
 </div>

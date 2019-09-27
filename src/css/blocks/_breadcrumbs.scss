@@ -2,6 +2,10 @@
   $self: &;
   margin-bottom: vw(25px);
 
+  @include mobile {
+    margin-bottom: 10px;
+  }
+
   &__container {
     display: flex;
     flex-wrap: wrap;
@@ -22,11 +26,24 @@
     border-radius: 5px;
     margin-right: vw(24px);
     text-decoration: none;
+
+    @include mobile {
+      width: 64px;
+      height: 28px;
+      font-size: 12px;
+      line-height: 12px;
+      margin-right: 8px;
+    }
   }
 
   &__back-img {
     width: vw(10px);
     margin-right: vw(10px);
+
+    @include mobile {
+      width: 10px;
+      margin-right: 4px;
+    }
   }
 
   &__list {
@@ -34,12 +51,19 @@
     flex-wrap: wrap;
     align-items: center;
     margin: vw(-15px);
-    
+
+    @include mobile {
+      margin: -10px;
+    }
   }
 
   &__li {
     padding: vw(15px);
     position: relative;
+
+    @include mobile {
+      padding: 10px;
+    }
 
     &:hover {
       &:after {
@@ -64,6 +88,11 @@
       top: 50%;
       transform: translate(-50%, -50%) rotate(-90deg);
       transition: transform 0.2s;
+
+      @include mobile {
+        width: 10px;
+        height: 10px;
+      }
     }
   }
 
@@ -77,6 +106,11 @@
   &__icon {
     width: vw(20px);
     margin-right: vw(5px);
+
+    @include mobile {
+      width: 20px;
+      margin-right: 5px;
+    }
   }
 
   &__text {
@@ -85,6 +119,11 @@
     color: #666;
     text-decoration: underline;
     transition: color 0.3s;
+
+    @include mobile {
+      font-size: 16px;
+      line-height: 16px;
+    }
 
     #{$self}__link:hover & {
       color: #1081e0;
@@ -101,12 +140,16 @@
     width: vw(270px);
     display: none;
 
+    @include hover {
+      display: block;
+    }
+
     &:before {
       display: block;
       content: "";
       position: absolute;
       left: 50%;
-      top: 0;
+      top: 2px;
       width: vw(26px);
       height: vw(26px);
       background: url(../img/triangle-top.png) no-repeat center;
@@ -114,7 +157,9 @@
     }
 
     #{$self}__link:hover + & {
-      display: block;
+      @include fromDesktop {
+        display: block;
+      }
     }
   }
 

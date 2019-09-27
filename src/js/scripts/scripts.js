@@ -306,18 +306,21 @@
 	};
 
 	const metroRelocation = () => {
-		const metro = document.querySelector('.js-metro');
-		const select = metro.querySelector('.js-metro-select');
-		const options = select.querySelectorAll('.js-metro-option');
-		const btn = metro.querySelector('.js-metro-btn');
-		let value = '';
+		const metro = document.querySelectorAll('.js-metro');
 
-		select.addEventListener('change', () => {
-			value = select.options[select.selectedIndex].value;
-		});
+		metro.forEach((metro) => {
+			const select = metro.querySelector('.js-metro-select');
+			const options = select.querySelectorAll('.js-metro-option');
+			const btn = metro.querySelector('.js-metro-btn');
+			let value = '';
 
-		btn.addEventListener('click', () => {
-			window.location.href = value;
+			select.addEventListener('change', () => {
+				value = select.options[select.selectedIndex].value;
+			});
+
+			btn.addEventListener('click', () => {
+				window.location.href = value;
+			});
 		});
 	};
 
@@ -562,6 +565,25 @@
 		});
 	};
 
+	const productFoodSlider = () => {
+		const $slider = $('.js-product-food');
+		const options = {
+			slidesToShow: 7,
+			arrows: true,
+			infinite: false,
+			responsive: [
+				{
+					breakpoint: 1280,
+					settings: {
+						slidesToShow: 3
+					}
+				}
+			]
+		};
+
+		$slider.slick(options);
+	}
+
 
 	// <****************PAGE READY****************>
 	const onPageRdy = function () {
@@ -570,6 +592,7 @@
 		setsSlider();
 		clientsSlider();
 		productSlider();
+		productFoodSlider();
 
 		// utility
 		map();
