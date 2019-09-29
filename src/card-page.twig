@@ -2,11 +2,11 @@
 {% block title %}Главная{% endblock %}
 {% block page %}
 	<main class="page-main">
-		<div class="container">
-			<h1 class="h1">Самый большой выбор пирогов в Москве - более 350 видов начинок в наличии:</h1>
-		</div>
 		{% include 'templates/includes/menu.twig' %}
 		{% include 'templates/includes/breadcrumbs.twig' %}
 		{% include 'templates/includes/product.twig' %}
+		{% include 'templates/includes/popular.twig' %}
+		{% include 'templates/includes/clients.twig' %}
+		{% include 'templates/includes/choose-inside.twig' %}
 	</main>
 {% endblock %}

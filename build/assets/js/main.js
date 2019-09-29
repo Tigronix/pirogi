@@ -569,7 +569,7 @@ var APP = {
 	};
 
 	var productFoodSlider = function productFoodSlider() {
-		var $slider = $('.js-product-food');
+		var $sliders = $('.js-product-food');
 		var options = {
 			slidesToShow: 7,
 			arrows: true,
@@ -582,7 +582,29 @@ var APP = {
 			}]
 		};
 
-		$slider.slick(options);
+		var sliderInitiate = function sliderInitiate() {
+			$sliders.each(function () {
+				var $slider = $(this);
+				var isDesktop = window.matchMedia('(min-width: 1280px)').matches;
+				var isSliderActive = $slider.hasClass('slick-initialized');
+
+				if (isDesktop) {
+					if (!isSliderActive) {
+						$slider.slick(options);
+					}
+				} else {
+					if (isSliderActive) {
+						$slider.slick('unslick');
+					}
+				}
+			});
+		};
+
+		$(window).on('load resize orientationchange', function () {
+			sliderInitiate();
+		});
+
+		sliderInitiate();
 	};
 
 	// <****************PAGE READY****************>

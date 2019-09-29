@@ -21,6 +21,14 @@
   &--green {
     background: #23B75F;
     color: #fff;
+
+    @include hover {
+      background: #19C960;
+    }
+
+    &:active {
+      background: #19C960;
+    }
   }
 
   &--red {

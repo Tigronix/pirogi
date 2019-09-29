@@ -62,7 +62,7 @@
 						<a href="#" class="link product__review-link">5 отзывов</a>
 					</div>
 					<div class="product__weight">
-						<div class="product__weight-title"></div>
+						<div class="product__weight-title">Выберите вес:</div>
 						<ul class="card__gram-list">
 							{% for item in gramList %}
 								<li class="card__gram-li">
@@ -89,6 +89,14 @@
 							<span class="card__price-number js-card-price">100</span>
 							<span class="card__price-value">руб.</span>
 						</div>
+						<button type="button" class="card__spices js-open-spices mobile">
+							<img src="assets/img/icons/spices.png" alt="" class="card__spices-img">
+							<div class="tooltip card__spices-tooltip">
+								<div class="tooltip__content">
+									Добавить ингридиенты
+								</div>
+							</div>
+						</button>
 						<div class="product__user-wrap">
 							<img src="assets/img/icons/user.png" alt="" class="product__user-icon">
 							<div class="product__user-text">1-2 персон</div>
@@ -139,12 +147,14 @@
 				</div>
 			</div>
 		</div>
-		<ul class="product__tags-list">
-			{% for index in 0..12 %}
-				<li class="product__tags-li">
-					<a href="#" class="product__tags-item">С капустой</a>
-				</li>
-			{% endfor %}
-		</ul>
+		<div class="product__tags-wrap">
+			<ul class="product__tags-list">
+				{% for index in 0..12 %}
+					<li class="product__tags-li">
+						<a href="#" class="product__tags-item">С капустой</a>
+					</li>
+				{% endfor %}
+			</ul>
+		</div>
 	</div>
 </div>

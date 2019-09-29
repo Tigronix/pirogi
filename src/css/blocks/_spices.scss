@@ -11,6 +11,7 @@
   border-radius: 10px;
   padding: vw(26px);
   display: none;
+  z-index: 10;
 
   @include mobile {
     padding: 26px;

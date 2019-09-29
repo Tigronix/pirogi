@@ -431,14 +431,12 @@
 				appendDots: '.js-popular-slider-dots',
 				dots: true,
 				infinite: false,
-				responsive: [
-					{
-						breakpoint: 1280,
-						settings: {
-							slidesToShow: 1
-						}
+				responsive: [{
+					breakpoint: 1280,
+					settings: {
+						slidesToShow: 1
 					}
-				]
+				}]
 			};
 
 			$slider.slick(options);
@@ -469,14 +467,12 @@
 			slidesToShow: 7,
 			arrows: true,
 			infinite: false,
-			responsive: [
-				{
-					breakpoint: 1280,
-					settings: {
-						slidesToShow: 3
-					}
+			responsive: [{
+				breakpoint: 1280,
+				settings: {
+					slidesToShow: 3
 				}
-			]
+			}]
 		};
 
 		$slider.slick(options);
@@ -566,22 +562,42 @@
 	};
 
 	const productFoodSlider = () => {
-		const $slider = $('.js-product-food');
+		const $sliders = $('.js-product-food');
 		const options = {
 			slidesToShow: 7,
 			arrows: true,
 			infinite: false,
-			responsive: [
-				{
-					breakpoint: 1280,
-					settings: {
-						slidesToShow: 3
-					}
+			responsive: [{
+				breakpoint: 1280,
+				settings: {
+					slidesToShow: 3
 				}
-			]
+			}]
 		};
 
-		$slider.slick(options);
+		const sliderInitiate = function () {
+			$sliders.each(function () {
+				const $slider = $(this);
+				const isDesktop = window.matchMedia('(min-width: 1280px)').matches;
+				const isSliderActive = $slider.hasClass('slick-initialized');
+
+				if(isDesktop) {
+					if(!isSliderActive) {
+						$slider.slick(options);
+					}
+				} else {
+					if(isSliderActive) {
+						$slider.slick('unslick');
+					}
+				}
+			});
+		};
+
+		$(window).on('load resize orientationchange', function () {
+			sliderInitiate();
+		});
+
+		sliderInitiate();
 	}
 
 
