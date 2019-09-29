@@ -6,6 +6,8 @@
 }
 
 html, body {
+  height: 100%;
+
   @include mobile {
     font-size: 10px;
   }
@@ -45,6 +47,7 @@ ul {
 
 .site-wrapper {
   overflow: hidden;
+  height: 100%;
 }
 
 .h1 {
@@ -111,6 +114,11 @@ p {
   line-height: vw(18px);
   color: #1081E0;
   text-decoration: none;
+
+  @include mobile {
+    font-size: 14px;
+    line-height: 14px;
+  }
 
   @include hover {
     text-decoration: underline;

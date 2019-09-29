@@ -1,0 +1,100 @@
+.p404 {
+  background: url(../img/404.png) no-repeat center;
+  background-size: cover;
+  height: 100%;
+
+  &__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+
+  &__content {
+    background: rgba(#fff, 0.8);
+    border-radius: 50px;
+    padding: 20px 60px 60px 60px;
+    text-align: center;
+
+    @include mobile {
+      padding: 10px 20px;
+      border-radius: 30px;
+    }
+  }
+
+  &__header {
+    font-size: vw(300px);
+    line-height: vw(359px);
+    color: #009471;
+    @include avant;
+
+    @include mobile {
+      font-size: 140px;
+      line-height: 140px;
+    }
+  }
+
+  &__desc {
+    font-size: vw(46px);
+    line-height: vw(45px);
+    color: #70544f;
+    font-weight: 500;
+    margin-bottom: vw(25px);
+
+    @include mobile {
+      font-size: 18px;
+      line-height: 18px;
+      margin-bottom: 25px;
+    }
+
+    & + p {
+      margin-bottom: vw(43px);
+
+      @include mobile {
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  p {
+    margin-bottom: vw(26px);
+
+    @include mobile {
+      margin-bottom: 10px;
+    }
+
+  }
+
+  &__phone {
+    color: #3BAB91;
+    text-decoration: none;
+
+    @include hover {
+      text-decoration: underline;
+    }
+  }
+
+  &__search-title {
+    margin-bottom: vw(10px);
+    text-align: center;
+    font-size: vw(24px);
+    line-height: vw(25px);
+    color: #666;
+    font-weight: bold;
+
+    @include mobile {
+      font-size: 20px;
+      line-height: 20px;
+      margin-bottom: 10px;
+    }
+
+  }
+
+  &__search {
+    margin:0 auto;
+
+    @include mobile {
+      display: block;
+    }
+  }
+}

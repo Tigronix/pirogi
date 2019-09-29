@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta name="format-detection" content="telephone=no">
+
+		<title>
+			{% block title %}Default title{% endblock %}
+		</title>
+
+		<link rel="stylesheet" href="./assets/css/main.css">
+	</head>
+	<body>
+		<div class="site-wrapper">
+			<main class="page-main page-main--404">
+				{% block page %}{% endblock %}
+			</main>
+		</div>
+
+		<script src="./assets/js/vendor.js"></script>
+		<script src="https://api-maps.yandex.ru/2.1/?apikey=c641cc57-5dbe-44cd-8878-1035f5039a6b&lang=ru_RU" type="text/javascript"></script>
+		<script src="./assets/js/main.js"></script>
+	</body>
+</html>

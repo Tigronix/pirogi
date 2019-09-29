@@ -282,6 +282,12 @@
     @include tablet {
       display: none;
     }
+
+    @include mobile {
+      height: auto;
+      width: 100%;
+      margin-right: 0;
+    }
   }
 
   &__input {
@@ -293,6 +299,14 @@
     font-size: vw(18px);
     line-height: vw(18px);
     color: #9299a2;
+
+    @include mobile {
+      padding: 10px;
+      font-size: 18px;
+      line-height: 18px;
+      width: 100%;
+      margin-bottom: 10px;
+    }
   }
 
   &__search-icon {
@@ -302,6 +316,13 @@
     left: vw(13px);
     top: 50%;
     transform: translateY(-50%);
+
+    @include mobile {
+      width: 20px;
+      height: 20px;
+      left: 13px;
+      display: none;
+    }
   }
 
   &__search-submit {
@@ -312,6 +333,14 @@
     color: #333;
     position: relative;
     padding-right: vw(10px);
+
+    @include mobile {
+      font-size: 18px;
+      line-height: 18px;
+      width: auto;
+      height: 40px;
+      min-width: 150px;
+    }
 
     &:after {
       display: block;
@@ -335,6 +364,11 @@
     align-items: center;
     width: 100%;
     height: 100%;
+
+    @include mobile {
+
+      padding: 10px;
+    }
   }
 
   &__fav {
