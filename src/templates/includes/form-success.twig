@@ -1,0 +1,46 @@
+<section class="form-success">
+	<div class="container form-success__container">
+		<ul class="form-success__list">
+			<li class="form-success__li">
+				<div class="form-success__item">
+          <div class="form-success__title">ПОДЕЛИСЬ С ДРУЗЬЯМИ!</div>
+					<div class="form-success__content">
+						<img src="assets/img/icons/bigLike.png" alt="" class="form-success__like">
+						<p>Делитесь своими новыми вкусами и впечатлениями с друзьями в социальных сетях!</p>
+						<div class="form-success__social">
+							<img src="assets/img/soc.png" alt="">
+						</div>
+					</div>
+				</div>
+			</li>
+			<li class="form-success__li">
+				<div class="form-success__item">
+					<div class="form-success__title">CASH BACK за FEED BACK</div>
+					<img src="assets/img/feedback.png" alt="" class="form-success__img">
+					<p>Поставьте оценку 5 звезд, напишите отзыв о пекарне и мы вернем 200 рублей на счет вашего телефона.</p>
+					{% include 'btn.twig' with {
+            text: 'Получить 200 рублей',
+            mod: 'form-success__btn'
+          } %}
+				</div>
+			</li>
+			<li class="form-success__li">
+				<div class="form-success__item">
+					<div class="form-success__title">НОВЫЕ АКЦИИ И СКИДКИ!</div>
+					<div class="form-success__content form-success__content--pdt">
+						<p>Подпишитесь на новости. Узнавайте первыми про выгодные акции и скидки.</p>
+						<label class="field form-success__field">
+							<img src="assets/img/icons/email.png" alt="" class="field__icon">
+							<input placeholder="Введите ваш E-mail" type="text" class="field__input">
+						</label>
+            {% include 'btn.twig' with {
+              mod: 'btn--green form-success__btn',
+              text: 'Подписаться'
+            } %}
+					</div>
+				</div>
+			</li>
+		</ul>
+	</div>
+
+</section>

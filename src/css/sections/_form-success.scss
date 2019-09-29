@@ -1,0 +1,103 @@
+.form-success {
+  margin-top: vw(35px);
+  margin-bottom: vw(35px);
+
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -vw(20px);
+
+    @include mobile {
+      display: block;
+      margin: -10px;
+    }
+  }
+
+  &__li {
+    padding: vw(20px);
+    width: calc(100% / 3);
+
+    @include mobile {
+      padding: 10px;
+      width: 100%;
+    }
+  }
+
+  &__item {
+    text-align: center;
+  }
+
+  &__title {
+    font-size: vw(24px);
+    line-height: vw(24px);
+    font-weight: 500;
+    color: #dc0029;
+    margin-bottom: vw(20px);
+
+    @include mobile {
+      font-size: 24px;
+      line-height: 24px;
+      margin-bottom: 16px;
+    }
+
+  }
+
+  &__content {
+    border-radius: 20px;
+    border: 1px solid #eee;
+    min-height: vw(309px);
+    padding: 0 vw(30px);
+
+    @include mobile {
+      min-height: none;
+      padding: 0;
+      border: none;
+    }
+
+
+    &--pdt {
+      padding-top: vw(35px);
+      @include mobile {
+        padding-top: 0px;
+      }
+
+    }
+
+    &--no-border {
+      border: none;
+    }
+  }
+
+  &__like {
+    margin-top: vw(50px);
+    margin-bottom: vw(10px);
+
+    @include mobile {
+      margin-top: 35px;
+      margin: 10px;
+    }
+
+  }
+
+  p {
+    margin-bottom: vw(20px);
+
+    @include mobile {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__field {
+    border: 1px solid #dddfe0;
+    border-radius: 5px;
+    display: block;
+    padding: 5px;
+    margin-bottom: vw(20px);
+
+    @include mobile {
+      margin-bottom: 20px;
+    }
+
+  }
+}

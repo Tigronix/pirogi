@@ -35,6 +35,8 @@
     font-size: vw(20px);
     line-height: vw(30px);
     color: #3C763D;
+    max-width: vw(564px);
+
 
     @include mobile {
       flex: 1;
@@ -42,6 +44,7 @@
       font-size: 13px;
       line-height: 20px;
       margin-left: 0px;
+      max-width: 100%;
     }
 
     &:before {

@@ -29,6 +29,10 @@
     left: vw(17px);
     top: 50%;
     transform: translateY(-50%);
+
+    @include mobile {
+      left: 17px;
+    }
   }
 
   &__input {
@@ -41,6 +45,13 @@
     padding-right: vw(20px);
     appearance: none;
     border: none;
+
+    @include mobile {
+      font-size: 15px;
+      line-height: 18px;
+      padding-right: 20px;
+      padding-left: 50px;
+    }
 
     #{$self}--route & {
       width: 100%;
