@@ -14,6 +14,16 @@ var APP = {
 	var PG = {};
 
 	// specific
+	var selectRelocation = function selectRelocation() {
+		var selects = document.querySelectorAll('.js-metro-input');
+
+		selects.forEach(function (select) {
+			select.addEventListener('change', function () {
+				console.log(123);
+			});
+		});
+	};
+
 	var cardCalc = function cardCalc() {
 		var cards = document.querySelectorAll('.js-card');
 		var cardObj = {
@@ -300,16 +310,19 @@ var APP = {
 
 	var insideNumbers = function insideNumbers() {
 		var inputs = document.querySelectorAll('.js-inside-input');
+		var btn = document.querySelector('.js-inside-btn');
 
 		inputs.forEach(function (input) {
 			input.addEventListener('click', function () {
 				var section = input.closest('.js-inside');
 				var dataNumber = input.getAttribute('data-inside-number');
+				var dataHref = input.getAttribute('data-inside-link');
 				var nodeNumber = section.querySelector('.js-inside-number');
 				var isChecked = input.checked;
 
 				if (isChecked) {
 					nodeNumber.innerText = dataNumber;
+					btn.href = dataHref;
 				}
 			});
 		});
@@ -331,6 +344,41 @@ var APP = {
 			btn.addEventListener('click', function () {
 				window.location.href = value;
 			});
+		});
+	};
+
+	var hamburger = function hamburger() {
+		var btn = document.querySelector('.js-hamburger-btn');
+		var menu = document.querySelector('.js-hamburger-menu');
+
+		btn.addEventListener('click', function () {
+			var isActive = menu.classList.contains('active');
+
+			if (isActive) {
+				menu.classList.remove('active');
+				btn.classList.remove('active');
+			} else {
+				menu.classList.add('active');
+				btn.classList.add('active');
+			}
+		});
+	};
+
+	var headerScroll = function headerScroll() {
+		var header = $('.page-header');
+		var menu = $('.menu');
+
+		$(window).on('scroll', function (e) {
+			var scrollTop = $(window).scrollTop();
+			var isScrolled = scrollTop >= 50;
+
+			if (isScrolled) {
+				header.addClass('scrolled');
+				menu.addClass('scrolled');
+			} else {
+				header.removeClass('scrolled');
+				menu.removeClass('scrolled');
+			}
 		});
 	};
 
@@ -627,6 +675,9 @@ var APP = {
 		setCalc();
 		insideNumbers();
 		metroRelocation();
+		hamburger();
+		headerScroll();
+		selectRelocation();
 	};
 
 	onPageRdy();

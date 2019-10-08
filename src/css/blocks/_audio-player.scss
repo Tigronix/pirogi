@@ -1,0 +1,15 @@
+.audio-player {
+  margin: 37px 0 30px;
+
+  &__header {
+    font-size: 18px;
+    line-height: 18px;
+    color: #009471;
+    margin-bottom: 16px;
+    text-align: center;
+  }
+
+  &__player {
+    width: 100%;
+  }
+}

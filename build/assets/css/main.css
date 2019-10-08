@@ -544,8 +544,8 @@ ul {
 }
 
 .site-wrapper {
-  overflow: hidden;
-  height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
 .h1 {
@@ -2566,6 +2566,14 @@ body.compensate-for-scrollbar {
   width: 1.04167vw;
   height: 1.04167vw;
   margin-right: 0.52083vw;
+}
+
+@media screen and (max-width: 767px) {
+  .btn__icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+  }
 }
 
 .card {
@@ -4609,11 +4617,76 @@ body.compensate-for-scrollbar {
   height: 100%;
 }
 
+.audio-player {
+  margin: 37px 0 30px;
+}
+
+.audio-player__header {
+  font-size: 18px;
+  line-height: 18px;
+  color: #009471;
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+.audio-player__player {
+  width: 100%;
+}
+
+.drop-menu {
+  position: fixed;
+  left: 0;
+  top: 52px;
+  right: 0;
+  background: #fff;
+  z-index: 999;
+  display: none;
+}
+
+@media screen and (max-width: 767px) {
+  .drop-menu.active {
+    display: block;
+  }
+}
+
+.drop-menu__calc {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  padding: 50px 16px 35px;
+  background: rgba(0, 0, 0, 0.57);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+}
+
+.drop-menu__calc-img-box {
+  text-decoration: none;
+  padding: 14px;
+  background: #f8cf26;
+  -webkit-box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+}
+
 .page-header {
   position: relative;
   z-index: 999;
   -webkit-box-shadow: 0px 4px 4px rgba(105, 105, 105, 0.25);
   box-shadow: 0px 4px 4px rgba(105, 105, 105, 0.25);
+}
+
+.page-header.scrolled {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  z-index: 999;
+  background: #fff;
 }
 
 .page-header__top {
@@ -4638,6 +4711,10 @@ body.compensate-for-scrollbar {
   height: 45px;
 }
 
+.page-header.scrolled .page-header__container-top {
+  display: none;
+}
+
 .page-header__menu-list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -4650,8 +4727,22 @@ body.compensate-for-scrollbar {
   margin: -1.82292vw;
 }
 
+@media screen and (max-width: 767px) {
+  .page-header__menu-list {
+    margin-top: 25px;
+    margin-bottom: 25px;
+  }
+}
+
 .page-header__menu-li {
   padding: 1.82292vw;
+}
+
+@media screen and (max-width: 767px) {
+  .page-header__menu-li {
+    padding: 5px;
+    width: 50%;
+  }
 }
 
 .page-header__menu-icon {
@@ -4660,11 +4751,26 @@ body.compensate-for-scrollbar {
   margin-right: 0.36458vw;
 }
 
+@media screen and (max-width: 767px) {
+  .page-header__menu-icon {
+    width: 25px;
+    height: 25px;
+    margin-right: 7px;
+  }
+}
+
 .page-header__menu-link {
   font-size: 0.9375vw;
   line-height: 0.9375vw;
   color: #666;
   text-decoration: none;
+}
+
+@media screen and (max-width: 767px) {
+  .page-header__menu-link {
+    font-size: 16px;
+    line-height: 16px;
+  }
 }
 
 .page-header__menu-link--sale {
@@ -5346,6 +5452,7 @@ body.compensate-for-scrollbar {
   align-items: center;
   cursor: pointer;
   display: none;
+  position: relative;
 }
 
 @media screen and (max-width: 1024px) {
@@ -5354,6 +5461,30 @@ body.compensate-for-scrollbar {
     display: -ms-flexbox;
     display: flex;
   }
+}
+
+.page-header__menu-btn-open, .page-header__menu-btn-close {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  -webkit-transition: opacity .3s;
+  -o-transition: opacity .3s;
+  transition: opacity .3s;
+}
+
+.page-header__menu-btn.active .page-header__menu-btn-open {
+  opacity: 0;
+}
+
+.page-header__menu-btn-close {
+  opacity: 0;
+}
+
+.page-header__menu-btn.active .page-header__menu-btn-close {
+  opacity: 1;
 }
 
 .page-header__mobile {
@@ -5509,6 +5640,26 @@ body.compensate-for-scrollbar {
 
 .menu {
   margin-bottom: 23px;
+}
+
+@media screen and (min-width: 1025px) {
+  .menu.scrolled {
+    position: fixed;
+    left: 0;
+    top: 100px;
+    right: 0;
+    z-index: 999;
+    background: #fff;
+    border-bottom: 3px solid #FFDC64;
+    -webkit-box-shadow: 0px 10px 5px -5px rgba(85, 85, 85, 0.25);
+    box-shadow: 0px 10px 5px -5px rgba(85, 85, 85, 0.25);
+  }
+  .menu.scrolled .big-choice {
+    display: none;
+  }
+  .menu.scrolled .menu__bottom {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 767px) {

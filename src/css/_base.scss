@@ -46,8 +46,8 @@ ul {
 }
 
 .site-wrapper {
-  overflow: hidden;
-  height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
 .h1 {

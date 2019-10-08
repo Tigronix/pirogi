@@ -2,6 +2,17 @@
 	const PG = {};
 
 	// specific
+	const selectRelocation = () => {
+		const selects = document.querySelectorAll('.js-metro-input');
+
+
+		selects.forEach((select) => {
+			select.addEventListener('change', () => {
+				const href = ;
+			});
+		});
+	};
+
 	const cardCalc = function () {
 		const cards = document.querySelectorAll('.js-card');
 		const cardObj = {
@@ -289,16 +300,19 @@
 
 	const insideNumbers = function () {
 		const inputs = document.querySelectorAll('.js-inside-input');
+		const btn = document.querySelector('.js-inside-btn');
 
 		inputs.forEach(function (input) {
 			input.addEventListener('click', () => {
 				const section = input.closest('.js-inside');
 				const dataNumber = input.getAttribute('data-inside-number');
+				const dataHref = input.getAttribute('data-inside-link');
 				const nodeNumber = section.querySelector('.js-inside-number');
 				const isChecked = input.checked;
 
 				if(isChecked) {
 					nodeNumber.innerText = dataNumber;
+					btn.href = dataHref;
 				}
 
 			});
@@ -322,6 +336,43 @@
 				window.location.href = value;
 			});
 		});
+	};
+
+	const hamburger = () => {
+		const btn = document.querySelector('.js-hamburger-btn');
+		const menu = document.querySelector('.js-hamburger-menu');
+
+		btn.addEventListener('click', () => {
+			const isActive = menu.classList.contains('active');
+
+			if(isActive){
+				menu.classList.remove('active');
+				btn.classList.remove('active');
+			}else{
+				menu.classList.add('active');
+				btn.classList.add('active');
+			}
+		});
+	};
+
+	const headerScroll = () => {
+		const header = $('.page-header');
+		const menu = $('.menu');
+
+		$(window).on('scroll', (e) => {
+			const scrollTop = $(window).scrollTop();
+			const isScrolled = scrollTop >= 50;
+
+			if(isScrolled){
+				header.addClass('scrolled');
+				menu.addClass('scrolled');
+			}else{
+				header.removeClass('scrolled');
+				menu.removeClass('scrolled');
+			}
+		});
+
+
 	};
 
 	// utility
@@ -621,6 +672,9 @@
 		setCalc();
 		insideNumbers();
 		metroRelocation();
+		hamburger();
+		headerScroll();
+		selectRelocation();
 	};
 
 	onPageRdy();

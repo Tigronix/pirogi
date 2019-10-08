@@ -1,0 +1,72 @@
+<div class="drop-menu js-hamburger-menu">
+	<div class="container drop-menu__container">
+		<form action="" class="page-header__search">
+			<img src="assets/img/icons/search.png" alt="" class="page-header__search-icon">
+			<input type="search" placeholder="осетинский пирог с мясом" class="page-header__input">
+			<button type="submit" class="page-header__search-submit">
+				<span class="page-header__search-submit-text">Найти</span></button>
+		</form>
+		<nav class="page-header__menu">
+			<ul class="page-header__menu-list">
+
+				<li class="page-header__menu-li">
+					<a href="#" class="page-header__menu-link ">
+						<img src="assets/img/icons/money.png" alt="" class="page-header__menu-icon">
+						<span class="page-header__menu-text">Цены</span>
+					</a>
+				</li>
+
+				<li class="page-header__menu-li">
+					<a href="#" class="page-header__menu-link page-header__menu-link--sale">
+						<img src="assets/img/icons/price-tag.png" alt="" class="page-header__menu-icon">
+						<span class="page-header__menu-text">Акции и скидки</span>
+					</a>
+				</li>
+
+				<li class="page-header__menu-li">
+					<a href="#" class="page-header__menu-link ">
+						<img src="assets/img/icons/trolley.png" alt="" class="page-header__menu-icon">
+						<span class="page-header__menu-text">Доставка</span>
+					</a>
+				</li>
+
+				<li class="page-header__menu-li">
+					<a href="#" class="page-header__menu-link ">
+						<img src="assets/img/icons/bill.png" alt="" class="page-header__menu-icon">
+						<span class="page-header__menu-text">Оплата</span>
+					</a>
+				</li>
+
+				<li class="page-header__menu-li">
+					<a href="#" class="page-header__menu-link ">
+						<img src="assets/img/icons/like.png" alt="" class="page-header__menu-icon">
+						<span class="page-header__menu-text">Отзывы</span>
+					</a>
+				</li>
+
+				<li class="page-header__menu-li">
+					<a href="#" class="page-header__menu-link ">
+						<img src="assets/img/icons/factory.png" alt="" class="page-header__menu-icon">
+						<span class="page-header__menu-text">О компании</span>
+					</a>
+				</li>
+
+				<li class="page-header__menu-li">
+					<a href="#" class="page-header__menu-link ">
+						<img src="assets/img/icons/shop.png" alt="" class="page-header__menu-icon">
+						<span class="page-header__menu-text">Контакты</span>
+					</a>
+				</li>
+
+			</ul>
+		</nav>
+		{% include 'btn.twig' with {
+			imgSrc : 'phone',
+			text: 'Позвоните мне'
+		} %}
+		{% include 'audio-player.twig' %}
+		<div class="drop-menu__calc">
+			<a href="#" class="drop-menu__calc-img-box"><img src="assets/img/icons/calc.png" alt="" class="drop-menu__calc-img"></a>
+		</div>
+	</div>
+</div>

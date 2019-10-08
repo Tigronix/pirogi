@@ -83,7 +83,10 @@
             </div>
             <div class="page-header__bot">
                 <div class="container page-header__container-bot">
-                    <button type="button" class="page-header__menu-btn"><img src="assets/img/icons/menu.png" alt=""></button>
+                    <button type="button" class="page-header__menu-btn js-hamburger-btn">
+                        <img class="page-header__menu-btn-open" src="assets/img/icons/menu.png" alt="">
+                        <img class="page-header__menu-btn-close" src="assets/img/icons/close-big.png" alt="">
+                    </button>
                     <a href="#" class="page-header__logo">
                         <img class="page-header__logo-img" src="assets/img/logo.png" alt="">
                         <span class="page-header__logo-text">традиции <br> осетии</span>
@@ -176,6 +179,86 @@
                             качества
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="drop-menu js-hamburger-menu">
+            <div class="container drop-menu__container">
+                <form action="" class="page-header__search">
+                    <img src="assets/img/icons/search.png" alt="" class="page-header__search-icon">
+                    <input type="search" placeholder="осетинский пирог с мясом" class="page-header__input">
+                    <button type="submit" class="page-header__search-submit">
+                        <span class="page-header__search-submit-text">Найти</span></button>
+                </form>
+                <nav class="page-header__menu">
+                    <ul class="page-header__menu-list">
+
+                        <li class="page-header__menu-li">
+                            <a href="#" class="page-header__menu-link ">
+                                <img src="assets/img/icons/money.png" alt="" class="page-header__menu-icon">
+                                <span class="page-header__menu-text">Цены</span>
+                            </a>
+                        </li>
+
+                        <li class="page-header__menu-li">
+                            <a href="#" class="page-header__menu-link page-header__menu-link--sale">
+                                <img src="assets/img/icons/price-tag.png" alt="" class="page-header__menu-icon">
+                                <span class="page-header__menu-text">Акции и скидки</span>
+                            </a>
+                        </li>
+
+                        <li class="page-header__menu-li">
+                            <a href="#" class="page-header__menu-link ">
+                                <img src="assets/img/icons/trolley.png" alt="" class="page-header__menu-icon">
+                                <span class="page-header__menu-text">Доставка</span>
+                            </a>
+                        </li>
+
+                        <li class="page-header__menu-li">
+                            <a href="#" class="page-header__menu-link ">
+                                <img src="assets/img/icons/bill.png" alt="" class="page-header__menu-icon">
+                                <span class="page-header__menu-text">Оплата</span>
+                            </a>
+                        </li>
+
+                        <li class="page-header__menu-li">
+                            <a href="#" class="page-header__menu-link ">
+                                <img src="assets/img/icons/like.png" alt="" class="page-header__menu-icon">
+                                <span class="page-header__menu-text">Отзывы</span>
+                            </a>
+                        </li>
+
+                        <li class="page-header__menu-li">
+                            <a href="#" class="page-header__menu-link ">
+                                <img src="assets/img/icons/factory.png" alt="" class="page-header__menu-icon">
+                                <span class="page-header__menu-text">О компании</span>
+                            </a>
+                        </li>
+
+                        <li class="page-header__menu-li">
+                            <a href="#" class="page-header__menu-link ">
+                                <img src="assets/img/icons/shop.png" alt="" class="page-header__menu-icon">
+                                <span class="page-header__menu-text">Контакты</span>
+                            </a>
+                        </li>
+
+                    </ul>
+                </nav>
+                <a href="#" class="btn ">
+                    <img src="assets/img/icons/phone.png" alt="" class="btn__icon">
+                    <span class="btn__text">Позвоните мне</span>
+                </a>
+
+                <div class="audio-player">
+                    <div class="audio-player__header">Послушайте реальные отзывы:</div>
+                    <audio class="audio-player__player" controls="controls">
+                        <source src="assets/audio/rain-audio.mp3" type="audio/ogg">
+                    </audio>
+                </div>                                                                            
+
+                <div class="drop-menu__calc">
+                    <a href="#" class="drop-menu__calc-img-box"><img src="assets/img/icons/calc.png" alt="" class="drop-menu__calc-img"></a>
                 </div>
             </div>
         </div>
@@ -886,7 +969,7 @@
                             <li class="catalog__li">
                                 <div class="card js-card">
                                     <div class="card__img-wrap">
-                                        <img data-src="assets/img/catalogItem0.png" alt="" class="card__img lazyload">
+                                        <img data-src="assets/img/catalogItem0.png" src="//via.placeholder.com/350x350" alt="" class="card__img lazyload">
 
                                         <div class="card__sale">хит продаж</div>
 
@@ -1237,7 +1320,7 @@
                             <li class="catalog__li">
                                 <div class="card js-card">
                                     <div class="card__img-wrap">
-                                        <img data-src="assets/img/catalogItem0.png" alt="" class="card__img lazyload">
+                                        <img data-src="assets/img/catalogItem0.png" src="//via.placeholder.com/350x350" alt="" class="card__img lazyload">
 
                                         <button type="button" class="card__fav">
                                             <img src="assets/img/icons/heart.png" alt="" class="card__fav-img">
@@ -1586,7 +1669,7 @@
                             <li class="catalog__li">
                                 <div class="card js-card">
                                     <div class="card__img-wrap">
-                                        <img data-src="assets/img/catalogItem0.png" alt="" class="card__img lazyload">
+                                        <img data-src="assets/img/catalogItem0.png" src="//via.placeholder.com/350x350" alt="" class="card__img lazyload">
 
                                         <div class="card__sale">хит продаж</div>
 
@@ -1937,7 +2020,7 @@
                             <li class="catalog__li">
                                 <div class="card js-card">
                                     <div class="card__img-wrap">
-                                        <img data-src="assets/img/catalogItem0.png" alt="" class="card__img lazyload">
+                                        <img data-src="assets/img/catalogItem0.png" src="//via.placeholder.com/350x350" alt="" class="card__img lazyload">
 
                                         <button type="button" class="card__fav">
                                             <img src="assets/img/icons/heart.png" alt="" class="card__fav-img">
@@ -2286,7 +2369,7 @@
                             <li class="catalog__li">
                                 <div class="card js-card">
                                     <div class="card__img-wrap">
-                                        <img data-src="assets/img/catalogItem0.png" alt="" class="card__img lazyload">
+                                        <img data-src="assets/img/catalogItem0.png" src="//via.placeholder.com/350x350" alt="" class="card__img lazyload">
 
                                         <button type="button" class="card__fav">
                                             <img src="assets/img/icons/heart.png" alt="" class="card__fav-img">
@@ -2635,7 +2718,7 @@
                             <li class="catalog__li">
                                 <div class="card js-card">
                                     <div class="card__img-wrap">
-                                        <img data-src="assets/img/catalogItem0.png" alt="" class="card__img lazyload">
+                                        <img data-src="assets/img/catalogItem0.png" src="//via.placeholder.com/350x350" alt="" class="card__img lazyload">
 
                                         <div class="card__sale">хит продаж</div>
 
@@ -2986,7 +3069,7 @@
                             <li class="catalog__li">
                                 <div class="card js-card">
                                     <div class="card__img-wrap">
-                                        <img data-src="assets/img/catalogItem0.png" alt="" class="card__img lazyload">
+                                        <img data-src="assets/img/catalogItem0.png" src="//via.placeholder.com/350x350" alt="" class="card__img lazyload">
 
                                         <button type="button" class="card__fav">
                                             <img src="assets/img/icons/heart.png" alt="" class="card__fav-img">
@@ -3335,7 +3418,7 @@
                             <li class="catalog__li">
                                 <div class="card js-card">
                                     <div class="card__img-wrap">
-                                        <img data-src="assets/img/catalogItem0.png" alt="" class="card__img lazyload">
+                                        <img data-src="assets/img/catalogItem0.png" src="//via.placeholder.com/350x350" alt="" class="card__img lazyload">
 
                                         <div class="card__sale">хит продаж</div>
 
@@ -3686,7 +3769,7 @@
                             <li class="catalog__li">
                                 <div class="card js-card">
                                     <div class="card__img-wrap">
-                                        <img data-src="assets/img/catalogItem0.png" alt="" class="card__img lazyload">
+                                        <img data-src="assets/img/catalogItem0.png" src="//via.placeholder.com/350x350" alt="" class="card__img lazyload">
 
                                         <button type="button" class="card__fav">
                                             <img src="assets/img/icons/heart.png" alt="" class="card__fav-img">
@@ -4035,7 +4118,7 @@
                             <li class="catalog__li">
                                 <div class="card js-card">
                                     <div class="card__img-wrap">
-                                        <img data-src="assets/img/catalogItem0.png" alt="" class="card__img lazyload">
+                                        <img data-src="assets/img/catalogItem0.png" src="//via.placeholder.com/350x350" alt="" class="card__img lazyload">
 
                                         <button type="button" class="card__fav">
                                             <img src="assets/img/icons/heart.png" alt="" class="card__fav-img">
@@ -4384,7 +4467,7 @@
                             <li class="catalog__li">
                                 <div class="card js-card">
                                     <div class="card__img-wrap">
-                                        <img data-src="assets/img/catalogItem0.png" alt="" class="card__img lazyload">
+                                        <img data-src="assets/img/catalogItem0.png" src="//via.placeholder.com/350x350" alt="" class="card__img lazyload">
 
                                         <div class="card__sale">хит продаж</div>
 
@@ -4735,7 +4818,7 @@
                             <li class="catalog__li">
                                 <div class="card js-card">
                                     <div class="card__img-wrap">
-                                        <img data-src="assets/img/catalogItem0.png" alt="" class="card__img lazyload">
+                                        <img data-src="assets/img/catalogItem0.png" src="//via.placeholder.com/350x350" alt="" class="card__img lazyload">
 
                                         <button type="button" class="card__fav">
                                             <img src="assets/img/icons/heart.png" alt="" class="card__fav-img">
@@ -5084,7 +5167,7 @@
                             <li class="catalog__li">
                                 <div class="card js-card">
                                     <div class="card__img-wrap">
-                                        <img data-src="assets/img/catalogItem0.png" alt="" class="card__img lazyload">
+                                        <img data-src="assets/img/catalogItem0.png" src="//via.placeholder.com/350x350" alt="" class="card__img lazyload">
 
                                         <div class="card__sale">хит продаж</div>
 
@@ -5435,7 +5518,7 @@
                             <li class="catalog__li">
                                 <div class="card js-card">
                                     <div class="card__img-wrap">
-                                        <img data-src="assets/img/catalogItem0.png" alt="" class="card__img lazyload">
+                                        <img data-src="assets/img/catalogItem0.png" src="//via.placeholder.com/350x350" alt="" class="card__img lazyload">
 
                                         <button type="button" class="card__fav">
                                             <img src="assets/img/icons/heart.png" alt="" class="card__fav-img">
@@ -5784,7 +5867,7 @@
                             <li class="catalog__li">
                                 <div class="card js-card">
                                     <div class="card__img-wrap">
-                                        <img data-src="assets/img/catalogItem0.png" alt="" class="card__img lazyload">
+                                        <img data-src="assets/img/catalogItem0.png" src="//via.placeholder.com/350x350" alt="" class="card__img lazyload">
 
                                         <button type="button" class="card__fav">
                                             <img src="assets/img/icons/heart.png" alt="" class="card__fav-img">
@@ -6133,7 +6216,7 @@
                             <li class="catalog__li">
                                 <div class="card js-card">
                                     <div class="card__img-wrap">
-                                        <img data-src="assets/img/catalogItem0.png" alt="" class="card__img lazyload">
+                                        <img data-src="assets/img/catalogItem0.png" src="//via.placeholder.com/350x350" alt="" class="card__img lazyload">
 
                                         <div class="card__sale">хит продаж</div>
 
@@ -6484,7 +6567,7 @@
                             <li class="catalog__li">
                                 <div class="card js-card">
                                     <div class="card__img-wrap">
-                                        <img data-src="assets/img/catalogItem0.png" alt="" class="card__img lazyload">
+                                        <img data-src="assets/img/catalogItem0.png" src="//via.placeholder.com/350x350" alt="" class="card__img lazyload">
 
                                         <button type="button" class="card__fav">
                                             <img src="assets/img/icons/heart.png" alt="" class="card__fav-img">
@@ -6833,7 +6916,7 @@
                             <li class="catalog__li">
                                 <div class="card js-card">
                                     <div class="card__img-wrap">
-                                        <img data-src="assets/img/catalogItem0.png" alt="" class="card__img lazyload">
+                                        <img data-src="assets/img/catalogItem0.png" src="//via.placeholder.com/350x350" alt="" class="card__img lazyload">
 
                                         <div class="card__sale">хит продаж</div>
 
@@ -7184,7 +7267,7 @@
                             <li class="catalog__li">
                                 <div class="card js-card">
                                     <div class="card__img-wrap">
-                                        <img data-src="assets/img/catalogItem0.png" alt="" class="card__img lazyload">
+                                        <img data-src="assets/img/catalogItem0.png" src="//via.placeholder.com/350x350" alt="" class="card__img lazyload">
 
                                         <button type="button" class="card__fav">
                                             <img src="assets/img/icons/heart.png" alt="" class="card__fav-img">
@@ -7533,7 +7616,7 @@
                             <li class="catalog__li">
                                 <div class="card js-card">
                                     <div class="card__img-wrap">
-                                        <img data-src="assets/img/catalogItem0.png" alt="" class="card__img lazyload">
+                                        <img data-src="assets/img/catalogItem0.png" src="//via.placeholder.com/350x350" alt="" class="card__img lazyload">
 
                                         <button type="button" class="card__fav">
                                             <img src="assets/img/icons/heart.png" alt="" class="card__fav-img">
@@ -9614,7 +9697,7 @@
 
                                     <li class="choose-inside__li">
                                         <label class="choose-inside__checkbox">
-                                            <input class="choose-inside__input js-inside-input" data-inside-number="20" type="radio" name="choose-inside">
+                                            <input class="choose-inside__input js-inside-input" data-inside-number="20" data-inside-link="https://www.google.com/" type="radio" name="choose-inside">
                                             <span class="choose-inside__icon"></span>
                                             <span class="choose-inside__desc">с мясом</span>
                                         </label>
@@ -9622,7 +9705,7 @@
 
                                     <li class="choose-inside__li">
                                         <label class="choose-inside__checkbox">
-                                            <input class="choose-inside__input js-inside-input" data-inside-number="20" type="radio" name="choose-inside">
+                                            <input class="choose-inside__input js-inside-input" data-inside-number="20" data-inside-link="https://www.google.com/" type="radio" name="choose-inside">
                                             <span class="choose-inside__icon"></span>
                                             <span class="choose-inside__desc">с мясом</span>
                                         </label>
@@ -9630,7 +9713,7 @@
 
                                     <li class="choose-inside__li">
                                         <label class="choose-inside__checkbox">
-                                            <input class="choose-inside__input js-inside-input" data-inside-number="20" type="radio" name="choose-inside">
+                                            <input class="choose-inside__input js-inside-input" data-inside-number="20" data-inside-link="https://www.google.com/" type="radio" name="choose-inside">
                                             <span class="choose-inside__icon"></span>
                                             <span class="choose-inside__desc">с мясом</span>
                                         </label>
@@ -9638,7 +9721,7 @@
 
                                     <li class="choose-inside__li">
                                         <label class="choose-inside__checkbox">
-                                            <input class="choose-inside__input js-inside-input" data-inside-number="20" type="radio" name="choose-inside">
+                                            <input class="choose-inside__input js-inside-input" data-inside-number="20" data-inside-link="https://www.google.com/" type="radio" name="choose-inside">
                                             <span class="choose-inside__icon"></span>
                                             <span class="choose-inside__desc">с мясом</span>
                                         </label>
@@ -9646,7 +9729,7 @@
 
                                     <li class="choose-inside__li">
                                         <label class="choose-inside__checkbox">
-                                            <input class="choose-inside__input js-inside-input" data-inside-number="20" type="radio" name="choose-inside">
+                                            <input class="choose-inside__input js-inside-input" data-inside-number="20" data-inside-link="https://www.google.com/" type="radio" name="choose-inside">
                                             <span class="choose-inside__icon"></span>
                                             <span class="choose-inside__desc">с мясом</span>
                                         </label>
@@ -9654,7 +9737,7 @@
 
                                     <li class="choose-inside__li">
                                         <label class="choose-inside__checkbox">
-                                            <input class="choose-inside__input js-inside-input" data-inside-number="20" type="radio" name="choose-inside">
+                                            <input class="choose-inside__input js-inside-input" data-inside-number="20" data-inside-link="https://www.google.com/" type="radio" name="choose-inside">
                                             <span class="choose-inside__icon"></span>
                                             <span class="choose-inside__desc">с мясом</span>
                                         </label>
@@ -9662,7 +9745,7 @@
 
                                     <li class="choose-inside__li">
                                         <label class="choose-inside__checkbox">
-                                            <input class="choose-inside__input js-inside-input" data-inside-number="20" type="radio" name="choose-inside">
+                                            <input class="choose-inside__input js-inside-input" data-inside-number="20" data-inside-link="https://www.google.com/" type="radio" name="choose-inside">
                                             <span class="choose-inside__icon"></span>
                                             <span class="choose-inside__desc">с мясом</span>
                                         </label>
@@ -9670,7 +9753,7 @@
 
                                     <li class="choose-inside__li">
                                         <label class="choose-inside__checkbox">
-                                            <input class="choose-inside__input js-inside-input" data-inside-number="20" type="radio" name="choose-inside">
+                                            <input class="choose-inside__input js-inside-input" data-inside-number="20" data-inside-link="https://www.google.com/" type="radio" name="choose-inside">
                                             <span class="choose-inside__icon"></span>
                                             <span class="choose-inside__desc">с мясом</span>
                                         </label>
@@ -9678,7 +9761,7 @@
 
                                     <li class="choose-inside__li">
                                         <label class="choose-inside__checkbox">
-                                            <input class="choose-inside__input js-inside-input" data-inside-number="20" type="radio" name="choose-inside">
+                                            <input class="choose-inside__input js-inside-input" data-inside-number="20" data-inside-link="https://www.google.com/" type="radio" name="choose-inside">
                                             <span class="choose-inside__icon"></span>
                                             <span class="choose-inside__desc">с мясом</span>
                                         </label>
@@ -9686,7 +9769,7 @@
 
                                     <li class="choose-inside__li">
                                         <label class="choose-inside__checkbox">
-                                            <input class="choose-inside__input js-inside-input" data-inside-number="20" type="radio" name="choose-inside">
+                                            <input class="choose-inside__input js-inside-input" data-inside-number="20" data-inside-link="https://www.google.com/" type="radio" name="choose-inside">
                                             <span class="choose-inside__icon"></span>
                                             <span class="choose-inside__desc">с мясом</span>
                                         </label>
@@ -9694,7 +9777,7 @@
 
                                     <li class="choose-inside__li">
                                         <label class="choose-inside__checkbox">
-                                            <input class="choose-inside__input js-inside-input" data-inside-number="20" type="radio" name="choose-inside">
+                                            <input class="choose-inside__input js-inside-input" data-inside-number="20" data-inside-link="https://www.google.com/" type="radio" name="choose-inside">
                                             <span class="choose-inside__icon"></span>
                                             <span class="choose-inside__desc">с мясом</span>
                                         </label>
@@ -9702,7 +9785,7 @@
 
                                     <li class="choose-inside__li">
                                         <label class="choose-inside__checkbox">
-                                            <input class="choose-inside__input js-inside-input" data-inside-number="20" type="radio" name="choose-inside">
+                                            <input class="choose-inside__input js-inside-input" data-inside-number="20" data-inside-link="https://www.google.com/" type="radio" name="choose-inside">
                                             <span class="choose-inside__icon"></span>
                                             <span class="choose-inside__desc">с мясом</span>
                                         </label>
@@ -9710,7 +9793,7 @@
 
                                     <li class="choose-inside__li">
                                         <label class="choose-inside__checkbox">
-                                            <input class="choose-inside__input js-inside-input" data-inside-number="20" type="radio" name="choose-inside">
+                                            <input class="choose-inside__input js-inside-input" data-inside-number="20" data-inside-link="https://www.google.com/" type="radio" name="choose-inside">
                                             <span class="choose-inside__icon"></span>
                                             <span class="choose-inside__desc">с мясом</span>
                                         </label>
@@ -9718,7 +9801,7 @@
 
                                     <li class="choose-inside__li">
                                         <label class="choose-inside__checkbox">
-                                            <input class="choose-inside__input js-inside-input" data-inside-number="20" type="radio" name="choose-inside">
+                                            <input class="choose-inside__input js-inside-input" data-inside-number="20" data-inside-link="https://www.google.com/" type="radio" name="choose-inside">
                                             <span class="choose-inside__icon"></span>
                                             <span class="choose-inside__desc">с мясом</span>
                                         </label>
@@ -9726,7 +9809,7 @@
 
                                     <li class="choose-inside__li">
                                         <label class="choose-inside__checkbox">
-                                            <input class="choose-inside__input js-inside-input" data-inside-number="20" type="radio" name="choose-inside">
+                                            <input class="choose-inside__input js-inside-input" data-inside-number="20" data-inside-link="https://www.google.com/" type="radio" name="choose-inside">
                                             <span class="choose-inside__icon"></span>
                                             <span class="choose-inside__desc">с мясом</span>
                                         </label>
@@ -9734,7 +9817,7 @@
 
                                     <li class="choose-inside__li">
                                         <label class="choose-inside__checkbox">
-                                            <input class="choose-inside__input js-inside-input" data-inside-number="20" type="radio" name="choose-inside">
+                                            <input class="choose-inside__input js-inside-input" data-inside-number="20" data-inside-link="https://www.google.com/" type="radio" name="choose-inside">
                                             <span class="choose-inside__icon"></span>
                                             <span class="choose-inside__desc">с мясом</span>
                                         </label>
@@ -9742,7 +9825,7 @@
 
                                     <li class="choose-inside__li">
                                         <label class="choose-inside__checkbox">
-                                            <input class="choose-inside__input js-inside-input" data-inside-number="20" type="radio" name="choose-inside">
+                                            <input class="choose-inside__input js-inside-input" data-inside-number="20" data-inside-link="https://www.google.com/" type="radio" name="choose-inside">
                                             <span class="choose-inside__icon"></span>
                                             <span class="choose-inside__desc">с мясом</span>
                                         </label>
@@ -9750,7 +9833,7 @@
 
                                     <li class="choose-inside__li">
                                         <label class="choose-inside__checkbox">
-                                            <input class="choose-inside__input js-inside-input" data-inside-number="20" type="radio" name="choose-inside">
+                                            <input class="choose-inside__input js-inside-input" data-inside-number="20" data-inside-link="https://www.google.com/" type="radio" name="choose-inside">
                                             <span class="choose-inside__icon"></span>
                                             <span class="choose-inside__desc">с мясом</span>
                                         </label>
@@ -9758,7 +9841,7 @@
 
                                     <li class="choose-inside__li">
                                         <label class="choose-inside__checkbox">
-                                            <input class="choose-inside__input js-inside-input" data-inside-number="20" type="radio" name="choose-inside">
+                                            <input class="choose-inside__input js-inside-input" data-inside-number="20" data-inside-link="https://www.google.com/" type="radio" name="choose-inside">
                                             <span class="choose-inside__icon"></span>
                                             <span class="choose-inside__desc">с мясом</span>
                                         </label>
@@ -9766,7 +9849,7 @@
 
                                     <li class="choose-inside__li">
                                         <label class="choose-inside__checkbox">
-                                            <input class="choose-inside__input js-inside-input" data-inside-number="20" type="radio" name="choose-inside">
+                                            <input class="choose-inside__input js-inside-input" data-inside-number="20" data-inside-link="https://www.google.com/" type="radio" name="choose-inside">
                                             <span class="choose-inside__icon"></span>
                                             <span class="choose-inside__desc">с мясом</span>
                                         </label>
@@ -9774,7 +9857,7 @@
 
                                     <li class="choose-inside__li">
                                         <label class="choose-inside__checkbox">
-                                            <input class="choose-inside__input js-inside-input" data-inside-number="20" type="radio" name="choose-inside">
+                                            <input class="choose-inside__input js-inside-input" data-inside-number="20" data-inside-link="https://www.google.com/" type="radio" name="choose-inside">
                                             <span class="choose-inside__icon"></span>
                                             <span class="choose-inside__desc">с мясом</span>
                                         </label>
@@ -9782,7 +9865,7 @@
 
                                     <li class="choose-inside__li">
                                         <label class="choose-inside__checkbox">
-                                            <input class="choose-inside__input js-inside-input" data-inside-number="20" type="radio" name="choose-inside">
+                                            <input class="choose-inside__input js-inside-input" data-inside-number="20" data-inside-link="https://www.google.com/" type="radio" name="choose-inside">
                                             <span class="choose-inside__icon"></span>
                                             <span class="choose-inside__desc">с мясом</span>
                                         </label>
@@ -9790,7 +9873,7 @@
 
                                 </ul>
                             </div>
-                            <a href="#" class="choose-inside__btn">Показать <span class="choose-inside__btn-text js-inside-number">48</span> пирогов</a>
+                            <a href="#" class="choose-inside__btn js-inside-btn">Показать <span class="choose-inside__btn-text js-inside-number">48</span> пирогов</a>
                         </div>
                 </section>
 
@@ -9816,7 +9899,7 @@
                                         <span class="map__title">Выбрать ближайшее метро</span>
                                         <div class="field field--select">
                                             <img src="assets/img/icons/train.png" alt="" class="field__icon">
-                                            <select id="" class="field__input">
+                                            <select id="" class="field__input js-metro-input" data-href="https://www.google.com/">
                                                 <option class="field__option" value="">По станции метро</option>
                                                 <option class="field__option" value="">1</option>
                                                 <option class="field__option" value="">2</option>
@@ -9830,7 +9913,7 @@
                                         <span class="map__title">Укажите округ</span>
                                         <div class="field field--select">
                                             <img src="assets/img/icons/near-me.png" alt="" class="field__icon">
-                                            <select id="" class="field__input">
+                                            <select id="" class="field__input js-metro-input" data-href="https://twitter.com/?lang=en">
                                                 <option class="field__option" value="">По округу</option>
                                                 <option class="field__option" value="">1</option>
                                                 <option class="field__option" value="">2</option>
@@ -9844,7 +9927,7 @@
                                         <span class="map__title">Укажите город</span>
                                         <div class="field field--select">
                                             <img src="assets/img/icons/pin.png" alt="" class="field__icon">
-                                            <select name="" id="" class="field__input">
+                                            <select name="" id="" class="field__input js-metro-input" data-href="https://www.amazon.com/">
                                                 <option class="field__option" value="">По городу и области</option>
                                                 <option class="field__option" value="">1</option>
                                                 <option class="field__option" value="">2</option>
