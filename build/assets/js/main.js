@@ -19,7 +19,8 @@ var APP = {
 
 		selects.forEach(function (select) {
 			select.addEventListener('change', function () {
-				console.log(123);
+				var href = select.options[select.selectedIndex].getAttribute('data-href');
+				window.location = href;
 			});
 		});
 	};

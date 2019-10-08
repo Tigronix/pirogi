@@ -8,7 +8,8 @@
 
 		selects.forEach((select) => {
 			select.addEventListener('change', () => {
-				const href = ;
+				const href = select.options[select.selectedIndex].getAttribute('data-href');
+				window.location = href;
 			});
 		});
 	};
