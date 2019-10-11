@@ -395,7 +395,7 @@ var APP = {
 
 			map.id = id;
 
-			ymaps.ready(function () {
+			ymaps.ready(function (e) {
 				var myMap = new ymaps.Map(id, {
 					center: [55.753994, 37.622093],
 					zoom: 9,

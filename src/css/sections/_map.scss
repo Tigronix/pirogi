@@ -1,6 +1,8 @@
 .map {
   padding: vw(36px) 0 vw(57px) 0;
   position: relative;
+  background: url(../img/maps.png) no-repeat center;
+  background-size: cover;
 
   @include mobile {
     display: none;
@@ -47,6 +49,7 @@
   }
 
   &__map {
+    display: none;
     position: absolute;
     left: 0;
     top: 0;
